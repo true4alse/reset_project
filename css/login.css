@@ -1,0 +1,159 @@
+
+.login-container *{font-family: 'NanumSquareNeo',"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;;}
+.login-container {
+    margin: 0 auto;
+    padding: 20rem 0 14rem;
+    background-color: white;
+    /* border-radius: 5px; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 3rem;
+    font-size: 3rem;font-weight: 800;
+}
+
+.login-container hr {
+    margin-bottom: 3rem;
+}
+
+.login-container input {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 10px;
+    border: 1px solid #333;
+    /* border-radius: 5px; */
+    box-sizing: border-box;
+}
+hr{background: #000;height: 3px;}
+.checkbox-container {
+    display: flex;
+    /* justify-content: left; */
+    align-items: center;
+    margin-bottom: 3rem;
+    font-size: 1.3rem;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+    width: auto;margin-bottom: 0;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    /* border-radius: 5px; */
+    background-color: #e17383;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.signup-button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    /* border-radius: 5px; */
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.help-links {
+    margin-top: 3rem;
+    color: #888;
+    font-size: 1.6rem;
+}
+
+.help-links a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.help-links a:hover {
+    text-decoration: underline;
+}
+
+.sns-login {
+    margin-top: 3rem;
+}
+
+.sns-login p {
+    margin-bottom: 20px;
+}
+
+.sns-buttons {
+    display: flex;
+    justify-content: space-around;gap: 2rem;
+}
+
+.sns-button {
+    border: none;
+    max-width: 70px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+.sns-button img{max-width: 100%;object-fit: contain;}
+
+/* .sns-button.kakao {
+    background-color: #ffeb3b;
+}
+
+.sns-button.naver {
+    background-color: #03c75a;
+}
+
+.sns-button.google {
+    background-color: #db4437;
+} */
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 10rem 0;
+    }
+
+    /* .login-container h2 {
+        font-size: 24px;
+    }
+
+    .login-container input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .login-button, .signup-button {
+        font-size: 14px;
+        padding: 8px;
+    } */
+}
+
+/* Media Query for Tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+    .login-container {
+        padding: 10rem 0;
+    }
+
+    .login-container h2 {
+        font-size: 28px;
+    }
+
+    .login-container input {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .login-button, .signup-button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

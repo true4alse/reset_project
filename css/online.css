@@ -1,0 +1,71 @@
+.online_wrap{
+    border: 2px solid #E17384;
+    border-radius: 3rem;
+    padding: 4rem;
+}
+.online_tit{
+    color: #E17384;font-weight: 800;
+    padding-bottom: 1rem;margin-bottom: 2rem;
+    border-bottom: 2px solid #e173836f;
+}
+.online_box{
+    border: 1px solid #BEBEBE;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+.online_box p i{font-weight: 800;}
+label.post_agree_txt{
+    display: flex;align-items: center;gap: 1rem;
+
+}
+.online2{
+    display: flex;gap: 4rem;margin-top: 5rem;
+}
+.online2>div{flex: 1;}
+.rp_title{display: flex;gap: 2rem;align-items: center;}
+input.online_box{padding: 1rem;margin: 0;}
+select.online_box{padding: 1rem;margin: 0;}
+.reserve_post_write_table tr{}
+.reserve_post_write_table th{font-size: 1.9rem;text-align: left;}
+.reserve_post_write_table td{padding: 1rem 0;}
+.reserve_post_write_table td>*{width: 90%;
+    font-family: 'NanumSquareNeo',"Pretendard Variable", Pretendard;
+    border: 1px solid #BEBEBE;
+    border-radius: 1rem;
+    padding: 1rem 1rem ;
+}
+.reserve_post_write_table td.tel{display: flex;gap: 1rem;}
+.reserve_post_write_table td.reserve_part_wrap>*{
+    border: 0px;
+    font-size: 1.7rem;
+}
+button{
+    font-family: 'NanumSquareNeo',"Pretendard Variable", Pretendard;;
+    margin: 5rem auto 0;
+    display: flex;justify-content: center;
+    background-color: #E17384;
+    border: 0;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    color: #fff;
+    
+}
+button p {font-size: 2.5rem;font-weight: 800;}
+
+@media (max-width: 1200px) {
+    .online2{flex-direction: column;}
+    .reserve_post_write_table th{font-size: 1.8rem;}
+}
+@media (max-width:600px){
+    .rp_title{flex-wrap: wrap;gap: 1rem;}
+    .rp_title>p{width: 30%;}
+    .rp_title>*{width: 60%;}
+    .online_wrap{padding: 4rem 1.5rem;}
+    button p {font-size: 2rem;font-weight: 800;}
+}
+@media (max-width:500px){
+    .reserve_post_write_table th{font-size: 1.4rem;}
+    .reserve_post_write_table td.tel{flex-wrap: wrap;}
+    .reserve_post_write_table td.tel>*{min-width: 100px;max-width: 300px;width: 90%;}
+}

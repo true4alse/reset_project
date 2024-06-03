@@ -1,0 +1,101 @@
+
+.idpw-container *{font-family: 'NanumSquareNeo',"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;;}
+.idpw-container {
+    margin: 0 auto;
+    padding: 20rem 0 14rem;
+    background-color: white;
+    /* border-radius: 5px; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+.idpw_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}
+.idpw_wrap>div{flex: 1;}
+.idpw-container h2 {
+    margin-bottom: 1rem;
+    font-size: 3rem;font-weight: 800;
+}
+h2+p{color: #888;margin-bottom: 2rem;font-size: 1.2rem;}
+.idpw-container hr {
+    margin-bottom: 3rem;
+}
+.id_wrap,.pw_wrap{margin-bottom: 5rem;}
+.idpw-container input {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 10px;
+    border: 1px solid #333;
+    /* border-radius: 5px; */
+    box-sizing: border-box;
+}
+hr{background: #000;height: 3px;}
+
+
+.checkbox-container input {
+    margin-right: 10px;
+    width: auto;margin-bottom: 0;
+}
+
+.id-button ,.pw-button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #e17383;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+.help-links {
+    margin-top: 3rem;
+    color: #888;
+    font-size: 1.6rem;
+}
+
+.help-links a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.help-links a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .idpw-container {
+        padding: 10rem 0;
+    }
+
+}
+
+/* Media Query for Tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+    .idpw-container {
+        padding: 10rem 0;
+    }
+
+    .idpw-container h2 {
+        font-size: 28px;
+    }
+
+    .idpw-container input {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .login-button, .signup-button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

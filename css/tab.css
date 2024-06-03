@@ -1,0 +1,119 @@
+@media (min-width:0px) and (max-width:1800px){
+    
+
+}
+@media (min-width:0px) and (max-width:1200px){
+    .img_wrap.doc{flex: 2;}
+    .m21_4_tit{font-size: 4.5rem;}
+    .pinkbox{font-size: 2rem;}
+    .m24_4 .txt_wrap ul li .tit{ font-size: 2rem;}
+    .m1_1 .txt_wrap{font-size: 2.2rem;gap: 1rem;padding: 3rem 1rem;}
+    h6{font-size: 2.2rem;margin-bottom: 3rem;}
+    .m31table th { padding: 1rem;}
+    .m31table td { padding: 1rem;}
+    .m31table thead { font-size: 1.7rem;}
+    .m31table tbody { font-size: 1.4rem;}
+    .m31_4 .flex_wrap .img_wrap{width: 60%;right: -10%;}
+    .qna_box{padding: 2rem;}
+    .left_tr td{padding: 2rem 2rem;}
+    .qna_box {margin-top: 2rem;}
+    .m6 section{padding: 5rem ;gap: 4rem;}
+}
+@media (min-width:0px) and (max-width:900px){
+/* subbanner */
+.sub_banner { height: 30rem;}
+.sub_banner .sub_banner_name p{font-size: 1.7rem;}
+.sub_banner .sub_banner_name{font-size: 4rem;}
+/* sub_tab */
+.sub_tab li.on a{border-radius: 0 0 3rem 0 ;}
+.sub_tab li a:hover{border-radius: 0 0 3rem 0 ;}
+.sub_tab li a{font-size: 1.7rem ;padding: 1.5rem;}
+.sub_tab li {flex-shrink: 1;min-width: 35%;}
+.sub_tab.tab7 li {flex-shrink: 1;min-width: 25%;}
+/* m1_1 */
+.m1_1 .txt_wrap{font-size: 2rem;aspect-ratio: auto;gap: 1rem;padding: 3rem 1rem;}
+.flex_wrap{flex-direction: column;gap: 3rem;}
+.flex_wrap>*{flex: none;}
+/* doctor */
+.doctor.page::before {  height: 21%;}
+.img_wrap.doc{max-width: 400px;align-self: center;}
+.doc_name{font-size: 1.8rem;margin-bottom: 2rem;}
+.doc_name b{font-size: 2.8rem; font-weight: 800;}
+.doc_ul{font-size: 1.8rem;margin-bottom: 2rem;line-height: 1.8;}
+/* m21_2 */
+.page.m21_2 .innerbot {    padding-bottom: 3rem;}
+.m21_2 ul {gap: 1rem;}
+.m21_2 .img_wrap{justify-content: center;}
+.m21_2 img {max-width: 300px;width: 80%; align-self: center;}
+
+.m21_3_ul{grid-template-columns: repeat(2, 1fr);gap: 5rem 2rem;}
+.m21_3_ul.m23_3_ul{gap: 3rem 2rem ;}
+.m21_3_ul li p{
+    font-size: 1.5rem;
+    width: 90%;padding: 1rem .5rem;
+    border-radius: 0 0 2rem 0 ;
+}
+/* .m21_4 */
+.m21_4 .flex_wrap{flex-direction: row; gap: 1rem;}
+.m21_4.page .innertop{padding-top: 7rem;}
+.m21_4.page .innerbot{padding-bottom: 7rem;}
+.m21_4_tit{font-size: 2.5rem;}
+.m21_4 h3 {margin-bottom: 2rem;}
+.m21_4 h3 i{font-size: 2rem;}
+.pinkbox{font-size: 1.8rem;border-radius: 2rem;padding: 2rem;}
+.m23_3_ul b{ font-size: 1.4rem;}
+.m24_4 .flex_wrap{justify-content: center;gap: 0;}
+.m24_4 .flex_wrap .img_wrap{max-width: 300px;line-height: 0;}
+.m24_4 .txt_wrap ul{padding-bottom: 5rem;}
+/* m31 */
+.con_wrap{flex-direction: column-reverse;gap: 2rem;}
+.con_wrap.right_img{flex-direction: column-reverse;}
+h6{font-size: 2rem;}
+.m31_3_ul{grid-template-columns: repeat(2,1fr); gap:3rem 5rem;margin-top: 3rem;}
+.m31_3_ul li:nth-of-type(2):after{content: none;}
+.c31_box{
+    margin-top: 2rem;padding: 2rem;
+    flex-direction: column;gap: 3rem;
+}
+.c31_box .circle_wrap .circle {font-size: 2rem;}
+.c31_box ul{flex: 2; grid-template-columns: repeat(2,1fr);gap: 1rem;}
+.c31_box ul li  {font-size: 1.8rem;padding: 0.6rem 2rem;}
+.m31table{    border-radius: 2rem 2rem 0 0;}
+.m31_4 ul { gap: 1rem;}
+.m31_4 ul li { font-size: 1.4rem; padding: 0.6rem 1.5rem;}
+.m31_4 .flex_wrap .img_wrap{width: 70%;right: -20%;}
+.qna_wrap li { padding: 3rem 1rem;}
+.m31_ul{gap: 1rem;max-width: 100%;}
+.m31_ul li{font-size: 1.8rem;}
+.m32_5_ul{margin-top: 2rem;flex-wrap: wrap;}
+.m32_5_ul li{min-width: 170px;max-width: 200px;margin-top: 2rem;gap: 1rem;}
+.m32_5_ul .img_wrap{width: 80%;}
+.m32_5_ul li:not(:last-child){border-right: 0;}
+.m33{flex-direction: column;}
+.m33 li{padding: 0 1rem;flex-direction: row;max-width: 100%;}
+.m32_5_ul.m33 li{max-width: 100%; text-align: start;}
+.m32_5_ul.m33 .img_wrap{max-width:120px ;}
+.m34_ul {gap: 3rem  1rem;}
+.m34_ul li{width: calc(100% / 2 - 3rem);}
+.m34_ul.m36 {
+    margin-top: 2rem;
+    gap: 1rem;
+}
+.con_wrap.m50{margin: 3rem 0;}
+.m34_ul.m36 li{ padding: .7rem 1rem;}
+.m21_4.m43_2 .content {
+    background: url(../img/m21_4bg.png) no-repeat right bottom 1rem / 300px;
+}
+h5 {font-size: 2.2rem;margin-bottom: 3rem;}
+.m44_ul{gap: 2rem;}
+.m45_1_ul{display: grid;grid-template-columns: repeat(2,1fr);}
+.m45_2_ul{display: grid;grid-template-columns: repeat(1,1fr);}
+.m6 section{padding: 5rem ;gap: 4rem;flex-direction: column;}
+.m6 .checkbox_ul{grid-template-columns: repeat(2,1fr);}
+.m7 .checkbox_ul{grid-template-columns: repeat(1,1fr);}
+
+.m81_ul .tit{font-size: 2.0rem;}
+.m81_ul{gap:5rem 2rem ;}
+.m82_2 .tit{font-size: 2rem;}
+
+}

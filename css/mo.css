@@ -1,0 +1,99 @@
+@media (min-width:0px) and (max-width:500px){
+/* subbanner */
+.sub_banner { height: 25rem;}
+.sub_banner .sub_banner_name{font-size: 3rem;}
+.sub_banner .sub_banner_name p {font-size: 1.4rem;}
+/* sub_tab */
+.sub_tab{gap: 1rem;}
+.sub_tab li.on a{border-radius: 0 0 2rem 0 ;}
+.sub_tab li a:hover{border-radius: 0 0 2rem 0 ;}
+.sub_tab li a{font-size: 1.4rem ;padding: 1rem;}
+.sub_tab li {flex-shrink: 1;min-width: 32%;}
+/* m1_1 */
+br.mo{display: block;}
+.m1_1 .txt_wrap{font-size: 1.6rem;gap: 1rem;padding: 2rem 1rem;border-radius: 2rem;}
+.flex_wrap{flex-direction: column;gap: 2rem;}
+.s5_ul p{
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0 0 1rem 0;
+}
+.m2_1 .pinkpoint{width: 2rem; height: 2px;}
+/*  */
+.doctor.page::before {  height: 21%;}
+.doctor .content{background: url(../img/m21_4bg.png) no-repeat right bottom 3rem / 200px;}
+.doc_name b{font-size: 2.8rem; font-weight: 800;}
+.doc_ul{font-size: 1.5rem;margin-bottom: 1rem;line-height: 1.8;}
+.flow_banner .list {height: 200px;}
+/*  */
+.m21_2 li p {padding: .5rem;}
+.m21_3_ul{gap: 3rem 1rem;}
+.m21_3_ul.m23_3_ul{gap: 2rem 1rem ;}
+.m21_3_ul li p{font-size: 1rem;}
+.m21_4 .flex_wrap .img_wrap{right: -10%;width: 60%;height: 100%;}
+.m21_4 .flex_wrap .img_wrap img{height: 100%; object-fit: contain;}
+.m21_4 .flex_wrap .txt_wrap{flex: none;width: 50%;}
+.m21_4_tit{font-size: 2rem;}
+.m21_4 h3 {margin-bottom: 1rem;}
+.m21_4 h3 i{font-size: 1.6rem;}
+.m21_4 .content{background: url(../img/m21_4bg.png) no-repeat left bottom 1rem / 200px;}
+.pinkbox{font-size: 1.5rem}
+.m23_3_ul b{ font-size: 1.3rem;letter-spacing: -0.5px;margin-top: 2rem;}
+.m24_4 .txt_wrap ul li .tit{ font-size: 1.7rem;}
+.m24_4 .txt_wrap ul li{ border-radius: 2rem;gap: 0rem;}
+.m24_4 .txt_wrap ul{gap: 1rem;}
+/* m31 */
+h6{font-size: 1.8rem;margin-bottom: 1rem;}
+.m31_3_ul{grid-template-columns: repeat(2,1fr); gap:3rem 3rem;margin-top: 2rem;}
+.m31_3_ul li:not(:last-child)::after {
+    right: -2.5rem;
+    width: 2em;
+    height: 2em;}
+.c31_box .circle_wrap .circle {font-size: 1.8rem;padding: 2rem;}
+.c31_box .circle_wrap::after{font-size: 2.5rem;}
+.c31_box ul{flex: 2; grid-template-columns: repeat(1,1fr);gap: 1rem;}
+.c31_box ul li  {font-size: 1.4rem;padding: 0.5rem 1rem;}
+.m31table thead {font-size: 1.3rem;}
+.m31table tbody { font-size: 1.1rem;}
+.m31_4 .flex_wrap .txt_wrap { width: 100%;}
+.m31_4 .flex_wrap .img_wrap{display: none;}
+.qna_wrap li {padding: 2rem 1rem;gap: 1rem;}
+.qna_wrap li i {width: 30px; font-size: 1.7rem;aspect-ratio: 1/1;border-radius: 0.5rem;}
+.qna_wrap li h5 {margin-bottom: 1rem;}
+.qna_wrap li>* {gap: 1rem;}
+.qna_wrap li h5 i::after {border-left: 5px solid #e17384;}
+.qna_wrap li p i::after{border-left: 5px solid #eae5e6;}
+.m31_ul {margin: 2rem 0;}
+.m31_ul li{font-size: 1.3rem;padding: .5rem;}
+.m32_5_ul li{min-width: 120px;max-width: 120px;margin-bottom: 1rem;}
+.m34_ul li{min-width: 165px;}
+.checkbox_ul.borderuli li{padding: .7rem 1.5rem;}
+.m41_ul{margin-top: 2rem;}
+h5 {font-size: 1.8rem;margin-bottom: 2rem;}
+.borderuli li{padding: .5rem ;}
+.m21_4.m43_2 .content {
+    background: url(../img/m21_4bg.png) no-repeat right bottom 1rem / 240px;
+}
+.m44_ul{gap: 1rem;}
+.m44_ul li {width: 40%;}
+.m45_1_ul{display: grid;grid-template-columns: repeat(1,1fr);}
+.con_wrap.m50{margin:2rem 0;}
+.m6 section{padding: 2rem ;gap: 2rem;flex-direction: column;margin: 3rem 0;}
+.m6 .checkbox_ul{grid-template-columns: repeat(1,1fr);}
+.m6 .tit {margin: 2rem 0;}
+
+
+.m81_ul .tit{font-size: 1.7rem;}
+.m81_ul{grid-template-columns: repeat(2,1fr);gap:2.5rem 1rem ;}
+.m81_ul .img_wrap{border-radius: 2rem;}
+.m81_ul li{gap: .5rem;}
+.m82_2 .tit{font-size: 1.7rem;width: 60%;background: #ffffff7d;}
+}
+@media (min-width:0px) and (max-width:320px){
+    .m21_3_ul{grid-template-columns: repeat(1, 1fr);gap: 3rem 2rem;max-width: 250px;margin: 0 auto;}
+    .m34_ul li{width: 100%;}
+    .m46_1_ul{display: grid;grid-template-columns: repeat(2,1fr);}
+    .m81_ul{grid-template-columns: repeat(1,1fr);gap:2rem ;}
+    .m82_2 .tit{width: 100%;}
+}
