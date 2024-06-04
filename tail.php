@@ -51,7 +51,7 @@ if (G5_IS_MOBILE) {
                     <label for="bchk">
                         <input type="checkbox" name="privacy" id="bchk"> 개인정보취급방침
                     </label>
-                    <a href="site1.html" target="_blank">자세히보기</a>
+                    <a href="site1.php" target="_blank">자세히보기</a>
                 </div>
             </div>
             <div class="form_wrap">
@@ -78,10 +78,10 @@ if (G5_IS_MOBILE) {
     <div class="footer_top">
         <div class="footer_inner top">
             <ul class="f_top">
-                <li><a href="./site1.html">개인정보처리방침</a></li>
-                <li><a href="./site2.html">이용약관</a></li>
-                <li><a href="./site3.html">환자권리장전</a></li>
-                <!-- <li><a href="./site3.html">비급여 진료비 안내</a></li> -->
+                <li><a href="./site1.php">개인정보처리방침</a></li>
+                <li><a href="./site2.php">이용약관</a></li>
+                <li><a href="./site3.php">환자권리장전</a></li>
+                <!-- <li><a href="./site3.php">비급여 진료비 안내</a></li> -->
             </ul>
         </div>
     </div>
