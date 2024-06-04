@@ -9,20 +9,15 @@ if(defined('G5_THEME_PATH')) {
     return;
 }
 
-if (G5_IS_MOBILE) {
-    include_once(G5_MOBILE_PATH.'/index.php');
-    return;
-}
+// if (G5_IS_MOBILE) {
+//     include_once(G5_MOBILE_PATH.'/index.php');
+//     return;
+// }
 
 include_once(G5_PATH.'/head.php');
 ?>
 
 <div class="wrap">
-        <div id="header-placeholder"></div>
-        <!-- quick -->
-        <div id="quick-placeholder"></div>
-        <!-- 팝업 -->
-        <div class="popups"></div> <!-- 팝업들이 추가될 컨테이너 -->
         <main>
             <!-- 메인배너 -->
             <div class="main_station swiper">
@@ -351,201 +346,10 @@ include_once(G5_PATH.'/head.php');
                 </div>
             </section>
         </main>
-        <div id="footer-placeholder"></div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            // 모든 쿠키를 가져와서 출력하는 함수
-            function printAllCookies() {
-                if (document.cookie === "") {
-                    console.log("저장된 쿠키가 없습니다.");
-                } else {
-                    console.log("현재 저장된 쿠키들:");
-                    var cookies = document.cookie.split('; ');
-                    cookies.forEach(function(cookie) {
-                        console.log(cookie);
-                    });
-                }
-            }
-        
-            // 페이지 로드 시 쿠키 출력
-            printAllCookies();
-        
-            console.log('현재 저장된 hiddenPopupsNew 쿠키 값:', getCookie('hiddenPopupsNew'));
-        
-        });
-    </script>
-    
-    <script>
-        // 함수: 쿠키 설정
-        function setCookie(name, value, days) {
-            var expires = "";
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
-        }
-    
-        // 함수: 쿠키 가져오기
-        function getCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-        }
-    
-        // 함수: 쿠키 삭제
-        function eraseCookie(name) {
-            document.cookie = name + '=; Max-Age=-99999999;';
-        }
-    
-        // 숨겨진 팝업들의 ID를 가져오는 함수
-        function getHiddenPopups() {
-            const hiddenPopupsString = getCookie('hiddenPopupsNew');
-            return hiddenPopupsString ? hiddenPopupsString.split(',') : [];
-        }
-    
-        // 숨겨진 팝업들의 ID를 쿠키에 저장하는 함수
-        function setHiddenPopups(hiddenPopups) {
-            setCookie('hiddenPopupsNew', hiddenPopups.join(','), 1);
-        }
-    
-        fetch('x_system/pop_json.json', { cache: 'no-cache' })
-            .then(response => response.json())
-            .then(data => {
-                const now = new Date();
-                const popupsContainer = document.querySelector('.popups');
-                const hiddenPopups = getHiddenPopups();
-    
-                const validPopups = data.filter(popup => {
-                    const startDate = new Date(popup.start_date);
-                    const endDate = new Date(popup.end_date);
-                    return startDate <= now && endDate >= now && !hiddenPopups.includes(popup.uniqueId);
-                }).reverse();
-    
-                validPopups.forEach((popup, index) => {
-                    const popupDiv = document.createElement('div');
-                    popupDiv.id = `popup_${index + 1}`;
-                    popupDiv.className = 'popup_wrap popup_num';
-                    popupDiv.style.left = popup.pop_position_left + 'px'; 
-                    popupDiv.style.top = popup.pop_position_top + 'px';
-    
-                    popupDiv.innerHTML = `
-                        <div class="popup">
-                            <a href="${popup.pop_link}">
-                                <img src="${popup.image_url}" alt="${popup.title}">
-                            </a>
-                        </div>
-                        <div class="popup_foot">
-                            <div>
-                                <label for="chkbox${index}">
-                                    <span>
-                                        <input type="checkbox" value="checkbox" name="chkbox${index}" id="chkbox${index}">
-                                        오늘 하루동안 보지 않기
-                                    </span>
-                                </label>
-                                <span class="popup_close">닫기 X</span>
-                            </div>
-                        </div>
-                    `;
-                    popupsContainer.appendChild(popupDiv);
-    
-                    const checkBox = popupDiv.querySelector(`#chkbox${index}`);
-                    const closeButton = popupDiv.querySelector('.popup_close');
-    
-                    closeButton.addEventListener('click', function () {
-                        if (checkBox.checked) {
-                            hiddenPopups.push(popup.uniqueId);
-                            setHiddenPopups(hiddenPopups);
-                        }
-                        popupDiv.style.display = 'none';
-                    });
-    
-                    if (hiddenPopups.includes(popup.uniqueId)) {
-                        popupDiv.style.display = 'none';
-                    }
-                });
-            })
-            .catch(error => {
-                console.error('팝업 데이터를 로드하는데 실패했습니다.', error);
-            });
-    </script>
-        
-            
-    <script>
-        // aos 초기화
-        AOS.init({ 
-            duration: 1000
-        });
-    
-        // 헤더와 푸터를 가져와서 각각의 placeholder에 삽입합니다.
-        fetch('header.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('header-placeholder').innerHTML = html;
+        $(function(){
 
-                // 헤더를 불러온 후에 실행되어야 하는 JavaScript 코드 추가
-                // 예시: 메뉴 토글 등의 기능 초기화
-                // 모바일 메뉴 열기
-                $('.header_menu').mouseenter(function(){
-                    $('.gnbinfo').addClass('active');
-                });
-                $('.header_menu').mouseleave(function(){
-                    $('.gnbinfo').removeClass('active');
-                });
-                // 모바일 메뉴 열기
-                $(".open_menu").click(function(event){
-                    event.stopPropagation();
-                    $(".hidden_bg").addClass("on");
-                });
-                // 모바일 메뉴 닫기
-                $(".close_menu").click(function(event){
-                    event.stopPropagation();
-                    $(".hidden_bg").removeClass("on");
-                });
-                // 모바일 메뉴 토글
-                $(".hidden_gnb>li").click(function(event) {
-                    event.stopPropagation();
-                    // 클릭된 메뉴의 하위 메뉴 토글
-                    $(this).find('.top_0').slideToggle();
-
-                    // 다른 메뉴의 하위 메뉴 닫기
-                    $(".hidden_gnb>li").not(this).find('.top_0').slideUp();
-                    
-                    // 현재 메뉴 활성화 표시
-                    $(".hidden_gnb>li>a").removeClass("on");
-                    $(this).children('a').addClass("on");
-                });
-            });
-
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer-placeholder').innerHTML = html;
-
-                // 불러온 후에 실행되어야 하는 JavaScript 코드 추가
-                
-            });
-        fetch('quick.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('quick-placeholder').innerHTML = html;
-
-                // 불러온 후에 실행되어야 하는 JavaScript 코드 추가
-                $(function() {
-                    $('.top_btn').click( function() {
-                        var htmloffset = $('html').offset();
-                        $('html, body').animate( { scrollTop : htmloffset.top }, 400 );
-                    });
-                })
-            });
-            
         // 비주얼 배너 슬라이더
         $('.main-slider').slick({
             fade: true,
@@ -610,6 +414,8 @@ include_once(G5_PATH.'/head.php');
             ],
             
         });
+
+    })
         
         
     </script>

@@ -414,7 +414,7 @@ h6+p{font-weight: 400;}
     content: '';width: 1.5em;height: 1.5em;
     background: url('../img/checkbox.png') no-repeat 50% 50% / contain;
 }
-.borderuli{gap: 1rem;}
+.borderuli{gap: 1rem;text-align: center;}
 .borderuli li{
     border: 2px solid #e17384;
     border-radius: 3rem;
@@ -458,6 +458,13 @@ h5 p{color: #e17384;}
 .m45_2_ul{display: grid;grid-template-columns: repeat(2,1fr);}
 .checkbox_ul li p i{font-weight: 400;}
 .m44_ul.m82 li {width: 25%;}
+/* m51 */
+.m5 p.pink_p{color: #E17384;}
+.m5 p.black_p{color: #000!important;}
+.m52 .borderl{width: 1px;height: 330px; background:  #e1738477;}
+.m52_ul li:not(:last-child){margin-bottom: 1rem;}
+.m5 .pinkh51{color: #E17384;}
+.m5 .m5_11 .img_wrap {aspect-ratio: 1/1;}
 /* m6 */
 .m6 section{
     margin: 5rem 0;padding: 8rem;

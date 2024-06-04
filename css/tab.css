@@ -108,6 +108,7 @@ h5 {font-size: 2.2rem;margin-bottom: 3rem;}
 .m44_ul{gap: 2rem;}
 .m45_1_ul{display: grid;grid-template-columns: repeat(2,1fr);}
 .m45_2_ul{display: grid;grid-template-columns: repeat(1,1fr);}
+.m52 .borderl{width: 100%;height:1px; background:  #e1738477;}
 .m6 section{padding: 5rem ;gap: 4rem;flex-direction: column;}
 .m6 .checkbox_ul{grid-template-columns: repeat(2,1fr);}
 .m7 .checkbox_ul{grid-template-columns: repeat(1,1fr);}

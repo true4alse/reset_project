@@ -92,8 +92,8 @@ if (defined('G5_IS_ADMIN')) {
 <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
 <meta name="msapplication-TileImage" content="./img/ms-icon-144x144.png">
 <meta name="msapplication-TileColor" content="#ffffff">
-<link href="도메인/img/head_icon.ico" rel="shortcut icon" type="image/x-icon">
-<title>리셋의원</title>
+<!-- <link href="도메인/img/head_icon.ico" rel="shortcut icon" type="image/x-icon"> -->
+<!-- <title>리셋의원</title> -->
 <!-- font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,6 +106,15 @@ if (defined('G5_IS_ADMIN')) {
 <link rel="stylesheet" href="./css/main.css">
 <link rel="stylesheet" href="./css/slider-custom.css?a">
 <link rel="stylesheet" href="./css/ani.css">
+<link rel="stylesheet" href="./css/idpw.css">
+<link rel="stylesheet" href="./css/join.css">
+<link rel="stylesheet" href="./css/login.css">
+<link rel="stylesheet" href="./css/mobile.css">
+<link rel="stylesheet" href="./css/model.css">
+<link rel="stylesheet" href="./css/online.css">
+<link rel="stylesheet" href="./css/sub.css">
+<link rel="stylesheet" href="./css/tab.css">
+
 <!-- js -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="./js/header.js"></script>
@@ -119,6 +128,8 @@ if (defined('G5_IS_ADMIN')) {
 <!-- swiper -->
 <script src="https://fastly.jsdelivr.net/npm/swiper@11.0.6/swiper-bundle.min.js"></script>
 <link href="https://fastly.jsdelivr.net/npm/swiper@11.0.6/swiper-bundle.min.css" rel="stylesheet">
+<!-- barunweb added -->
+<script src=./js/_common_.js></script>
 <!--[if lte IE 8]>
 <script src="<?php echo G5_JS_URL ?>/html5.js"></script>
 <![endif]-->
@@ -141,8 +152,8 @@ var g5_admin_url = "<?php echo G5_ADMIN_URL; ?>";
 <?php } ?>
 </script>
 <?php
-add_javascript('<script src="'.G5_JS_URL.'/jquery-1.12.4.min.js"></script>', 0);
-add_javascript('<script src="'.G5_JS_URL.'/jquery-migrate-1.4.1.min.js"></script>', 0);
+// add_javascript('<script src="'.G5_JS_URL.'/jquery-1.12.4.min.js"></script>', 0);
+// add_javascript('<script src="'.G5_JS_URL.'/jquery-migrate-1.4.1.min.js"></script>', 0);
 if (defined('_SHOP_')) {
     if(!G5_IS_MOBILE) {
         add_javascript('<script src="'.G5_JS_URL.'/jquery.shop.menu.js?ver='.G5_JS_VER.'"></script>', 0);
@@ -171,5 +182,5 @@ if ($is_member) { // 회원이라면 로그인 중이라는 메세지를 출력�
     else if ($is_admin == 'board') $sr_admin_msg = "게시판관리자 ";
 
     echo '<div id="hd_login_msg">'.$sr_admin_msg.get_text($member['mb_nick']).'님 로그인 중 ';
-    echo '<a href="'.G5_BBS_URL.'/logout.php">로그아웃</a></div>';
+    echo '<a href="'.G5_BBS_URL.'/logout.php">Logout</a></div>';
 }

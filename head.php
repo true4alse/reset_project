@@ -31,8 +31,8 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         <div class="hidden_top"> 
             <div class="mtop">
                 <div class="login">
-                    <a href="./login.html">Login</a>
-                    <a href="./join.html">Join</a>
+                    <a href="./login.php">Login</a>
+                    <a href="./join.php">Join</a>
                 </div>
                 <a class="close_menu">
                     <img src="./img/close_menu.png" alt="메뉴닫기">
@@ -42,108 +42,108 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 <li class="">
                     <a href="javascript:void(0)">왜 리셋인가</a>
                     <ul class="top_0">
-                        <li><a href="./menu1_1.html">ㅣ 왜 리셋인가</a></li>
-                        <li><a href="./menu1_2.html">ㅣ 의료진 소개</a></li>
-                        <li><a href="./menu1_3.html">ㅣ 둘러보기</a></li>
-                        <li><a href="./menu1_4.html">ㅣ 오시는 길 / 진료시간</a></li>
+                        <li><a href="./menu1_1.php">ㅣ 왜 리셋인가</a></li>
+                        <li><a href="./menu1_2.php">ㅣ 의료진 소개</a></li>
+                        <li><a href="./menu1_3.php">ㅣ 둘러보기</a></li>
+                        <li><a href="./menu1_4.php">ㅣ 오시는 길 / 진료시간</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0)" class="mint">&middot; 리셋 시그니처</a>
                     <ul class="mint top_0">
-                        <li><a href="./menu2_1.html">ㅣ 상체 패키지</a></li>
-                        <li><a href="./menu2_2.html">ㅣ 하체 패키지</a></li>
-                        <li><a href="./menu2_3.html">ㅣ 전신 패키지</a></li>
-                        <li><a href="./menu2_4.html">ㅣ one-day 패키지</a></li>
-                        <li><a href="./menu2_5.html">ㅣ 5주 패키지</a></li>
-                        <li><a href="./menu2_6.html">ㅣ 100days 패키지</a></li>
-                        <li><a href="./menu2_7.html">ㅣ 리셋 웨딩플래너</a></li>
+                        <li><a href="./menu2_1.php">ㅣ 상체 패키지</a></li>
+                        <li><a href="./menu2_2.php">ㅣ 하체 패키지</a></li>
+                        <li><a href="./menu2_3.php">ㅣ 전신 패키지</a></li>
+                        <li><a href="./menu2_4.php">ㅣ one-day 패키지</a></li>
+                        <li><a href="./menu2_5.php">ㅣ 5주 패키지</a></li>
+                        <li><a href="./menu2_6.php">ㅣ 100days 패키지</a></li>
+                        <li><a href="./menu2_7.php">ㅣ 리셋 웨딩플래너</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0)" class="mint">&middot; 비만 건강</a>
                     <ul class="mint top_0">
-                        <li><a href="./menu3_1.html">ㅣ SPL</a></li>
-                        <li><a href="./menu3_2.html">ㅣ 지방분해주사</a></li>
-                        <li><a href="./menu3_3.html">ㅣ 트리플바디</a></li>
-                        <li><a href="./menu3_4.html">ㅣ 토르고주파</a></li>
-                        <li><a href="./menu3_5.html">ㅣ 오토힐링</a></li>
-                        <li><a href="./menu3_6.html">ㅣ 체외충격파</a></li>
+                        <li><a href="./menu3_1.php">ㅣ SPL</a></li>
+                        <li><a href="./menu3_2.php">ㅣ 지방분해주사</a></li>
+                        <li><a href="./menu3_3.php">ㅣ 트리플바디</a></li>
+                        <li><a href="./menu3_4.php">ㅣ 토르고주파</a></li>
+                        <li><a href="./menu3_5.php">ㅣ 오토힐링</a></li>
+                        <li><a href="./menu3_6.php">ㅣ 체외충격파</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0)" class="pink">&middot; 피부미용 탈모</a>
                     <ul class="pink top_0">
-                        <li><a href="./menu4_1.html">ㅣ 보톡스</a></li>
-                        <li><a href="./menu4_2.html">ㅣ 필러</a></li>
-                        <li><a href="./menu4_3.html">ㅣ 스킨부스터/리쥬비네이션</a></li>
-                        <li><a href="./menu4_4.html">ㅣ 여드름/스킨케어</a></li>
-                        <li><a href="./menu4_5.html">ㅣ 모공/색소 프로그램</a></li>
-                        <li><a href="./menu4_6.html">ㅣ 레이저제모</a></li>
-                        <li><a href="./menu4_7.html">ㅣ 탈모치료</a></li>
+                        <li><a href="./menu4_1.php">ㅣ 보톡스</a></li>
+                        <li><a href="./menu4_2.php">ㅣ 필러</a></li>
+                        <li><a href="./menu4_3.php">ㅣ 스킨부스터/리쥬비네이션</a></li>
+                        <li><a href="./menu4_4.php">ㅣ 여드름/스킨케어</a></li>
+                        <li><a href="./menu4_5.php">ㅣ 모공/색소 프로그램</a></li>
+                        <li><a href="./menu4_6.php">ㅣ 레이저제모</a></li>
+                        <li><a href="./menu4_7.php">ㅣ 탈모치료</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0)" class="pink">&middot; 프리미엄 리프팅</a>
                     <ul class="pink top_0">
-                        <li><a href="./menu5_1.html">ㅣ 프리미엄 리프팅</a></li>
+                        <li><a href="./menu5_1.php">ㅣ 프리미엄 리프팅</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0)"  class="gray">&middot; 영양수액</a>
                     <ul class="gray top_0">
-                        <li><a href="./menu6.html">ㅣ 1:1 맞춤 수액</a></li>
-                        <li><a href="./menu6.html#m6_1" class="scroll-link6">ㅣ 다이어트 수액</a></li>
-                        <li><a href="./menu6.html#m6_2" class="scroll-link6">ㅣ 통증/피로 수액</a></li>
-                        <li><a href="./menu6.html#m6_3" class="scroll-link6">ㅣ 감기몸살 수액</a></li>
-                        <li><a href="./menu6.html#m6_4" class="scroll-link6">ㅣ 장염 수액</a></li>
-                        <li><a href="./menu6.html#m6_5" class="scroll-link6">ㅣ 간기능 수액</a></li>
-                        <li><a href="./menu6.html#m6_6" class="scroll-link6">ㅣ 갱년기 수액</a></li>
-                        <li><a href="./menu6.html#m6_7" class="scroll-link6">ㅣ 어지럼증 수액</a></li>
-                        <li><a href="./menu6.html#m6_8" class="scroll-link6">ㅣ 두드러기/알레르기 수액</a></li>
-                        <li><a href="./menu6.html#m6_9" class="scroll-link6">ㅣ 건망증/총명 수액</a></li>
+                        <li><a href="./menu6.php">ㅣ 1:1 맞춤 수액</a></li>
+                        <li><a href="./menu6.php#m6_1" class="scroll-link6">ㅣ 다이어트 수액</a></li>
+                        <li><a href="./menu6.php#m6_2" class="scroll-link6">ㅣ 통증/피로 수액</a></li>
+                        <li><a href="./menu6.php#m6_3" class="scroll-link6">ㅣ 감기몸살 수액</a></li>
+                        <li><a href="./menu6.php#m6_4" class="scroll-link6">ㅣ 장염 수액</a></li>
+                        <li><a href="./menu6.php#m6_5" class="scroll-link6">ㅣ 간기능 수액</a></li>
+                        <li><a href="./menu6.php#m6_6" class="scroll-link6">ㅣ 갱년기 수액</a></li>
+                        <li><a href="./menu6.php#m6_7" class="scroll-link6">ㅣ 어지럼증 수액</a></li>
+                        <li><a href="./menu6.php#m6_8" class="scroll-link6">ㅣ 두드러기/알레르기 수액</a></li>
+                        <li><a href="./menu6.php#m6_9" class="scroll-link6">ㅣ 건망증/총명 수액</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0)" class="gray">&middot; 기능 의학</a>
                     <ul class="gray top_0">
-                        <li><a href="./menu7.html" class="scroll-link">ㅣ 항산화력 / 산화스트레스 검사</a></li>
-                        <li><a href="./menu7.html#m7_2" class="scroll-link">ㅣ NK세포 활성도 & 면역력 검사</a></li>
-                        <li><a href="./menu7.html#m7_3" class="scroll-link">ㅣ 장내 미생물 검사</a></li>
-                        <li><a href="./menu7.html#m7_4" class="scroll-link">ㅣ 호르몬 검사</a></li>
-                        <li><a href="./menu7.html#m7_5" class="scroll-link">ㅣ 소변 유기산 검사</a></li>
-                        <li><a href="./menu7.html#m7_6" class="scroll-link">ㅣ 음식 항원 알레르기 검사 (IgG)</a></li>
+                        <li><a href="./menu7.php" class="scroll-link">ㅣ 항산화력 / 산화스트레스 검사</a></li>
+                        <li><a href="./menu7.php#m7_2" class="scroll-link">ㅣ NK세포 활성도 & 면역력 검사</a></li>
+                        <li><a href="./menu7.php#m7_3" class="scroll-link">ㅣ 장내 미생물 검사</a></li>
+                        <li><a href="./menu7.php#m7_4" class="scroll-link">ㅣ 호르몬 검사</a></li>
+                        <li><a href="./menu7.php#m7_5" class="scroll-link">ㅣ 소변 유기산 검사</a></li>
+                        <li><a href="./menu7.php#m7_6" class="scroll-link">ㅣ 음식 항원 알레르기 검사 (IgG)</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0)" class="gray">&middot; 건강주치의</a>
                     <ul class="gray top_0">
-                        <li><a href="./menu8_1.html">ㅣ 질환 클리닉</a></li>
-                        <li><a href="./menu8_2.html">ㅣ 예방접종 클리닉</a></li>
+                        <li><a href="./menu8_1.php">ㅣ 질환 클리닉</a></li>
+                        <li><a href="./menu8_2.php">ㅣ 예방접종 클리닉</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0)">리셋과 함께한★</a>
                     <ul class="top_0">
-                        <li><a href="./menu9_1.html">ㅣ 수기 후기 스캔</a></li>
-                        <li><a href="./menu9_2.html">ㅣ 전/후사진</a></li>
+                        <li><a href="./menu9_1.php">ㅣ 수기 후기 스캔</a></li>
+                        <li><a href="./menu9_2.php">ㅣ 전/후사진</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0)">리셋 커뮤니티</a>
                     <ul class="top_0">
-                        <li><a href="./menu10_1.html">ㅣ 공지사항</a></li>
-                        <li><a href="./menu10_2.html">ㅣ 이벤트</a></li>
-                        <li><a href="./menu10_3.html">ㅣ 미디어/보도자료</a></li>
-                        <li><a href="./menu10_4.html">ㅣ 시술 후 주의사항</a></li>
-                        <li><a href="./menu10_5.html">ㅣ 리셋 리얼 모델 모집</a></li>
+                        <li><a href="./menu10_1.php">ㅣ 공지사항</a></li>
+                        <li><a href="./menu10_2.php">ㅣ 이벤트</a></li>
+                        <li><a href="./menu10_3.php">ㅣ 미디어/보도자료</a></li>
+                        <li><a href="./menu10_4.php">ㅣ 시술 후 주의사항</a></li>
+                        <li><a href="./menu10_5.php">ㅣ 리셋 리얼 모델 모집</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0)">상담 및 예약</a>
                     <ul class="top_0">
-                        <li><a href="./menu11_1.html">ㅣ 온라인 상담</a></li>    
-                        <li><a href="./menu11_2.html">ㅣ 온라인 예약</a></li>
+                        <li><a href="./menu11_1.php">ㅣ 온라인 상담</a></li>    
+                        <li><a href="./menu11_2.php">ㅣ 온라인 예약</a></li>
                         <li><a href="https://m.booking.naver.com/booking/6/bizes/255056?theme=place&entry=pll&area=pll">ㅣ 네이버 예약</a></li>
                         <li><a href="https://pf.kakao.com/_xbsWQj">ㅣ 카톡 상담</a></li>
                     </ul>
@@ -158,115 +158,115 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 <header>
     <div class="header_inner">
         <h1 class="h_logo">
-            <a href="index.html"><img src="./img/logo_b.png" alt="리셋의원 로고"></a>
+            <a href="index.php"><img src="./img/logo_b.png" alt="리셋의원 로고"></a>
         </h1>
         <div class="header_menu">
             <ul class="gnb">
                 <li class="">
-                    <a href="./menu1_1.html">왜 리셋인가</a>
+                    <a href="./menu1_1.php">왜 리셋인가</a>
                     <ul class="">
-                        <li><a href="./menu1_1.html">ㅣ 왜 리셋인가</a></li>
-                        <li><a href="./menu1_2.html">ㅣ 의료진 소개</a></li>
-                        <li><a href="./menu1_3.html">ㅣ 둘러보기</a></li>
-                        <li><a href="./menu1_4.html">ㅣ 오시는 길 / 진료시간</a></li>
+                        <li><a href="./menu1_1.php">ㅣ 왜 리셋인가</a></li>
+                        <li><a href="./menu1_2.php">ㅣ 의료진 소개</a></li>
+                        <li><a href="./menu1_3.php">ㅣ 둘러보기</a></li>
+                        <li><a href="./menu1_4.php">ㅣ 오시는 길 / 진료시간</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./menu2_1.html" class="mint">리셋 시그니처</a>
+                    <a href="./menu2_1.php" class="mint">리셋 시그니처</a>
                     <ul class="mint">
-                        <li><a href="./menu2_1.html">ㅣ 상체 패키지</a></li>
-                        <li><a href="./menu2_2.html">ㅣ 하체 패키지</a></li>
-                        <li><a href="./menu2_3.html">ㅣ 전신 패키지</a></li>
-                        <li><a href="./menu2_4.html">ㅣ one-day 패키지</a></li>
-                        <li><a href="./menu2_5.html">ㅣ 5주 패키지</a></li>
-                        <li><a href="./menu2_6.html">ㅣ 100days 패키지</a></li>
-                        <li><a href="./menu2_7.html">ㅣ 리셋 웨딩플래너</a></li>
+                        <li><a href="./menu2_1.php">ㅣ 상체 패키지</a></li>
+                        <li><a href="./menu2_2.php">ㅣ 하체 패키지</a></li>
+                        <li><a href="./menu2_3.php">ㅣ 전신 패키지</a></li>
+                        <li><a href="./menu2_4.php">ㅣ one-day 패키지</a></li>
+                        <li><a href="./menu2_5.php">ㅣ 5주 패키지</a></li>
+                        <li><a href="./menu2_6.php">ㅣ 100days 패키지</a></li>
+                        <li><a href="./menu2_7.php">ㅣ 리셋 웨딩플래너</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./menu3_1.html" class="mint">비만 건강</a>
+                    <a href="./menu3_1.php" class="mint">비만 건강</a>
                     <ul class="mint">
-                        <li><a href="./menu3_1.html">ㅣ SPL</a></li>
-                        <li><a href="./menu3_2.html">ㅣ 지방분해주사</a></li>
-                        <li><a href="./menu3_3.html">ㅣ 트리플바디</a></li>
-                        <li><a href="./menu3_4.html">ㅣ 토르고주파</a></li>
-                        <li><a href="./menu3_5.html">ㅣ 오토힐링</a></li>
-                        <li><a href="./menu3_6.html">ㅣ 체외충격파</a></li>
+                        <li><a href="./menu3_1.php">ㅣ SPL</a></li>
+                        <li><a href="./menu3_2.php">ㅣ 지방분해주사</a></li>
+                        <li><a href="./menu3_3.php">ㅣ 트리플바디</a></li>
+                        <li><a href="./menu3_4.php">ㅣ 토르고주파</a></li>
+                        <li><a href="./menu3_5.php">ㅣ 오토힐링</a></li>
+                        <li><a href="./menu3_6.php">ㅣ 체외충격파</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./menu4_1.html" class="pink">피부미용 탈모</a>
+                    <a href="./menu4_1.php" class="pink">피부미용 탈모</a>
                     <ul class="pink">
-                        <li><a href="./menu4_1.html">ㅣ 보톡스</a></li>
-                        <li><a href="./menu4_2.html">ㅣ 필러</a></li>
-                        <li><a href="./menu4_3.html">ㅣ 스킨부스터/리쥬비네이션</a></li>
-                        <li><a href="./menu4_4.html">ㅣ 여드름/스킨케어</a></li>
-                        <li><a href="./menu4_5.html">ㅣ 모공/색소 프로그램</a></li>
-                        <li><a href="./menu4_6.html">ㅣ 레이저제모</a></li>
-                        <li><a href="./menu4_7.html">ㅣ 탈모치료</a></li>
+                        <li><a href="./menu4_1.php">ㅣ 보톡스</a></li>
+                        <li><a href="./menu4_2.php">ㅣ 필러</a></li>
+                        <li><a href="./menu4_3.php">ㅣ 스킨부스터/리쥬비네이션</a></li>
+                        <li><a href="./menu4_4.php">ㅣ 여드름/스킨케어</a></li>
+                        <li><a href="./menu4_5.php">ㅣ 모공/색소 프로그램</a></li>
+                        <li><a href="./menu4_6.php">ㅣ 레이저제모</a></li>
+                        <li><a href="./menu4_7.php">ㅣ 탈모치료</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./menu5_1.html" class="pink">프리미엄 리프팅</a>
+                    <a href="./menu5_1.php" class="pink">프리미엄 리프팅</a>
                     <ul class="pink">
-                        <li><a href="./menu5_1.html">ㅣ 프리미엄 리프팅</a></li>
+                        <li><a href="./menu5_1.php">ㅣ 프리미엄 리프팅</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./menu6.html"  class="gray">영양수액</a>
+                    <a href="./menu6.php"  class="gray">영양수액</a>
                     <ul class="gray">
-                        <li><a href="./menu6.html">ㅣ 1:1 맞춤 수액</a></li>
-                        <li><a href="./menu6.html#m6_1" class="scroll-link6">ㅣ 다이어트 수액</a></li>
-                        <li><a href="./menu6.html#m6_2" class="scroll-link6">ㅣ 통증/피로 수액</a></li>
-                        <li><a href="./menu6.html#m6_3" class="scroll-link6">ㅣ 감기몸살 수액</a></li>
-                        <li><a href="./menu6.html#m6_4" class="scroll-link6">ㅣ 장염 수액</a></li>
-                        <li><a href="./menu6.html#m6_5" class="scroll-link6">ㅣ 간기능 수액</a></li>
-                        <li><a href="./menu6.html#m6_6" class="scroll-link6">ㅣ 갱년기 수액</a></li>
-                        <li><a href="./menu6.html#m6_7" class="scroll-link6">ㅣ 어지럼증 수액</a></li>
-                        <li><a href="./menu6.html#m6_8" class="scroll-link6">ㅣ 두드러기/알레르기 수액</a></li>
-                        <li><a href="./menu6.html#m6_9" class="scroll-link6">ㅣ 건망증/총명 수액</a></li>
+                        <li><a href="./menu6.php">ㅣ 1:1 맞춤 수액</a></li>
+                        <li><a href="./menu6.php#m6_1" class="scroll-link6">ㅣ 다이어트 수액</a></li>
+                        <li><a href="./menu6.php#m6_2" class="scroll-link6">ㅣ 통증/피로 수액</a></li>
+                        <li><a href="./menu6.php#m6_3" class="scroll-link6">ㅣ 감기몸살 수액</a></li>
+                        <li><a href="./menu6.php#m6_4" class="scroll-link6">ㅣ 장염 수액</a></li>
+                        <li><a href="./menu6.php#m6_5" class="scroll-link6">ㅣ 간기능 수액</a></li>
+                        <li><a href="./menu6.php#m6_6" class="scroll-link6">ㅣ 갱년기 수액</a></li>
+                        <li><a href="./menu6.php#m6_7" class="scroll-link6">ㅣ 어지럼증 수액</a></li>
+                        <li><a href="./menu6.php#m6_8" class="scroll-link6">ㅣ 두드러기/알레르기 수액</a></li>
+                        <li><a href="./menu6.php#m6_9" class="scroll-link6">ㅣ 건망증/총명 수액</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./menu7.html" class="gray">기능 의학</a>
+                    <a href="./menu7.php" class="gray">기능 의학</a>
                     <ul class="gray">
-                        <li><a href="./menu7.html" class="scroll-link">ㅣ 항산화력 / 산화스트레스 검사</a></li>
-                        <li><a href="./menu7.html#m7_2" class="scroll-link">ㅣ NK세포 활성도 & 면역력 검사</a></li>
-                        <li><a href="./menu7.html#m7_3" class="scroll-link">ㅣ 장내 미생물 검사</a></li>
-                        <li><a href="./menu7.html#m7_4" class="scroll-link">ㅣ 호르몬 검사</a></li>
-                        <li><a href="./menu7.html#m7_5" class="scroll-link">ㅣ 소변 유기산 검사</a></li>
-                        <li><a href="./menu7.html#m7_6" class="scroll-link">ㅣ 음식 항원 알레르기 검사 (IgG)</a></li>
+                        <li><a href="./menu7.php" class="scroll-link">ㅣ 항산화력 / 산화스트레스 검사</a></li>
+                        <li><a href="./menu7.php#m7_2" class="scroll-link">ㅣ NK세포 활성도 & 면역력 검사</a></li>
+                        <li><a href="./menu7.php#m7_3" class="scroll-link">ㅣ 장내 미생물 검사</a></li>
+                        <li><a href="./menu7.php#m7_4" class="scroll-link">ㅣ 호르몬 검사</a></li>
+                        <li><a href="./menu7.php#m7_5" class="scroll-link">ㅣ 소변 유기산 검사</a></li>
+                        <li><a href="./menu7.php#m7_6" class="scroll-link">ㅣ 음식 항원 알레르기 검사 (IgG)</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./menu8_1.html" class="gray">건강주치의</a>
+                    <a href="./menu8_1.php" class="gray">건강주치의</a>
                     <ul class="gray">
-                        <li><a href="./menu8_1.html">ㅣ 질환 클리닉</a></li>
-                        <li><a href="./menu8_2.html">ㅣ 예방접종 클리닉</a></li>
+                        <li><a href="./menu8_1.php">ㅣ 질환 클리닉</a></li>
+                        <li><a href="./menu8_2.php">ㅣ 예방접종 클리닉</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./menu9_1.html">리셋과 함께한★</a>
+                    <a href="./menu9_1.php">리셋과 함께한★</a>
                     <ul class="">
-                        <li><a href="./menu9_1.html">ㅣ 수기 후기 스캔</a></li>
-                        <li><a href="./menu9_2.html">ㅣ 전/후사진</a></li>
+                        <li><a href="./menu9_1.php">ㅣ 수기 후기 스캔</a></li>
+                        <li><a href="./menu9_2.php">ㅣ 전/후사진</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./menu10_1.html">리셋 커뮤니티</a>
+                    <a href="./menu10_1.php">리셋 커뮤니티</a>
                     <ul class="">
-                        <li><a href="./menu10_1.html">ㅣ 공지사항</a></li>
-                        <li><a href="./menu10_2.html">ㅣ 이벤트</a></li>
-                        <li><a href="./menu10_3.html">ㅣ 미디어/보도자료</a></li>
-                        <li><a href="./menu10_4.html">ㅣ 시술 후 주의사항</a></li>
-                        <li><a href="./menu10_5.html">ㅣ 리셋 리얼 모델 모집</a></li>
+                        <li><a href="./menu10_1.php">ㅣ 공지사항</a></li>
+                        <li><a href="./menu10_2.php">ㅣ 이벤트</a></li>
+                        <li><a href="./menu10_3.php">ㅣ 미디어/보도자료</a></li>
+                        <li><a href="./menu10_4.php">ㅣ 시술 후 주의사항</a></li>
+                        <li><a href="./menu10_5.php">ㅣ 리셋 리얼 모델 모집</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="./menu11_1.html">상담 및 예약</a>
+                    <a href="./menu11_1.php">상담 및 예약</a>
                     <ul class="">
-                        <li><a href="./menu11_1.html">ㅣ 온라인 상담</a></li>    
-                        <li><a href="./menu11_2.html">ㅣ 온라인 예약</a></li>
+                        <li><a href="./menu11_1.php">ㅣ 온라인 상담</a></li>    
+                        <li><a href="./menu11_2.php">ㅣ 온라인 예약</a></li>
                         <li><a href="https://m.booking.naver.com/booking/6/bizes/255056?theme=place&entry=pll&area=pll">ㅣ 네이버 예약</a></li>
                         <li><a href="https://pf.kakao.com/_xbsWQj">ㅣ 카톡 상담</a></li>
                     </ul>
@@ -298,10 +298,10 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         </div>
         <ul class="header_right">
             <?php if ($is_member) {  ?>
-                <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">정보수정</a></li>
-                <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
+                <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">Modify</a></li>
+                <li><a href="<?php echo G5_BBS_URL ?>/logout.php">Logout</a></li>
                 <?php if ($is_admin) {  ?>
-                <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
+                <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">Admin</a></li>
                 <?php }  ?>
                 <?php } else {  ?>
                 <li><a href="<?php echo G5_BBS_URL ?>/register.php">Join</a></li>
@@ -310,6 +310,108 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         </ul>
     </div>
 </header>
+<div id="quick-placeholder">
+<aside class="quick">
+    <ul>
+        <li>
+            <a href="https://naver.me/xYQTkzJx" target="_blank">
+                <div class="img_wrap">
+                    <img src="./img/quick_way.png" alt="오시는 길">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="tel:031-709-6645">
+                <div class="img_wrap">
+                    <img src="./img/quick_call.png" alt="전화문의">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="https://pf.kakao.com/_xbsWQj">
+                <div class="img_wrap">
+                    <img src="./img/quick_kakao.png" alt="카카오톡문의하기">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/@resetclinic_bd" target="_blank">
+                <div class="img_wrap">
+                    <img src="./img/quick_youtube.png" alt="유튜브">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/resetclinic_bd" target="_blank">
+                <div class="img_wrap">
+                    <img src="./img/quick_insta.png" alt="인스타">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="top_btn">
+                <div class="img_wrap">
+                    <img src="./img/quick_top.png" alt="top">
+                </div>
+                TOP
+            </a>
+        </li>
+    </ul>
+</aside>
+<aside class="quick_m">
+    <ul>
+        <li>
+            <a href="tel:031-709-6645" target="_blank">
+                <div class="img_wrap">
+                    <img src="./img/mquick_call.png" alt="전화문의">
+                </div>
+                전화문의
+            </a>
+        </li>
+        <li>
+            <a href="https://naver.me/xYQTkzJx" target="_blank">
+                <div class="img_wrap">
+                    <img src="./img/mquick_way.png" alt="오시는 길">
+                </div>
+                오시는 길
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/resetclinic_bd" target="_blank">
+                <div class="img_wrap">
+                    <img src="./img/mquick_insta2.png" alt="인스타">
+                </div>
+                인스타
+            </a>
+        </li>
+        <li>
+            <a href="https://pf.kakao.com/_xbsWQj">
+                <div class="img_wrap">
+                    <img src="./img/mquick_kakao2.png" alt="카카오톡문의하기">
+                </div>
+                카톡문의
+            </a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/@resetclinic_bd" target="_blank">
+                <div class="img_wrap">
+                    <img src="./img/mquick_youtube2.png" alt="유튜브">
+                </div>
+                유튜브
+            </a>
+        </li>
+        <li class="top_li">
+            <a class="top_btn">
+                <div class="img_wrap">
+                    <img src="./img/mquick_top.png" alt="top">
+                </div>
+                TOP
+            </a>
+        </li>
+    </ul>
+</aside>
+</div>
+
     
 
 <?php
