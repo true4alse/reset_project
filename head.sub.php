@@ -77,20 +77,20 @@ if (defined('G5_IS_ADMIN')) {
 <meta name="og:site_name" content="리셋의원" />
 <meta property="og:image" content="./img/reset.png">
 <!--  -->
-<link rel="apple-touch-icon" sizes="57x57" href="./img/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="./img/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="./img/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="./img/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="./img/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="./img/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="./img/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="./img/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="./img/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="./img/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
-<meta name="msapplication-TileImage" content="./img/ms-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png">
 <meta name="msapplication-TileColor" content="#ffffff">
 <!-- <link href="도메인/img/head_icon.ico" rel="shortcut icon" type="image/x-icon"> -->
 <!-- <title>리셋의원</title> -->
@@ -101,24 +101,24 @@ if (defined('G5_IS_ADMIN')) {
 <!-- 프리텐다드 -->
 <link rel="stylesheet" as="style" crossorigin href="https://fastly.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
 <!-- css -->
-<link rel="stylesheet" href="./css/common.css">
-<link rel="stylesheet" href="./css/font.css">
-<link rel="stylesheet" href="./css/main.css">
-<link rel="stylesheet" href="./css/slider-custom.css?a">
-<link rel="stylesheet" href="./css/ani.css">
-<link rel="stylesheet" href="./css/idpw.css">
-<link rel="stylesheet" href="./css/join.css">
-<link rel="stylesheet" href="./css/login.css">
-<link rel="stylesheet" href="./css/mobile.css">
-<link rel="stylesheet" href="./css/model.css">
-<link rel="stylesheet" href="./css/online.css">
-<link rel="stylesheet" href="./css/sub.css">
-<link rel="stylesheet" href="./css/tab.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/font.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/slider-custom.css?a">
+<link rel="stylesheet" href="/css/ani.css">
+<link rel="stylesheet" href="/css/idpw.css">
+<link rel="stylesheet" href="/css/join.css">
+<link rel="stylesheet" href="/css/login.css">
+<link rel="stylesheet" href="/css/mobile.css">
+<link rel="stylesheet" href="/css/model.css">
+<link rel="stylesheet" href="/css/online.css">
+<link rel="stylesheet" href="/css/sub.css">
+<link rel="stylesheet" href="/css/tab.css">
 
 <!-- js -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="./js/header.js"></script>
-<script src="./js/swiper.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/swiper.js"></script>
 <!-- aos -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
