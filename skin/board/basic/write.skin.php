@@ -4,7 +4,34 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
-
+            <div class="sub_banner">
+                <div class="sub_bg"></div>
+                <div class="sub_banner_inner">
+                    <div class="sub_banner_name">
+                        <p class="" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                            RESET YOUR BODY
+                        </p>
+                        <h2 class="">RESET CLINIC</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_content page">
+                <ul class="sub_tab tab6 innertop innerbot">
+                    <li class="on"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">공지사항</a></li>
+                    <li><a href="menu10_2.php">이벤트</a></li>
+                    <li><a href="menu10_3.php">미디어 / 보도자료</a></li>
+                    <li><a href="menu10_4.php">시술 후 주의사항</a></li>
+                    <li><a href="menu10_5.php">리셋 리얼 모델 모집</a></li>
+                </ul>
+            </div>
+            <div class="content page">
+                <h3>
+                    <span>RESET CLINIC</span>
+                    <i>
+                        <em ><b>공지사항</b></em>
+                    </i>
+                </h3>
+            </div>
 <section id="bo_w">
     <h2 class="sound_only"><?php echo $g5['title'] ?></h2>
 
@@ -113,7 +140,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
     <div class="write_div">
         <label for="wr_content" class="sound_only">내용<strong>필수</strong></label>
-        <div class="wr_content <?php echo $is_dhtml_editor ? $config['cf_editor'] : ''; ?>">
+        <div class="textbox1 wr_content <?php echo $is_dhtml_editor ? $config['cf_editor'] : ''; ?>">
             <?php if($write_min || $write_max) { ?>
             <!-- 최소/최대 글자 수 사용 시 -->
             <p id="char_count_desc">이 게시판은 최소 <strong><?php echo $write_min; ?></strong>글자 이상, 최대 <strong><?php echo $write_max; ?></strong>글자 이하까지 글을 쓰실 수 있습니다.</p>
@@ -161,8 +188,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     <?php } ?>
 
     <div class="btn_confirm write_div">
-        <a href="<?php echo get_pretty_url($bo_table); ?>" class="btn_cancel btn">취소</a>
-        <button type="submit" id="btn_submit" accesskey="s" class="btn_submit btn">작성완료</button>
+        <a href="<?php echo get_pretty_url($bo_table); ?>" class="btn_cancel btn_s1">취소</a>
+        <button type="submit" id="btn_submit" accesskey="s" class="btn_submit btn_s1">작성완료</button>
     </div>
     </form>
 

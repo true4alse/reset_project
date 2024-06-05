@@ -12,8 +12,37 @@ if ($is_nogood) $colspan++;
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
 
+            <div class="sub_banner">
+                <div class="sub_bg"></div>
+                <div class="sub_banner_inner">
+                    <div class="sub_banner_name">
+                        <p class="" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                            RESET YOUR BODY
+                        </p>
+                        <h2 class="">RESET CLINIC</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_content page">
+                <ul class="sub_tab tab6 innertop innerbot">
+                    <li class="on"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">공지사항</a></li>
+                    <li><a href="menu10_2.php">이벤트</a></li>
+                    <li><a href="menu10_3.php">미디어 / 보도자료</a></li>
+                    <li><a href="menu10_4.php">시술 후 주의사항</a></li>
+                    <li><a href="menu10_5.php">리셋 리얼 모델 모집</a></li>
+                </ul>
+            </div>
+            <div class="content page">
+                <h3>
+                    <span>RESET CLINIC</span>
+                    <i>
+                        <em ><b>공지사항</b></em>
+                    </i>
+                </h3>
+            </div>
+
 <!-- 게시판 목록 시작 { -->
-<div id="bo_list" style="width:<?php echo $width; ?>">
+<div id="bo_list">
 
     <!-- 게시판 카테고리 시작 { -->
     <?php if ($is_category) { ?>
@@ -46,15 +75,15 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         </div>
 
         <ul class="btn_bo_user">
-        	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_admin btn" title="관리자"><i class="fa fa-cog fa-spin fa-fw"></i><span class="sound_only">관리자</span></a></li><?php } ?>
-            <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_b01 btn" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
+        	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_s1" title="관리자">Admin<span class="sound_only">admin</span></a></li><?php } ?>
+            <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_s1" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
             <li>
-            	<button type="button" class="btn_bo_sch btn_b01 btn" title="게시판 검색"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">게시판 검색</span></button>
+            	<button type="button" class="btn_s1" title="게시판 검색">search<span class="sound_only">게시판 검색</span></button>
             </li>
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
+            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_s1" title="글쓰기">write<span class="sound_only">글쓰기</span></a></li><?php } ?>
         	<?php if ($is_admin == 'super' || $is_auth) {  ?>
         	<li>
-        		<button type="button" class="btn_more_opt is_list_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
+        		<button type="button" class="btn_s1" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
         		<?php if ($is_checkbox) { ?>	
 		        <ul class="more_opt is_list_btn">  
 		            <li><button type="submit" name="btn_submit" value="선택삭제" onclick="document.pressed=this.value"><i class="fa fa-trash-o" aria-hidden="true"></i> 선택삭제</button></li>
@@ -82,13 +111,13 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 				</label>
             </th>
             <?php } ?>
-            <th scope="col">번호</th>
-            <th scope="col">제목</th>
-            <th scope="col">글쓴이</th>
-            <th scope="col"><?php echo subject_sort_link('wr_hit', $qstr2, 1) ?>조회 </a></th>
+            <th scope="col">index</th>
+            <th scope="col">title</th>
+            <th scope="col">author</th>
+            <th scope="col"><?php echo subject_sort_link('wr_hit', $qstr2, 1) ?>views </a></th>
             <?php if ($is_good) { ?><th scope="col"><?php echo subject_sort_link('wr_good', $qstr2, 1) ?>추천 </a></th><?php } ?>
             <?php if ($is_nogood) { ?><th scope="col"><?php echo subject_sort_link('wr_nogood', $qstr2, 1) ?>비추천 </a></th><?php } ?>
-            <th scope="col"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>날짜  </a></th>
+            <th scope="col"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>date  </a></th>
         </tr>
         </thead>
         <tbody>
@@ -158,17 +187,6 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 	<?php echo $write_pages; ?>
 	<!-- 페이지 -->
 	
-    <?php if ($list_href || $is_checkbox || $write_href) { ?>
-    <div class="bo_fx">
-        <?php if ($list_href || $write_href) { ?>
-        <ul class="btn_bo_user">
-        	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_admin btn" title="관리자"><i class="fa fa-cog fa-spin fa-fw"></i><span class="sound_only">관리자</span></a></li><?php } ?>
-            <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_b01 btn" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
-        </ul>	
-        <?php } ?>
-    </div>
-    <?php } ?>   
     </form>
 
     <!-- 게시판 검색 시작 { -->

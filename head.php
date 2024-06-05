@@ -30,10 +30,18 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <div class="hidden_menu">
         <div class="hidden_top"> 
             <div class="mtop">
-                <div class="login">
-                    <a href="/login.php">Login</a>
-                    <a href="/join.php">Join</a>
-                </div>
+                <ul class="login">
+                <?php if ($is_member) {  ?>
+                <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">Modify</a></li>
+                <li><a href="<?php echo G5_BBS_URL ?>/logout.php">Logout</a></li>
+                <?php if ($is_admin) {  ?>
+                <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">Admin</a></li>
+                <?php }  ?>
+                <?php } else {  ?>
+                <li><a href="<?php echo G5_BBS_URL ?>/register.php">Join</a></li>
+                <li><a href="<?php echo G5_BBS_URL ?>/login.php">Login</a></li>
+                <?php }  ?>
+                </ul>
                 <a class="close_menu">
                     <img src="/img/close_menu.png" alt="메뉴닫기">
                 </a>
@@ -132,7 +140,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 <li>
                     <a href="javascript:void(0)">리셋 커뮤니티</a>
                     <ul class="top_0">
-                        <li><a href="/menu10_1.php">ㅣ 공지사항</a></li>
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">ㅣ 공지사항</a></li>
                         <li><a href="/menu10_2.php">ㅣ 이벤트</a></li>
                         <li><a href="/menu10_3.php">ㅣ 미디어/보도자료</a></li>
                         <li><a href="/menu10_4.php">ㅣ 시술 후 주의사항</a></li>
@@ -255,7 +263,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 <li>
                     <a href="/menu10_1.php">리셋 커뮤니티</a>
                     <ul class="">
-                        <li><a href="/menu10_1.php">ㅣ 공지사항</a></li>
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">ㅣ 공지사항</a></li>
                         <li><a href="/menu10_2.php">ㅣ 이벤트</a></li>
                         <li><a href="/menu10_3.php">ㅣ 미디어/보도자료</a></li>
                         <li><a href="/menu10_4.php">ㅣ 시술 후 주의사항</a></li>

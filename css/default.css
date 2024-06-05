@@ -9,7 +9,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 ul, dl,dt,dd {margin:0;padding:0;list-style:none}
 legend {position:absolute;margin:0;padding:0;font-size:0;line-height:0;text-indent:-9999em;overflow:hidden}
-label, input, button, select, img {vertical-align:middle;font-size:1em}
+label, input, button, select, img {
+  vertical-align: middle;
+  font-size: 1.2em;
+}
 /* input, button {margin:0;padding:0;font-family:'Malgun Gothic', dotum, sans-serif;font-size:1em} */
 input[type="submit"] {cursor:pointer}
 button {cursor:pointer}
@@ -163,7 +166,9 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 #gnb_all_bg {display:none;background:rgba(0,0,0,0.1);width:100%;height:100%;position:fixed;left:0;top:0;z-index:999}
 
 /* 중간 레이아웃 */
-#wrapper {}
+#wrapper {
+  /* padding-top: 130px; */
+}
 #container_wr:after {display:block;visibility:hidden;clear:both;content:""}
 #container_wr {margin:0 auto;zoom:1}
 #aside {float:right;width:235px;padding:0;height:100%;margin:20px 0 20px 20px}
@@ -264,7 +269,14 @@ button.btn02 {display:inline-block;margin:0;padding:7px;border:1px solid #3b3c3f
 
 .btn_confirm {text-align:right} /* 서식단계 진행 */
 
-.btn_submit {border:0;background:#3a8afd;color:#fff;cursor:pointer;border-radius:3px}
+.btn_submit {
+  margin: 0;
+  border: 0;
+  background: #E17384;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+}
 .btn_submit:hover {background:#2375eb}
 .btn_close {border:1px solid #dcdcdc;cursor:pointer;border-radius:3px;background:#fff}
 a.btn_close {text-align:center;line-height:50px}
@@ -299,7 +311,9 @@ a.btn_admin,.btn_admin {display:inline-block;color:#d13f4a;text-decoration:none;
 .tbl_head01 tfoot th, .tbl_head01 tfoot td {padding:10px 0;border-top:1px solid #c1d1d5;border-bottom:1px solid #c1d1d5;background:#d7e0e2;text-align:center}
 .tbl_head01 tbody th {padding:8px 0;border-bottom:1px solid #e8e8e8}
 .tbl_head01 td {color:#666;padding:10px 5px;border-top:1px solid #ecf0f1;border-bottom:1px solid #ecf0f1;line-height:1.4em;height:60px;word-break:break-all}
-.tbl_head01 tbody tr:hover td {background:#fafafa}
+.tbl_head01 tbody tr:hover td {
+  background: #f2ebeb2e;
+}
 .tbl_head01 a:hover {text-decoration:underline}
 
 .tbl_head02 {margin:0 0 10px}

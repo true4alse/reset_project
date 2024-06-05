@@ -46,7 +46,7 @@ if (G5_IS_MOBILE) {
     <div class="counsel_inner">
         <form >
             <div class="txt_wrap">
-                <div class="counsel_tit"><img src="./img/logo_b.png" alt="">빠른상담</div>
+                <div class="counsel_tit"><img src="/img/logo_b.png" alt="">빠른상담</div>
                 <div class="b_privacy">
                     <label for="bchk">
                         <input type="checkbox" name="privacy" id="bchk"> 개인정보취급방침
@@ -88,7 +88,7 @@ if (G5_IS_MOBILE) {
     <div class="footer_bot">
         <div class="footer_inner bot">
             <div class="f_logo">
-                <img src="./img/logo_w.png" alt="리셋의원 로고">
+                <img src="/img/logo_w.png" alt="리셋의원 로고">
             </div>
             <ul class="f_bot">
                 <li><span>상호</span> 리셋의원</li>

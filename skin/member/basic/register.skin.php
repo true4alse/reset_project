@@ -32,21 +32,19 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
                 <caption>개인정보 수집 및 이용</caption>
                 <thead>
                 <tr>
-                    <th>목적</th>
-                    <th>항목</th>
+                    <th>수집목적</th>
+                    <th>수집항목</th>
                     <th>보유기간</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>이용자 식별 및 본인여부 확인</td>
-                    <td>아이디, 이름, 비밀번호<?php echo ($config['cf_cert_use'])? ", 생년월일, 휴대폰 번호(본인인증 할 때만, 아이핀 제외), 암호화된 개인식별부호(CI)" : ""; ?></td>
-                    <td>회원 탈퇴 시까지</td>
+                    <td>이용자 식별, 서비스 이행을 위한 연락</td>
+                    <td>아이디, 이름, 비밀번호, 휴대전화번호<?php echo ($config['cf_cert_use'])? ", 생년월일, 휴대폰 번호(본인인증 할 때만, 아이핀 제외), 암호화된 개인식별부호(CI)" : ""; ?></td>
+                    <td>회원 탈퇴, 제명시까지</td>
                 </tr>
                 <tr>
-                    <td>고객서비스 이용에 관한 통지,<br>CS대응을 위한 이용자 식별</td>
-                    <td>연락처 (이메일, 휴대전화번호)</td>
-                    <td>회원 탈퇴 시까지</td>
+                    <td colspan="3">동의를 거부할 수 있습니다. 동의 거부시에는 회원서비스 이용이 제한됩니다.</td>
                 </tr>
                 </tbody>
             </table>

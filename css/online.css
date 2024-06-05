@@ -40,9 +40,9 @@ select.online_box{padding: 1rem;margin: 0;}
     border: 0px;
     font-size: 1.7rem;
 }
-button{
+.application-form button{
     font-family: 'NanumSquareNeo',"Pretendard Variable", Pretendard;;
-    margin: 5rem auto 0;
+    /* margin: 5rem auto 0; */
     display: flex;justify-content: center;
     background-color: #E17384;
     border: 0;

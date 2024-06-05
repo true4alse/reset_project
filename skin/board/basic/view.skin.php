@@ -6,11 +6,40 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
 
+<div class="sub_banner">
+                <div class="sub_bg"></div>
+                <div class="sub_banner_inner">
+                    <div class="sub_banner_name">
+                        <p class="" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                            RESET YOUR BODY
+                        </p>
+                        <h2 class="">RESET CLINIC</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="tab_content page">
+                <ul class="sub_tab tab6 innertop innerbot">
+                    <li class="on"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">공지사항</a></li>
+                    <li><a href="menu10_2.php">이벤트</a></li>
+                    <li><a href="menu10_3.php">미디어 / 보도자료</a></li>
+                    <li><a href="menu10_4.php">시술 후 주의사항</a></li>
+                    <li><a href="menu10_5.php">리셋 리얼 모델 모집</a></li>
+                </ul>
+            </div>
+            <div class="content page">
+                <h3>
+                    <span>RESET CLINIC</span>
+                    <i>
+                        <em ><b>공지사항</b></em>
+                    </i>
+                </h3>
+            </div>
+
 <script src="<?php echo G5_JS_URL; ?>/viewimageresize.js"></script>
 
 <!-- 게시물 읽기 시작 { -->
 
-<article id="bo_v" style="width:<?php echo $width; ?>">
+<article id="bo_v">
     <header>
         <h2 id="bo_v_title">
             <?php if ($category_name) { ?>
@@ -40,9 +69,9 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 	        <?php ob_start(); ?>
 
 	        <ul class="btn_bo_user bo_v_com">
-				<li><a href="<?php echo $list_href ?>" class="btn_b01 btn" title="목록"><i class="fa fa-list" aria-hidden="true"></i><span class="sound_only">목록</span></a></li>
-	            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01 btn" title="답변"><i class="fa fa-reply" aria-hidden="true"></i><span class="sound_only">답변</span></a></li><?php } ?>
-	            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
+				<li><a href="<?php echo $list_href ?>" class="btn_b01" title="목록">List<span class="sound_only">목록</span></a></li>
+	            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01" title="답변">Reply<span class="sound_only">답변</span></a></li><?php } ?>
+	            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01" title="글쓰기">Write<span class="sound_only">글쓰기</span></a></li><?php } ?>
 	        	<?php if($update_href || $delete_href || $copy_href || $move_href || $search_href) { ?>
 	        	<li>
 	        		<button type="button" class="btn_more_opt is_view_btn btn_b01 btn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>

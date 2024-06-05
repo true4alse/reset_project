@@ -101,7 +101,26 @@ if (defined('G5_IS_ADMIN')) {
 <!-- 프리텐다드 -->
 <link rel="stylesheet" as="style" crossorigin href="https://fastly.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
 <!-- css -->
-<link rel="stylesheet" href="/css/common.css">
+
+<?php
+if (!defined('G5_IS_ADMIN')) {
+    echo '<link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/slider-custom.css?a">
+    <link rel="stylesheet" href="/css/ani.css">
+    <link rel="stylesheet" href="/css/idpw.css">
+    <link rel="stylesheet" href="/css/join.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+    <link rel="stylesheet" href="/css/model.css">
+    <link rel="stylesheet" href="/css/online.css">
+    <link rel="stylesheet" href="/css/sub.css">
+    <link rel="stylesheet" href="/css/tab.css">';
+}
+
+?>
+<!-- <link rel="stylesheet" href="/css/common.css">
 <link rel="stylesheet" href="/css/font.css">
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/slider-custom.css?a">
@@ -113,7 +132,7 @@ if (defined('G5_IS_ADMIN')) {
 <link rel="stylesheet" href="/css/model.css">
 <link rel="stylesheet" href="/css/online.css">
 <link rel="stylesheet" href="/css/sub.css">
-<link rel="stylesheet" href="/css/tab.css">
+<link rel="stylesheet" href="/css/tab.css"> -->
 
 <!-- js -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
