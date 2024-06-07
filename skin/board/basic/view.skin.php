@@ -17,20 +17,12 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                     </div>
                 </div>
             </div>
-            <div class="tab_content page">
-                <ul class="sub_tab tab6 innertop innerbot">
-                    <li class="on"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">공지사항</a></li>
-                    <li><a href="menu10_2.php">이벤트</a></li>
-                    <li><a href="menu10_3.php">미디어 / 보도자료</a></li>
-                    <li><a href="menu10_4.php">시술 후 주의사항</a></li>
-                    <li><a href="menu10_5.php">리셋 리얼 모델 모집</a></li>
-                </ul>
-            </div>
+            <?php include_once(G5_PATH.'/_bbs_list_component/bbs_ul_community.php'); ?>
             <div class="content page">
                 <h3>
                     <span>RESET CLINIC</span>
                     <i>
-                        <em ><b>공지사항</b></em>
+                        <em ><b><?php echo $board['bo_subject'] ?></b></em>
                     </i>
                 </h3>
             </div>
@@ -55,12 +47,12 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     <section id="bo_v_info">
         <h2>페이지 정보</h2>
         <div class="profile_info">
-        	<div class="pf_img"><?php echo get_member_profile_img($view['mb_id']) ?></div>
+        	<!-- <div class="pf_img"><?php echo get_member_profile_img($view['mb_id']) ?></div> -->
         	<div class="profile_info_ct">
         		<span class="sound_only">작성자</span> <strong><?php echo $view['name'] ?><?php if ($is_ip_view) { echo "&nbsp;($ip)"; } ?></strong><br>
-       		 	<span class="sound_only">댓글</span><strong><a href="#bo_vc"> <i class="fa fa-commenting-o" aria-hidden="true"></i> <?php echo number_format($view['wr_comment']) ?>건</a></strong>
-        		<span class="sound_only">조회</span><strong><i class="fa fa-eye" aria-hidden="true"></i> <?php echo number_format($view['wr_hit']) ?>회</strong>
-        		<strong class="if_date"><span class="sound_only">작성일</span><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></strong>
+       		 	<span class="sound_only">댓글</span><strong><a href="#bo_vc"> 댓글 <?php echo number_format($view['wr_comment']) ?>건</a></strong>
+        		<span class="sound_only">조회</span><strong>조회수 <?php echo number_format($view['wr_hit']) ?>회</strong>
+        		<strong class="if_date"><span class="sound_only">작성일</span>날짜 <?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></strong>
     		</div>
     	</div>
 
@@ -244,7 +236,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
     <?php
     // 코멘트 입출력
-    include_once(G5_BBS_PATH.'/view_comment.php');
+    // include_once(G5_BBS_PATH.'/view_comment.php');
 	?>
 </article>
 <!-- } 게시판 읽기 끝 -->

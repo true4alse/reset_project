@@ -5,6 +5,27 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
 
+            <div class="sub_banner">
+                <div class="sub_bg"></div>
+                <div class="sub_banner_inner">
+                    <div class="sub_banner_name">
+                        <p class="" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                            RESET YOUR BODY
+                        </p>
+                        <h2 class="">RESET CLINIC</h2>
+                    </div>
+                </div>
+            </div>
+            <?php include_once(G5_PATH.'/_bbs_list_component/bbs_ul_community.php'); ?>
+            <div class="content page">
+                <h3>
+                    <span>RESET CLINIC</span>
+                    <i>
+                        <em ><b><?php echo $board['bo_subject'] ?></b></em>
+                    </i>
+                </h3>
+            </div>
+
 <section id="bo_w">
     <h2 class="sound_only"><?php echo $g5['title'] ?></h2>
 

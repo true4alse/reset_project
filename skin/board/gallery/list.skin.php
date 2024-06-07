@@ -6,9 +6,31 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
 
+            <div class="sub_banner">
+                <div class="sub_bg"></div>
+                <div class="sub_banner_inner">
+                    <div class="sub_banner_name">
+                        <p class="" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                            RESET YOUR BODY
+                        </p>
+                        <h2 class="">RESET CLINIC</h2>
+                    </div>
+                </div>
+            </div>
+            <?php include_once(G5_PATH.'/_bbs_list_component/bbs_ul_community.php'); ?>
+            <div class="content page">
+                <h3>
+                    <span>RESET CLINIC</span>
+                    <i>
+                        <em ><b><?php echo $board['bo_subject'] ?></b></em>
+                    </i>
+                </h3>
+            </div>
+
+
 
 <!-- 게시판 목록 시작 { -->
-<div id="bo_gall" style="width:<?php echo $width; ?>">
+<div id="bo_gall">
 
     <?php if ($is_category) { ?>
     <nav id="bo_cate">
@@ -37,25 +59,27 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         </div>
 
         <ul class="btn_bo_user">
-            <?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_admin btn" title="관리자"><i class="fa fa-cog fa-spin fa-fw"></i><span class="sound_only">관리자</span></a></li><?php } ?>
-            <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_b01 btn" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
-            <li>
-                <button type="button" class="btn_bo_sch btn_b01 btn" title="게시판 검색"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">게시판 검색</span></button> 
-            </li>
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
-            <?php if ($is_admin == 'super' || $is_auth) {  ?>
-            <li>
-                <button type="button" class="btn_more_opt is_list_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
+        	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_s1" title="관리자">Admin<span class="sound_only">admin</span></a></li><?php } ?>
+            <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_s1" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
+            <!-- <li>
+            	<button type="button" class="btn_s1" title="게시판 검색">search<span class="sound_only">게시판 검색</span></button>
+            </li> -->
+            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_s1" title="글쓰기">write<span class="sound_only">글쓰기</span></a></li><?php } ?>
+        	<?php if ($is_admin == 'super' || $is_auth) {  ?>
+        	<li>
+            <button type="button" class="btn_more_opt is_list_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
                 <?php if ($is_checkbox) { ?>    
                 <ul class="more_opt is_list_btn">  
-                    <li><button type="submit" name="btn_submit" value="선택삭제" onclick="document.pressed=this.value"><i class="fa fa-trash-o" aria-hidden="true"></i> 선택삭제</button></li>
-                    <li><button type="submit" name="btn_submit" value="선택복사" onclick="document.pressed=this.value"><i class="fa fa-files-o" aria-hidden="true"></i> 선택복사</button></li>
-                    <li><button type="submit" name="btn_submit" value="선택이동" onclick="document.pressed=this.value"><i class="fa fa-arrows" aria-hidden="true"></i> 선택이동</button></li>
+                    <li><button type="submit" name="btn_submit" value="선택삭제" onclick="document.pressed=this.value">선택삭제</button></li>
+                    <li><button type="submit" name="btn_submit" value="선택복사" onclick="document.pressed=this.value">선택복사</button></li>
+                    <li><button type="submit" name="btn_submit" value="선택이동" onclick="document.pressed=this.value">선택이동</button></li>
                 </ul>
-                <?php } ?>
-            </li>
-            <?php }  ?>
+		        <?php } ?>
+        	</li>
+        	<?php }  ?>
         </ul>
+
+
     </div>
     <!-- } 게시판 페이지 정보 및 버튼 끝 -->
 
@@ -152,8 +176,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
                     <div class="gall_info">
                         <span class="sound_only">작성자 </span><?php echo $list[$i]['name'] ?>
-                        <span class="gall_date"><span class="sound_only">작성일 </span><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $list[$i]['datetime2'] ?></span>
-                        <span class="gall_view"><span class="sound_only">조회 </span><i class="fa fa-eye" aria-hidden="true"></i> <?php echo $list[$i]['wr_hit'] ?></span>
+                        <span class="gall_date"><span class="sound_only">작성일 </span>작성일 <?php echo $list[$i]['datetime2'] ?></span>
+                        <span class="gall_view"><span class="sound_only">조회 </span>조회 <?php echo $list[$i]['wr_hit'] ?></span>
                     </div>
                     <div class="gall_option">
                       <?php if ($is_good) { ?><span class="sound_only">추천</span><strong><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <?php echo $list[$i]['wr_good'] ?></strong><?php } ?>
@@ -170,17 +194,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     <?php echo $write_pages; ?>
     <!-- 페이지 -->
     
-    <?php if ($list_href || $is_checkbox || $write_href) { ?>
-    <div class="bo_fx">
-        <?php if ($list_href || $write_href) { ?>
-        <ul class="btn_bo_user">
-            <?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_admin btn" title="관리자"><i class="fa fa-cog fa-spin fa-fw"></i><span class="sound_only">관리자</span></a></li><?php } ?>
-            <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_b01 btn" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
-        </ul>   
-        <?php } ?>
-    </div>
-    <?php } ?> 
+   
     </form>
 
     <!-- 게시판 검색 시작 { -->

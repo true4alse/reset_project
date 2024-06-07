@@ -23,20 +23,12 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                     </div>
                 </div>
             </div>
-            <div class="tab_content page">
-                <ul class="sub_tab tab6 innertop innerbot">
-                    <li class="on"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">공지사항</a></li>
-                    <li><a href="menu10_2.php">이벤트</a></li>
-                    <li><a href="menu10_3.php">미디어 / 보도자료</a></li>
-                    <li><a href="menu10_4.php">시술 후 주의사항</a></li>
-                    <li><a href="menu10_5.php">리셋 리얼 모델 모집</a></li>
-                </ul>
-            </div>
+            <?php include_once(G5_PATH.'/_bbs_list_component/bbs_ul_community.php'); ?>
             <div class="content page">
                 <h3>
                     <span>RESET CLINIC</span>
                     <i>
-                        <em ><b>공지사항</b></em>
+                        <em ><b><?php echo $board['bo_subject'] ?></b></em>
                     </i>
                 </h3>
             </div>
@@ -77,19 +69,19 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         <ul class="btn_bo_user">
         	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_s1" title="관리자">Admin<span class="sound_only">admin</span></a></li><?php } ?>
             <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_s1" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
-            <li>
+            <!-- <li>
             	<button type="button" class="btn_s1" title="게시판 검색">search<span class="sound_only">게시판 검색</span></button>
-            </li>
+            </li> -->
             <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_s1" title="글쓰기">write<span class="sound_only">글쓰기</span></a></li><?php } ?>
         	<?php if ($is_admin == 'super' || $is_auth) {  ?>
         	<li>
-        		<button type="button" class="btn_s1" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
-        		<?php if ($is_checkbox) { ?>	
-		        <ul class="more_opt is_list_btn">  
-		            <li><button type="submit" name="btn_submit" value="선택삭제" onclick="document.pressed=this.value"><i class="fa fa-trash-o" aria-hidden="true"></i> 선택삭제</button></li>
-		            <li><button type="submit" name="btn_submit" value="선택복사" onclick="document.pressed=this.value"><i class="fa fa-files-o" aria-hidden="true"></i> 선택복사</button></li>
-		            <li><button type="submit" name="btn_submit" value="선택이동" onclick="document.pressed=this.value"><i class="fa fa-arrows" aria-hidden="true"></i> 선택이동</button></li>
-		        </ul>
+            <button type="button" class="btn_more_opt is_list_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
+                <?php if ($is_checkbox) { ?>    
+                <ul class="more_opt is_list_btn">  
+                    <li><button type="submit" name="btn_submit" value="선택삭제" onclick="document.pressed=this.value">선택삭제</button></li>
+                    <li><button type="submit" name="btn_submit" value="선택복사" onclick="document.pressed=this.value">선택복사</button></li>
+                    <li><button type="submit" name="btn_submit" value="선택이동" onclick="document.pressed=this.value">선택이동</button></li>
+                </ul>
 		        <?php } ?>
         	</li>
         	<?php }  ?>

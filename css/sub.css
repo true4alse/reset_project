@@ -91,7 +91,10 @@ br.mo{display: none;}
 .m1_1 .txt_wrap i{color: #e17384;font-weight: 800;}
 .m1_1 .txt_wrap p em{color: #212121;font-weight: 400;}
 
-.s5_ul a{position: relative;}
+.s5_ul a {
+    position: relative;
+    display: block;
+}
 .s5_ul p{
     position: absolute;left: 0;bottom: 0;
     background: #e17384;color: #fff;

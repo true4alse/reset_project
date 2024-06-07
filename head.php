@@ -133,15 +133,15 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 <li>
                     <a href="javascript:void(0)">리셋과 함께한★</a>
                     <ul class="top_0">
-                        <li><a href="/menu9_1.php">ㅣ 수기 후기 스캔</a></li>
-                        <li><a href="/menu9_2.php">ㅣ 전/후사진</a></li>
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=review">ㅣ 수기 후기 스캔</a></li>
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=before_after">ㅣ 전/후사진</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0)">리셋 커뮤니티</a>
                     <ul class="top_0">
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">ㅣ 공지사항</a></li>
-                        <li><a href="/menu10_2.php">ㅣ 이벤트</a></li>
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=event">ㅣ 이벤트</a></li>
                         <li><a href="/menu10_3.php">ㅣ 미디어/보도자료</a></li>
                         <li><a href="/menu10_4.php">ㅣ 시술 후 주의사항</a></li>
                         <li><a href="/menu10_5.php">ㅣ 리셋 리얼 모델 모집</a></li>
@@ -256,15 +256,15 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 <li>
                     <a href="/menu9_1.php">리셋과 함께한★</a>
                     <ul class="">
-                        <li><a href="/menu9_1.php">ㅣ 수기 후기 스캔</a></li>
-                        <li><a href="/menu9_2.php">ㅣ 전/후사진</a></li>
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=review">ㅣ 수기 후기 스캔</a></li>
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=before_after">ㅣ 전/후사진</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="/menu10_1.php">리셋 커뮤니티</a>
                     <ul class="">
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">ㅣ 공지사항</a></li>
-                        <li><a href="/menu10_2.php">ㅣ 이벤트</a></li>
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=event">ㅣ 이벤트</a></li>
                         <li><a href="/menu10_3.php">ㅣ 미디어/보도자료</a></li>
                         <li><a href="/menu10_4.php">ㅣ 시술 후 주의사항</a></li>
                         <li><a href="/menu10_5.php">ㅣ 리셋 리얼 모델 모집</a></li>
