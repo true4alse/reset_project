@@ -142,8 +142,8 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     <ul class="top_0">
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">ㅣ 공지사항</a></li>
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=event">ㅣ 이벤트</a></li>
-                        <li><a href="/menu10_3.php">ㅣ 미디어/보도자료</a></li>
-                        <li><a href="/menu10_4.php">ㅣ 시술 후 주의사항</a></li>
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=gallery">ㅣ 미디어/보도자료</a></li>
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=qa">ㅣ 시술 후 주의사항</a></li>
                         <li><a href="/menu10_5.php">ㅣ 리셋 리얼 모델 모집</a></li>
                     </ul>
                 </li>
@@ -265,8 +265,8 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     <ul class="">
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">ㅣ 공지사항</a></li>
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=event">ㅣ 이벤트</a></li>
-                        <li><a href="/menu10_3.php">ㅣ 미디어/보도자료</a></li>
-                        <li><a href="/menu10_4.php">ㅣ 시술 후 주의사항</a></li>
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=gallery">ㅣ 미디어/보도자료</a></li>
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=qa">ㅣ 시술 후 주의사항</a></li>
                         <li><a href="/menu10_5.php">ㅣ 리셋 리얼 모델 모집</a></li>
                     </ul>
                 </li>
