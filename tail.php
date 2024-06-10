@@ -44,20 +44,30 @@ if (G5_IS_MOBILE) {
 </div>
 <div class="f_counsel_wrap page">
     <div class="counsel_inner">
-        <form >
+        <form name="fwrite" id="fwrite" action="<?php echo G5_URL ?>/bbs/write_update.php?bo_table=fast_consulting" onsubmit="return check_hj();" method="post" enctype="multipart/form-data" autocomplete="off">
             <div class="txt_wrap">
                 <div class="counsel_tit"><img src="/img/logo_b.png" alt="">빠른상담</div>
                 <div class="b_privacy">
-                    <label for="bchk">
-                        <input type="checkbox" name="privacy" id="bchk"> 개인정보취급방침
-                    </label>
+                <input type="checkbox" id="c1" class="agreeChk labelchk" required><label for="c1" class="infoAgree">개인정보취급방침</label>
                     <a href="site1.php" target="_blank">자세히보기</a>
                 </div>
             </div>
             <div class="form_wrap">
+                <input type="hidden" name="uid" value="<?php echo get_uniqid(); ?>">
+                <input type="hidden" name="w" value="<?php echo $w ?>">
+                <input type="hidden" name="bo_table" value="fast_consulting">
+                <input type="hidden" name="wr_id" value="<?php echo $wr_id ?>">
+                <input type="hidden" name="sca" value="<?php echo $sca ?>">
+                <input type="hidden" name="sfl" value="<?php echo $sfl ?>">
+                <input type="hidden" name="stx" value="<?php echo $stx ?>">
+                <input type="hidden" name="spt" value="<?php echo $spt ?>">
+                <input type="hidden" name="sst" value="<?php echo $sst ?>">
+                <input type="hidden" name="sod" value="<?php echo $sod ?>">
+                <input type="hidden" name="page" value="<?php echo $page ?>">
+
                 <label for="cate1" class="hide_label">상담받을 과목 선택</label>
-                <select name="cate1" id="cate1" class="f_cate">
-                    <option value="" hidden="">상담받을 과목 선택</option>
+                <select  name="wr_content" id="reser_contents"  class="f_cate">
+                    <option value="내용입력안함" hidden="">상담받을 과목 선택</option>
                     <option value="패키지프로그램">패키지프로그램</option>
                     <option value="다이어트">다이어트</option>
                     <option value="토탈피로통증">토탈피로통증</option>
@@ -66,12 +76,40 @@ if (G5_IS_MOBILE) {
                     <option value="제모">제모</option>
                 </select>
                 <label for="name" class="hide_label">이름</label>
-                <input type="text" id="name" name="name" placeholder="이름" class="f_name" maxlength="10">
+                <input type="text" id="user_named" name="wr_name" value="<?php echo $is_member ? $member['mb_name'] : ''; ?>" placeholder="이름" class="f_name" maxlength="10">
+
                 <label for="hphoneall" class="hide_label">연락처</label>
-                <input type="text" id="hphoneall" name="hphoneall" placeholder="연락처 (- 없이 입력)" class="f_tel" maxlength="11">
-                <input type="submit" value="상담 신청" class="f_submit" >
+                <input type="text" id="user_hp" name="wr_subject" placeholder="연락처 (- 없이 입력)" class="f_tel" maxlength="11">
+
+                <input type="submit" value="상담 신청" class="f_submit apply subHead" accesskey="s">
             </div>
         </form>
+
+
+        
+       
+        <script>
+          function check_hj(){
+            var chbox1 = document.getElementById("c1");
+            var chbox2 = document.getElementById("user_named");
+            var chbox3 = document.getElementById("user_hp");
+            if($(chbox1).val() ==""){
+              alert("개인정보수집에 동의해주세요.");
+              return false;
+            }else if($(chbox2).val() ==""){
+              alert("이름을 남겨주세요.")
+              return false;
+            }else if($(chbox3).val() ==""){
+              alert("연락처를 남겨주세요.");
+              return false;
+            }else{
+              alert("빠른상담이 접수되었습니다.");
+              return true;
+              window.location.href="/"
+            }
+          }
+        </script>
+     
     </div>
 </div>
 <footer>

@@ -150,8 +150,11 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 <li>
                     <a href="javascript:void(0)">상담 및 예약</a>
                     <ul class="top_0">
-                        <li><a href="/menu11_1.php">ㅣ 온라인 상담</a></li>    
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=online_consulting">ㅣ 온라인 상담</a></li>    
                         <li><a href="/menu11_2.php">ㅣ 온라인 예약</a></li>
+                        <?php if ($is_admin) {  ?>
+                            <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=fast_consulting">ㅣ 빠른상담</a></li>
+                        <?php } ?>    
                         <li><a href="https://m.booking.naver.com/booking/6/bizes/255056?theme=place&entry=pll&area=pll">ㅣ 네이버 예약</a></li>
                         <li><a href="https://pf.kakao.com/_xbsWQj">ㅣ 카톡 상담</a></li>
                     </ul>
@@ -273,8 +276,11 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 <li>
                     <a href="/menu11_1.php">상담 및 예약</a>
                     <ul class="">
-                        <li><a href="/menu11_1.php">ㅣ 온라인 상담</a></li>    
+                        <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=online_consulting">ㅣ 온라인 상담</a></li>    
                         <li><a href="/menu11_2.php">ㅣ 온라인 예약</a></li>
+                        <?php if ($is_admin) {  ?>
+                            <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=fast_consulting">ㅣ 빠른상담</a></li>
+                        <?php } ?>    
                         <li><a href="https://m.booking.naver.com/booking/6/bizes/255056?theme=place&entry=pll&area=pll">ㅣ 네이버 예약</a></li>
                         <li><a href="https://pf.kakao.com/_xbsWQj">ㅣ 카톡 상담</a></li>
                     </ul>

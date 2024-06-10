@@ -202,6 +202,10 @@ if ($w == '' || $w == 'u') {
 }
 
 $is_use_captcha = ((($board['bo_use_captcha'] && $w !== 'u') || $is_guest) && !$is_admin) ? 1 : 0;
+if($board['bo_table']=='fast_consulting'){
+    $is_use_captcha = 0;
+}
+
 
 if ($is_use_captcha && !chk_captcha()) {
     alert('자동등록방지 숫자가 틀렸습니다.');
@@ -755,6 +759,10 @@ if (!($w == 'u' || $w == 'cu') && $config['cf_email_use'] && $board['bo_use_emai
 @include_once($board_skin_path.'/write_update.tail.skin.php');
 
 delete_cache_latest($bo_table);
+
+if($bo_table == 'fast_consulting'){
+    goto_url("/");
+}
 
 $redirect_url = run_replace('write_update_move_url', short_url_clean(G5_HTTP_BBS_URL.'/board.php?bo_table='.$bo_table.'&amp;wr_id='.$wr_id.$qstr), $board, $wr_id, $w, $qstr, $file_upload_msg);
 
