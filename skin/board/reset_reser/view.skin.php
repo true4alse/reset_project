@@ -6,7 +6,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
 
-            <div class="sub_banner">
+<div class="sub_banner">
                 <div class="sub_bg"></div>
                 <div class="sub_banner_inner">
                     <div class="sub_banner_name">
@@ -17,7 +17,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                     </div>
                 </div>
             </div>
-            <?php include_once(G5_PATH.'/_bbs_list_component/bbs_ul_community.php'); ?>
+            <?php include_once(G5_PATH.'/_bbs_list_component/bbs_ul_reset_reser.php'); ?>
             <div class="content page">
                 <h3>
                     <span>RESET CLINIC</span>
@@ -47,9 +47,10 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     <section id="bo_v_info">
         <h2>페이지 정보</h2>
         <div class="profile_info">
+        	<!-- <div class="pf_img"><?php echo get_member_profile_img($view['mb_id']) ?></div> -->
         	<div class="profile_info_ct">
         		<span class="sound_only">작성자</span> <strong><?php echo $view['name'] ?><?php if ($is_ip_view) { echo "&nbsp;($ip)"; } ?></strong><br>
-       		 	<span class="sound_only">댓글</span><strong><a href="#bo_vc">댓글 <?php echo number_format($view['wr_comment']) ?>건</a></strong>
+       		 	<span class="sound_only">댓글</span><strong><a href="#bo_vc"> 댓글 <?php echo number_format($view['wr_comment']) ?>건</a></strong>
         		<span class="sound_only">조회</span><strong>조회수 <?php echo number_format($view['wr_hit']) ?>회</strong>
         		<strong class="if_date"><span class="sound_only">작성일</span>날짜 <?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></strong>
     		</div>
@@ -60,17 +61,17 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 	        <?php ob_start(); ?>
 
 	        <ul class="btn_bo_user bo_v_com">
-				<li><a href="<?php echo $list_href ?>" class="btn_b01 btn btn_s1" title="목록">list<span class="sound_only">목록</span></a></li>
-	            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01 btn btn_s1" title="답변">Reply</i><span class="sound_only">답변</span></a></li><?php } ?>
-	            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn btn_s1" title="글쓰기">Write<span class="sound_only">글쓰기</span></a></li><?php } ?>
+				<li><a href="<?php echo $list_href ?>" class="btn_b01" title="목록">List<span class="sound_only">목록</span></a></li>
+	            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01" title="답변">Reply<span class="sound_only">답변</span></a></li><?php } ?>
+	            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01" title="글쓰기">Write<span class="sound_only">글쓰기</span></a></li><?php } ?>
 	        	<?php if($update_href || $delete_href || $copy_href || $move_href || $search_href) { ?>
 	        	<li>
-	        		<button type="button" class="btn_more_opt is_view_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
+	        		<button type="button" class="btn_more_opt is_view_btn btn_b01 btn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
 		        	<ul class="more_opt is_view_btn"> 
-			            <?php if ($update_href) { ?><li><a href="<?php echo $update_href ?>">수정</a></li><?php } ?>
-			            <?php if ($delete_href) { ?><li><a href="<?php echo $delete_href ?>" onclick="del(this.href); return false;">삭제</a></li><?php } ?>
-			            <?php if ($copy_href) { ?><li><a href="<?php echo $copy_href ?>" onclick="board_move(this.href); return false;">복사</a></li><?php } ?>
-			            <?php if ($move_href) { ?><li><a href="<?php echo $move_href ?>" onclick="board_move(this.href); return false;">이동</a></li><?php } ?>
+			            <?php if ($update_href) { ?><li><a href="<?php echo $update_href ?>">수정<i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></li><?php } ?>
+			            <?php if ($delete_href) { ?><li><a href="<?php echo $delete_href ?>" onclick="del(this.href); return false;">삭제<i class="fa fa-trash-o" aria-hidden="true"></i></a></li><?php } ?>
+			            <?php if ($copy_href) { ?><li><a href="<?php echo $copy_href ?>" onclick="board_move(this.href); return false;">복사<i class="fa fa-files-o" aria-hidden="true"></i></a></li><?php } ?>
+			            <?php if ($move_href) { ?><li><a href="<?php echo $move_href ?>" onclick="board_move(this.href); return false;">이동<i class="fa fa-arrows" aria-hidden="true"></i></a></li><?php } ?>
 			            <?php if ($search_href) { ?><li><a href="<?php echo $search_href ?>">검색<i class="fa fa-search" aria-hidden="true"></i></a></li><?php } ?>
 			        </ul> 
 	        	</li>
@@ -95,7 +96,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 	        <?php
 	        $link_buttons = ob_get_contents();
 	        ob_end_flush();
-	         ?>
+			?>
 	    </div>
 	    <!-- } 게시물 상단 버튼 끝 -->
     </section>

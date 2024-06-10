@@ -154,6 +154,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                         <li><a href="/menu11_2.php">ㅣ 온라인 예약</a></li>
                         <?php if ($is_admin) {  ?>
                             <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=fast_consulting">ㅣ 빠른상담</a></li>
+                            <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=reservation">ㅣ 온라인예약확인</a></li>
                         <?php } ?>    
                         <li><a href="https://m.booking.naver.com/booking/6/bizes/255056?theme=place&entry=pll&area=pll">ㅣ 네이버 예약</a></li>
                         <li><a href="https://pf.kakao.com/_xbsWQj">ㅣ 카톡 상담</a></li>
@@ -257,14 +258,14 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     </ul>
                 </li>
                 <li>
-                    <a href="/menu9_1.php">리셋과 함께한★</a>
+                    <a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=review">리셋과 함께한★</a>
                     <ul class="">
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=review">ㅣ 수기 후기 스캔</a></li>
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=before_after">ㅣ 전/후사진</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="/menu10_1.php">리셋 커뮤니티</a>
+                    <a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">리셋 커뮤니티</a>
                     <ul class="">
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">ㅣ 공지사항</a></li>
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=event">ㅣ 이벤트</a></li>
@@ -274,12 +275,13 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     </ul>
                 </li>
                 <li>
-                    <a href="/menu11_1.php">상담 및 예약</a>
+                    <a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=online_consulting">상담 및 예약</a>
                     <ul class="">
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=online_consulting">ㅣ 온라인 상담</a></li>    
                         <li><a href="/menu11_2.php">ㅣ 온라인 예약</a></li>
                         <?php if ($is_admin) {  ?>
                             <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=fast_consulting">ㅣ 빠른상담</a></li>
+                            <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=reservation">ㅣ 온라인예약확인</a></li>
                         <?php } ?>    
                         <li><a href="https://m.booking.naver.com/booking/6/bizes/255056?theme=place&entry=pll&area=pll">ㅣ 네이버 예약</a></li>
                         <li><a href="https://pf.kakao.com/_xbsWQj">ㅣ 카톡 상담</a></li>

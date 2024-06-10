@@ -202,7 +202,7 @@ if ($w == '' || $w == 'u') {
 }
 
 $is_use_captcha = ((($board['bo_use_captcha'] && $w !== 'u') || $is_guest) && !$is_admin) ? 1 : 0;
-if($board['bo_table']=='fast_consulting'){
+if($board['bo_table']=='fast_consulting' || $board['bo_table']=='reservation'){
     $is_use_captcha = 0;
 }
 
@@ -760,7 +760,7 @@ if (!($w == 'u' || $w == 'cu') && $config['cf_email_use'] && $board['bo_use_emai
 
 delete_cache_latest($bo_table);
 
-if($bo_table == 'fast_consulting'){
+if($bo_table == 'fast_consulting' || $bo_table == 'reservation'){
     goto_url("/");
 }
 
