@@ -1,6 +1,7 @@
 <?php
 include_once('./_common.php');
 
+
 define('_INDEX_', true);
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
@@ -73,10 +74,10 @@ include_once(G5_PATH.'/head.php');
                     </ul>
                     
 
-                    <form class="reser_form" action="<?php echo G5_URL?>/bbs/write_update.php?bo_table=model" method="post" enctype="multipart/form-data" name="fwrite" id="fwrite2">
+                    <form class="reser_form" action="<?php echo G5_URL?>/bbs/write_update.php?bo_table=model" method="post" enctype="multipart/form-data" name="fwrite" id="fwrite2" onsubmit="return checking_form();">
                         <input type="hidden" name="uid" value="<?php echo get_uniqid(); ?>">
                         <input type="hidden" name="w" value="<?php echo $w ?>">
-                        <input type="hidden" name="bo_table" value="reservation">
+                        <input type="hidden" name="bo_table" value="model">
                         <input type="hidden" name="wr_id" value="<?php echo $wr_id ?>">
                         <input type="hidden" name="sca" value="<?php echo $sca ?>">
                         <input type="hidden" name="sfl" value="<?php echo $sfl ?>">
@@ -89,25 +90,25 @@ include_once(G5_PATH.'/head.php');
                         <div class="model_wrap">
                             <p class="online_tit">1. 인적 사항</p>
                             <div class="model1">
-                                <label for="name">이름</label>
-                                <input class="online_box" type="text" id="name" placeholder="이름을 입력해주세요." name="wr_name">
+                                <label for="chk_name">이름</label>
+                                <input class="online_box" type="text" id="chk_name" placeholder="이름을 입력해주세요." name="wr_name">
                     
-                                <label for="dob">생년월일</label>
-                                <input class="online_box" type="date" id="dob" name="wr_1">
+                                <label for="chk_birth">생년월일</label>
+                                <input class="online_box" type="date" id="chk_birth" name="wr_1">
                     
-                                <label for="height">키</label>
-                                <input class="online_box"  type="number" id="height" name="wr_2" placeholder="cm">
+                                <label for="chk_height">키</label>
+                                <input class="online_box"  type="number" id="chk_height" name="wr_2" placeholder="cm">
                     
-                                <label for="weight">몸무게</label>
-                                <input class="online_box"  type="number" id="weight" placeholder="kg" name="wr_3">
+                                <label for="chk_weight">몸무게</label>
+                                <input class="online_box"  type="number" id="chk_weight" placeholder="kg" name="wr_3">
                     
-                                <label for="phone">휴대폰번호</label>
+                                <label for="chk_number">휴대폰번호</label>
                                 <div class="tel">
-                                    <input class="online_box" type="text" id="phone-part2" name="wr_subject">
+                                    <input class="online_box" type="text" id="chk_number" name="wr_subject">
                                 </div>
 
-                                <label for="address">거주지</label>
-                                <input  class="online_box" type="text" id="address" name="wr_4">
+                                <label for="chk_resi">거주지</label>
+                                <input  class="online_box" type="text" id="chk_resi" name="wr_4">
                     
                                 <label>결혼여부</label>
                                 <div class="marry_wrap">
@@ -123,42 +124,43 @@ include_once(G5_PATH.'/head.php');
                 
                         <div class="model_wrap">
                             <p class="online_tit">2. 지원 동기</p>
-                            <textarea  class="online_box" id="motivation" rows="5" name="wr_content"></textarea>
+                            <textarea  class="online_box" id="chk_contents" rows="5" name="wr_content"></textarea>
                         </div>
                 
                         <div class="model_wrap">
                             <p class="online_tit">3. 파일 첨부</p>
                             <div class="file_add">
-                                <!-- <div id="display_file1" >
+                                <div id="display_file1" >
                                     <label id="file1" for="file1">파일 1</label>
-                                    <input type="text" class="s_text" id="file_check1" disabled=""><div class="btn_type2"><div class="btn_inner"><span>업로드</span><input type="file" name="file1" cname="file_check1" class="s_upload"></div></div>
+                                    <input type="text" class="s_text" id="file_check1" disabled=""><div class="btn_type2"><div class="btn_inner"><span>업로드</span><input type="file" onchange="return infofile(1)"  name="bf_file[]" id="bf_file_1" cname="file_check1" class="s_upload"></div></div>
                                 </div>
                                 <div id="display_file2" >
                                     <label id="file2" for="file2">파일 2</label>
-                                    <input type="text" class="s_text" id="file_check2" disabled=""><div class="btn_type2"><div class="btn_inner"><span>업로드</span><input type="file" name="file2" cname="file_check2" class="s_upload"></div></div>
+                                    <input type="text" class="s_text" id="file_check2" disabled=""><div class="btn_type2"><div class="btn_inner"><span>업로드</span><input type="file" onchange="return infofile(2)" name="bf_file[]" id="bf_file_2" cname="file_check2" class="s_upload"></div></div>
                                 </div>
                                 <div id="display_file3" >
                                     <label id="file3" for="file3">파일 3</label>
-                                    <input type="text" class="s_text" id="file_check3" disabled=""><div class="btn_type2"><div class="btn_inner"><span>업로드</span><input type="file" name="file3" cname="file_check3" class="s_upload"></div></div>
+                                    <input type="text" class="s_text" id="file_check3" disabled=""><div class="btn_type2"><div class="btn_inner"><span>업로드</span><input type="file" onchange="return infofile(3)" name="bf_file[]" id="bf_file_3" cname="file_check3" class="s_upload"></div></div>
                                 </div>
                                 <div id="display_file4" >
                                     <label id="file4" for="file4">파일 4</label>
-                                    <input type="text" class="s_text" id="file_check4" disabled=""><div class="btn_type2"><div class="btn_inner"><span>업로드</span><input type="file" name="file4" cname="file_check4" class="s_upload"></div></div>
+                                    <input type="text" class="s_text" id="file_check4" disabled=""><div class="btn_type2"><div class="btn_inner"><span>업로드</span><input type="file" onchange="return infofile(4)" name="bf_file[]" id="bf_file_4" cname="file_check4" class="s_upload"></div></div>
                                 </div>
                                 <div id="display_file5" >
                                     <label id="file5" for="file5">파일 5</label>
-                                    <input type="text" class="s_text" id="file_check5" disabled=""><div class="btn_type2"><div class="btn_inner"><span>업로드</span><input type="file" name="file5" cname="file_check5" class="s_upload"></div></div>
+                                    <input type="text" class="s_text" id="file_check5" disabled=""><div class="btn_type2"><div class="btn_inner"><span>업로드</span><input type="file" onchange="return infofile(5)" name="bf_file[]" id="bf_file_5" cname="file_check5" class="s_upload"></div></div>
                                 </div>
                                 <div id="display_file6" >
                                     <label id="file6" for="file6">파일 6</label>
-                                    <input type="text" class="s_text" id="file_check6" disabled=""><div class="btn_type2"><div class="btn_inner"><span>업로드</span><input type="file" name="file6" cname="file_check6" class="s_upload"></div></div>
-                                </div> -->
-
-                                <div class="file_wr write_div">
-                                    <label for="bf_file_1" class="lb_icon">파일 #1</span></label>
-                                    <input type="file" name="bf_file" id="bf_file_1 ?>" class="frm_file">
+                                    <input type="text" class="s_text" id="file_check6" disabled=""><div class="btn_type2"><div class="btn_inner"><span>업로드</span><input type="file" onchange="return infofile(6)" name="bf_file[]" id="bf_file_6" cname="file_check6" class="s_upload"></div></div>
                                 </div>
-
+                            <script>
+                                function infofile(n){
+                                    let fileinfo = document.querySelector("#bf_file_"+n).files
+                                    console.log(fileinfo)
+                                    document.querySelector("#file_check"+n).value = fileinfo[0].name
+                                }
+                            </script>
 
                             </div>
                         </div>
@@ -174,8 +176,8 @@ include_once(G5_PATH.'/head.php');
                                     ※ 보유 기간 : 1년(상담 목적 달성 확인시)
                                 </p>
                             </div>
-                            <label for="post_agree" class="post_agree_txt">
-                                <input type="checkbox" id="post_agree" name="agreecheck">
+                            <label for="chk_agree" class="post_agree_txt">
+                                <input type="checkbox" id="chk_agree" name="agreecheck">
                                 <p>위 개인정보 보호정책에 동의합니다. <br>(동의를 하셔야 모델지원이 가능합니다.)</p>
                             </label>
                         </div>
@@ -185,46 +187,47 @@ include_once(G5_PATH.'/head.php');
                     
                     <script>
 
-                        // function checking_form(){
-                        //     var chk_date = document.getElementById('chk_date');
-                        //     var chk_time = document.getElementById('chk_time');
-                        //     let chk_name = document.getElementById('chk_name');
-                        //     let chk_number = document.getElementById('chk_number');
-                        //     let chk_contents = document.getElementById('chk_contents');
-                        //     let chk_cate = document.getElementById('chk_category');
-                        //     let chk_birth = document.getElementById('chk_birth');
-                        //     var chk_agree = document.getElementById('chk_agree');
+                        function checking_form(){
+                            let chk_name = document.getElementById('chk_name');
+                            let chk_birth = document.getElementById('chk_birth');
+                            let chk_height = document.getElementById('chk_height');
+                            let chk_weight = document.getElementById('chk_weight');
+                            let chk_number = document.getElementById('chk_number');
+                            let chk_resi = document.getElementById('chk_resi');
+                            let chk_contents = document.getElementById('chk_contents');
+                            let chk_agree = document.getElementById('chk_agree');
+                            
 
-                        //     if($(chk_date).val() == ""){
-                        //         alert('날짜를 선택해주세요');
-                        //         return false;
-                        //     }else if($(chk_time).val() == ""){
-                        //         alert('시간를 선택해주세요');
-                        //         return false;
-                        //     }else if($(chk_cate).val() == ""){
-                        //         alert("원하시는 클리닉 종류를 선택해주세요")
-                        //         return false;
-                        //     }else if($(chk_name).val() == ""){
-                        //         alert('이름을 입력해주세요');
-                        //         return false;
-                        //     }else if($(chk_number).val() == ""){
-                        //         alert('연락처를 입력해주세요');
-                        //         return false;
-                        //     }else if($(chk_birth).val() == ""){
-                        //         alert('생년월일을 입력해주세요');
-                        //         return false;
-                        //     }else if($(chk_contents).val() == ""){
-                        //         alert('상담내용을 입력해주세요');
-                        //         return false;
-                        //     }else if($(chk_agree).prop("checked")!=true){
-                        //         alert('개인정보수집 동의에 체크해주세요');
-                        //         return false;
-                        //     }else{
-                        //         alert("신청이 접수 되었습니다");
-                        //         return true;
-                        //     }
+                            if($(chk_name).val() == ""){
+                                alert('이름을 입력해주세요');
+                                return false;
+                            }else if($(chk_birth).val() == ""){
+                                alert('생년월일을 입력해주세요');
+                                return false;
+                            }else if($(chk_height).val() == ""){
+                                alert("키를 입력해주세요")
+                                return false;
+                            }else if($(chk_weight).val() == ""){
+                                alert('몸무게를 입력해주세요');
+                                return false;
+                            }else if($(chk_number).val() == ""){
+                                alert('연락처를 입력해주세요');
+                                return false;
+                            }else if($(chk_resi).val() == ""){
+                                alert('거주지를 입력해주세요');
+                                return false;
+                            }else if($(chk_contents).val() == ""){
+                                alert('지원동기를 입력해주세요');
+                                return false;
+                            }else if($(chk_agree).prop("checked")!=true){
+                                alert('개인정보수집 동의에 체크해주세요');
+                                return false;
+                            }else{
+                                alert("신청이 접수 되었습니다");
+                                return true;
+                            }
 
-                        // }
+                        }
 
                     </script>
 

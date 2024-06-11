@@ -202,6 +202,8 @@ if ($w == '' || $w == 'u') {
 }
 
 $is_use_captcha = ((($board['bo_use_captcha'] && $w !== 'u') || $is_guest) && !$is_admin) ? 1 : 0;
+
+// 비회원도 캡차 실행없이 업로드할 수 있도록 수정
 if($board['bo_table']=='fast_consulting' || $board['bo_table']=='reservation' || $board['bo_table']=='model'){
     $is_use_captcha = 0;
 }

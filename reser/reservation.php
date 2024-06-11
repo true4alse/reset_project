@@ -459,7 +459,6 @@ function checking_form(){
     alert('개인정보수집 동의에 체크해주세요');
     return false;
   }else{
-
     alert("신청이 접수 되었습니다");
     return true;
   }

@@ -272,6 +272,9 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=gallery">ㅣ 미디어/보도자료</a></li>
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=qa">ㅣ 시술 후 주의사항</a></li>
                         <li><a href="/menu10_5.php">ㅣ 리셋 리얼 모델 모집</a></li>
+                        <?php if ($is_admin) {  ?>
+                            <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=model">ㅣ 리셋 리얼 모델 모집 확인</a></li>
+                        <?php } ?>    
                     </ul>
                 </li>
                 <li>
