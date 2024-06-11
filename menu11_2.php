@@ -30,7 +30,14 @@ include_once(G5_PATH.'/head.php');
                     </div>
                 </div>
             </div>
-            <?php include_once(G5_PATH.'/_bbs_list_component/bbs_ul_reset_reser.php'); ?>
+            <div class="tab_content page">
+                <ul class="sub_tab tab7 innertop innerbot">
+                    <li class="<?php if($bo_table=="online_consulting"){echo "on";} ?>"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=online_consulting">온라인 상담</a></li>
+                    <li class="on"><a href="/menu11_2.php">온라인 예약</a></li>
+                    <li><a href="https://m.booking.naver.com/booking/6/bizes/255056?theme=place&entry=pll&area=pll" target="_blank">네이버 예약</a></li>
+                    <li><a href="https://pf.kakao.com/_xbsWQj" target="_blank">카톡 상담</a></li>
+                </ul>
+            </div>
             <div class="content page">
                 <h3>
                     <span>RESET CLINIC</span>
@@ -51,6 +58,7 @@ include_once(G5_PATH.'/head.php');
                         <input type="hidden" name="sst" value="<?php echo $sst ?>">
                         <input type="hidden" name="sod" value="<?php echo $sod ?>">
                         <input type="hidden" name="page" value="<?php echo $page ?>">
+                        <input type="hidden" name="wr_10" value="대기중">
                         <div class="online_wrap">
                             <p class="online_tit">개인정보 수집, 이용 동의 안내</p>
                             <div class="online_box">
@@ -139,10 +147,10 @@ include_once(G5_PATH.'/head.php');
                                         <th>진료구분</th>
                                         <td class="reserve_part_wrap">
                                             <label for="part1">
-                                                <input type="radio" name="wr_6" id="part1" checked=""> 초진
+                                                <input type="radio" name="wr_6" value="초진" id="part1" checked=""> 초진
                                             </label>
                                             <label for="part2">
-                                                <input type="radio" name="wr_6" id="part2"> 재진
+                                                <input type="radio" name="wr_6" value="재진" id="part2"> 재진
                                             </label>
                                         </td>
                                     </tr>

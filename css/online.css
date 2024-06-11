@@ -29,11 +29,12 @@ select.online_box{padding: 1rem;margin: 0;}
 .reserve_post_write_table tr{}
 .reserve_post_write_table th{font-size: 1.9rem;text-align: left;}
 .reserve_post_write_table td{padding: 1rem 0;}
-.reserve_post_write_table td>*{width: 90%;
-    font-family: 'NanumSquareNeo',"Pretendard Variable", Pretendard;
+.reserve_post_write_table td>* {
+    width: 100%;
+    font-family: 'NanumSquareNeo', "Pretendard Variable", Pretendard;
     border: 1px solid #BEBEBE;
     border-radius: 1rem;
-    padding: 1rem 1rem ;
+    padding: 1rem 1rem;
 }
 .reserve_post_write_table td.tel{display: flex;gap: 1rem;}
 .reserve_post_write_table td.reserve_part_wrap>*{

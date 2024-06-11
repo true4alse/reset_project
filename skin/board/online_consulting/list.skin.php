@@ -72,6 +72,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             <!-- <li>
             	<button type="button" class="btn_s1" title="게시판 검색">search<span class="sound_only">게시판 검색</span></button>
             </li> -->
+            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_s1" title="글쓰기">write<span class="sound_only">글쓰기</span></a></li><?php } ?>
         	<?php if ($is_admin == 'super' || $is_auth) {  ?>
         	<li>
             <button type="button" class="btn_more_opt is_list_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
@@ -102,14 +103,13 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 				</label>
             </th>
             <?php } ?>
-            <th>date</th>
-            <th>time</th>
-            <th>category</th>
-            <th>name</th>
-            <th>call</th>
-            <th>email</th>
-            <th>birth</th>
-            <th>first</th>
+            <th scope="col">index</th>
+            <th scope="col">title</th>
+            <th scope="col">author</th>
+            <th scope="col"><?php echo subject_sort_link('wr_hit', $qstr2, 1) ?>views </a></th>
+            <?php if ($is_good) { ?><th scope="col"><?php echo subject_sort_link('wr_good', $qstr2, 1) ?>추천 </a></th><?php } ?>
+            <?php if ($is_nogood) { ?><th scope="col"><?php echo subject_sort_link('wr_nogood', $qstr2, 1) ?>비추천 </a></th><?php } ?>
+            <th scope="col"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>date  </a></th>
         </tr>
         </thead>
         <tbody>
@@ -128,19 +128,47 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             	</label>
             </td>
             <?php } ?>
-            <td class="td_center"><?php echo $list[$i]['wr_1']?></td>
-            <td class="td_center"><?php echo $list[$i]['wr_2']?></td>
-            <td class="td_center"><?php echo $list[$i]['wr_3']?></td>
-            <td class="td_center"><?php echo $list[$i]['wr_name']?></td>
-            <td class="td_center"><?php echo $list[$i]['wr_subject']?></td>
-            <td class="td_center"><?php echo $list[$i]['wr_4']?></td>
-            <td class="td_center"><?php echo $list[$i]['wr_5']?></td>
-            <td class="td_center"><?php echo $list[$i]['wr_6']?></td>
-            
-        </tr>
-        <tr>
-            <td colspan="9"><?php echo $list[$i]['wr_content']?></td>
-           
+            <td class="td_num2">
+            <?php
+            if ($list[$i]['is_notice']) // 공지사항
+                echo '<strong class="notice_icon">공지</strong>';
+            else if ($wr_id == $list[$i]['wr_id'])
+                echo "<span class=\"bo_current\">열람중</span>";
+            else
+                echo $list[$i]['num'];
+             ?>
+            </td>
+
+            <td class="td_subject" style="padding-left:<?php echo $list[$i]['reply'] ? (strlen($list[$i]['wr_reply'])*10) : '0'; ?>px">
+                <?php
+                if ($is_category && $list[$i]['ca_name']) {
+				?>
+                <a href="<?php echo $list[$i]['ca_name_href'] ?>" class="bo_cate_link"><?php echo $list[$i]['ca_name'] ?></a>
+                <?php } ?>
+                <div class="bo_tit">
+                    <a href="<?php echo $list[$i]['href'] ?>">
+                        <?php echo $list[$i]['icon_reply'] ?>
+                        <?php
+                            if (isset($list[$i]['icon_secret'])) echo rtrim($list[$i]['icon_secret']);
+                         ?>
+                        <?php echo $list[$i]['subject'] ?>
+                    </a>
+                    <?php
+                    if ($list[$i]['icon_new']) echo "<span class=\"new_icon\">N<span class=\"sound_only\">새글</span></span>";
+                    // if ($list[$i]['file']['count']) { echo '<'.$list[$i]['file']['count'].'>'; }
+                    if (isset($list[$i]['icon_hot'])) echo rtrim($list[$i]['icon_hot']);
+                    if (isset($list[$i]['icon_file'])) echo rtrim($list[$i]['icon_file']);
+                    if (isset($list[$i]['icon_link'])) echo rtrim($list[$i]['icon_link']);
+                    ?>
+                    <?php if ($list[$i]['comment_cnt']) { ?><span class="sound_only">댓글</span><span class="cnt_cmt"><?php echo $list[$i]['wr_comment']; ?></span><span class="sound_only">개</span><?php } ?>
+                </div>
+            </td>
+            <td class="td_name sv_use"><?php echo $list[$i]['name'] ?></td>
+            <td class="td_num"><?php echo $list[$i]['wr_hit'] ?></td>
+            <?php if ($is_good) { ?><td class="td_num"><?php echo $list[$i]['wr_good'] ?></td><?php } ?>
+            <?php if ($is_nogood) { ?><td class="td_num"><?php echo $list[$i]['wr_nogood'] ?></td><?php } ?>
+            <td class="td_datetime"><?php echo $list[$i]['datetime2'] ?></td>
+
         </tr>
         <?php } ?>
         <?php if (count($list) == 0) { echo '<tr><td colspan="'.$colspan.'" class="empty_table">게시물이 없습니다.</td></tr>'; } ?>

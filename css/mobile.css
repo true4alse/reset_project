@@ -249,7 +249,9 @@ a.btn,.btn {line-height:35px;height:35px;padding:0 5px;text-align:center;font-we
 -o-transition:background-color 0.3s ease-out;
 transition:background-color 0.3s ease-out}
 
-
+.reserve_post_write_table{
+  width:100%;
+}
 /* 기본테이블 */
 .tbl_wrap {}
 .tbl_wrap table {width:100%;border-collapse:collapse;border-spacing:0}
