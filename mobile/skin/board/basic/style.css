@@ -57,6 +57,12 @@
 #bo_list_total {margin:10px;padding:10px;text-align:center;background:#e3e7ec;color:#8b8b8b;border-radius:3px}
 
 .btn_bo_user > li {float:left;text-align:center;margin-left:5px}
+.btn_bo_user > li >a {
+    display: flex;
+    align-items: center;
+    padding: 0 2px;
+    height: 100%;
+}
 .btn_bo_adm button {border:0;padding:0 10px;background:#d13f4a;color:#fff;text-decoration:none;vertical-align:middle}
 .btn_more_opt {width:30px}
 .more_opt {display:none;position:absolute;top:50px;right:7px;background:#fff;border:1px solid #b8bfc4;z-index:999}
@@ -108,7 +114,21 @@
 .bo_subject {display:block;width:100%;padding-bottom:5px}
 .bo_current {color:#e8180c}
 .bo_info:after {display:block;visibility:hidden;clear:both;content:""}
-.bo_info {position:relative;padding-top:5px;line-height:20px;color:#646464;vertical-align:top}
+.bo_info {
+    position: relative;
+    padding-top: 5px;
+    line-height: 20px;
+    color: #646464;
+    vertical-align: top;
+    display: flex;
+    /* justify-content: flex-end; */
+}
+.btn_bo_user{
+    justify-content: flex-end!important;
+}
+.bo_info>span{
+	padding-right:5px;
+}
 .bo_info i {margin-left:10px}
 .bo_info .comment_icon {background:url(./img/icon_comment.png) no-repeat 50% 50%;display:inline-block;width:20px;height:28px;text-indent:-999px;overflow:hidden;vertical-align:top;background-size:70%;margin:0 0px 0 5px}
 .bo_info .bo_date {}

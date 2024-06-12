@@ -6,11 +6,35 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
 
+<div class="sub_banner">
+    <div class="sub_bg"></div>
+    <div class="sub_banner_inner">
+        <div class="sub_banner_name">
+            <p class="" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                RESET YOUR BODY
+            </p>
+            <h2 class="">RESET CLINIC</h2>
+        </div>
+    </div>
+</div>
+<?php include_once(G5_PATH.'/_bbs_list_component/bbs_ul_community.php'); ?>
+<div class="content page">
+    <h3>
+        <span>RESET CLINIC</span>
+        <i>
+            <em ><b><?php echo $board['bo_subject'] ?></b></em>
+        </i>
+    </h3>
+</div>
+
 <script src="<?php echo G5_JS_URL; ?>/viewimageresize.js"></script>
 
 <!-- 게시판 이름 표시 <div id="bo_v_table"><?php echo ($board['bo_mobile_subject'] ? $board['bo_mobile_subject'] : $board['bo_subject']); ?></div> -->
-<ul class="btn_top top btn_bo_user"> 
-	<li><a href="#bo_vc" class="btn_b03 btn" title="댓글"><i class="fa fa-commenting" aria-hidden="true"></i><span class="sound_only">댓글</span></a></li>
+<ul class="top btn_bo_user"> 
+
+    <!-- 댓글 공유 기능 X -->
+    
+	<!-- <li><a href="#bo_vc" class="btn_b03 btn" title="댓글"><i class="fa fa-commenting" aria-hidden="true"></i><span class="sound_only">댓글</span></a></li>
     <?php if ($board['bo_use_sns'] || $scrap_href){ ?>
     <li class="bo_share">
     	<button type="button" class="btn_share_opt btn_b03 btn is_view_btn" title="공유"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="sound_only">공유</span></button>
@@ -19,7 +43,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             <?php include_once(G5_SNS_PATH."/view.sns.skin.php"); ?>
         </div>	
     </li>
-    <?php } ?>
+    <?php } ?> -->
     <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b03 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</a></li><?php } ?>
 	
 	<li>
@@ -197,7 +221,7 @@ jQuery(function($){
     
     <?php
     // 코멘트 입출력
-    include_once(G5_BBS_PATH.'/view_comment.php');
+    // include_once(G5_BBS_PATH.'/view_comment.php');
 	?>
 
 </article>

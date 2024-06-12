@@ -64,7 +64,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             <!-- <li>
             	<button type="button" class="btn_s1" title="게시판 검색">search<span class="sound_only">게시판 검색</span></button>
             </li> -->
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_s1" title="글쓰기">write<span class="sound_only">글쓰기</span></a></li><?php } ?>
+           
         	<?php if ($is_admin == 'super' || $is_auth) {  ?>
         	<li>
             <button type="button" class="btn_more_opt is_list_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>

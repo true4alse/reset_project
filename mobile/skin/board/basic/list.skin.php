@@ -10,6 +10,27 @@ if ($is_checkbox) $colspan++;
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
 
+<div class="sub_banner">
+    <div class="sub_bg"></div>
+    <div class="sub_banner_inner">
+        <div class="sub_banner_name">
+            <p class="" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                RESET YOUR BODY
+            </p>
+            <h2 class="">RESET CLINIC</h2>
+        </div>
+    </div>
+</div>
+<?php include_once(G5_PATH.'/_bbs_list_component/bbs_ul_community.php'); ?>
+<div class="content page">
+    <h3>
+        <span>RESET CLINIC</span>
+        <i>
+            <em ><b><?php echo $board['bo_subject'] ?></b></em>
+        </i>
+    </h3>
+</div>
+
 <form name="fboardlist" id="fboardlist" action="<?php echo G5_BBS_URL; ?>/board_list_update.php" onsubmit="return fboardlist_submit(this);" method="post">
 <input type="hidden" name="bo_table" value="<?php echo $bo_table ?>">
 <input type="hidden" name="sfl" value="<?php echo $sfl ?>">
@@ -21,8 +42,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 <input type="hidden" name="sw" value="">
 
 <?php if ($rss_href || $write_href) { ?>
-<ul class="<?php echo isset($view) ? 'view_is_list btn_top' : 'btn_top top btn_bo_user';?>">
-	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_admin btn" title="관리자"><i class="fa fa-cog fa-spin fa-fw"></i><span class="sound_only">관리자</span></a></li><?php } ?>
+<ul class="<?php echo isset($view) ? 'view_is_list' : 'top btn_bo_user';?>">
+	
     <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_b03 btn" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
     <?php if ($is_admin == 'super' || $is_auth) {  ?>
 	<li>
@@ -36,7 +57,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         <?php } ?>
 	</li>
     <?php } ?>
-	<?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="fix_btn write_btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
+	<?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="write_btn" title="글쓰기">Write<span class="sound_only">글쓰기</span></a></li><?php } ?>
 </ul>
 <?php } ?>
 <!-- 게시판 목록 시작 -->
@@ -107,8 +128,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                 </div>
 				<div class="bo_info">
                     <span class="sound_only">작성자</span><?php echo $list[$i]['name'] ?>
-                    <span class="bo_date"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $list[$i]['datetime2'] ?></span>
-                	<span class="bo_view"><i class="fa fa-eye" aria-hidden="true"></i> <?php echo number_format($list[$i]['wr_hit']) ?><span class="sound_only">회</span></span>
+                    <span class="bo_date">Date <?php echo $list[$i]['datetime2'] ?></span>
+                	<span class="bo_view">View <?php echo number_format($list[$i]['wr_hit']) ?><span class="sound_only">회</span></span>
                 	<?php if ($is_good) { ?><span class="sound_only">추천</span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <?php echo $list[$i]['wr_good'] ?><?php } ?>
                     <?php if ($is_nogood) { ?><span class="sound_only">비추천</span><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> <?php echo $list[$i]['wr_nogood'] ?><?php } ?>
                 </div>        
@@ -130,25 +151,9 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 <!-- 페이지 -->
 <?php echo $write_pages; ?>
 
-<div id="bo_list_total">
-    <span>전체 <?php echo number_format($total_count) ?>건</span>
-    <?php echo $page ?> 페이지
-</div>
 
-<fieldset id="bo_sch">
-    <legend>게시물 검색</legend>
-    <form name="fsearch" method="get">
-    <input type="hidden" name="bo_table" value="<?php echo $bo_table ?>">
-    <input type="hidden" name="sca" value="<?php echo $sca ?>">
-    <input type="hidden" name="sop" value="and">
-    <label for="sfl" class="sound_only">검색대상</label>
-    <select name="sfl" id="sfl">
-        <?php echo get_board_sfl_select_options($sfl); ?>
-    </select>
-    <input name="stx" value="<?php echo stripslashes($stx) ?>" placeholder="검색어를 입력하세요" required id="stx" class="sch_input" size="15" maxlength="20">
-    <button type="submit" value="검색" class="sch_btn"><i class="fa fa-search" aria-hidden="true"></i> <span class="sound_only">검색</span></button>
-    </form>
-</fieldset>
+
+
 
 <?php if ($is_checkbox) { ?>
 <script>
