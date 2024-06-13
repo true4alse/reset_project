@@ -108,7 +108,20 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                     </div>
                         <span>예약내용: <?php echo $list[$i]['wr_content'] ?></span>
                     <div>
-
+                    <div>
+                        <span>상태 : 
+                            <select name="wr_10" id="td_state">
+                                <option value="대기중" <?php if($list[$i]['wr_10']=='대기중') echo 'selected'; ?>>대기중</option>
+                                <option value="확인함" <?php if($list[$i]['wr_10']=='확인함') echo 'selected'; ?>>확인함</option>
+                                <option value="예약완료" <?php if($list[$i]['wr_10']=='예약완료') echo 'selected'; ?>>예약완료</option>
+                            </select>
+                            <?php
+                            // UPDATE `g5_write_reservation` SET `wr_10` = '확인함' WHERE `g5_write_reservation`.`wr_id` = 13;
+                            // $sql = "update g5_write_reservation set wr_10=".$list[$i]["wr_10"]." where g5_write_reservation wr_id=".$list[$i]['wr_id'];
+                            // sql_query($sql);
+                            ?>
+                    </span>
+                    </div>
                     </div>
                 </div>
 				<div class="bo_info">

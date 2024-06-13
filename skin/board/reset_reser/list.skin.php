@@ -110,6 +110,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             <th>email</th>
             <th>birth</th>
             <th>first</th>
+            <th>state</th>
         </tr>
         </thead>
         <tbody>
@@ -136,11 +137,11 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             <td class="td_center"><?php echo $list[$i]['wr_4']?></td>
             <td class="td_center"><?php echo $list[$i]['wr_5']?></td>
             <td class="td_center"><?php echo $list[$i]['wr_6']?></td>
+            <td class="td_center"><?php echo $list[$i]['wr_10']?></td>
             
         </tr>
         <tr>
             <td colspan="9"><?php echo $list[$i]['wr_content']?></td>
-           
         </tr>
         <?php } ?>
         <?php if (count($list) == 0) { echo '<tr><td colspan="'.$colspan.'" class="empty_table">게시물이 없습니다.</td></tr>'; } ?>
