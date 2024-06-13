@@ -79,7 +79,7 @@ include_once(G5_PATH.'/head.php');
                                 <div class="online_box">
                                     <input type="date" class="date_input" id="chk_date" name="wr_1">
                                 </div>
-                                <p class="online_tit">예약 시간 선택</p>
+                                <p class="online_tit dPdirtlrks">예약 시간 선택</p>
                                 <div class="rp_title">
                                     <p>선택된 날짜</p>
                                     <input type="text" name="resdate" id="aacaa" class="tcal tcalInput tcalActive online_box" value="" readonly="">
@@ -128,7 +128,7 @@ include_once(G5_PATH.'/head.php');
                                     <tr>
                                         <th>연락처</th>
                                         <td class="tel">
-                                            <input type="text" id="chk_number" name="wr_subject" placeholder="예시)010-1111-1111">
+                                            <input type="text" id="chk_number" name="wr_subject" placeholder="ex) 010-1111-1111">
                                         </td>
                                     </tr>
                                     <tr>

@@ -136,6 +136,9 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=gallery">ㅣ 미디어/보도자료</a></li>
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=qa">ㅣ 시술 후 주의사항</a></li>
                         <li><a href="/menu10_5.php">ㅣ 리셋 리얼 모델 모집</a></li>
+                        <?php if ($is_admin) {  ?>
+                            <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=model">ㅣ 리셋 리얼 모델모집 확인</a></li>
+                        <?php } ?>   
                     </ul>
                 </li>
                 <li>
@@ -144,7 +147,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=online_consulting">ㅣ 온라인 상담</a></li>    
                         <li><a href="/menu11_2.php">ㅣ 온라인 예약</a></li>
                         <?php if ($is_admin) {  ?>
-                            <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=fast_consulting">ㅣ 빠른상담</a></li>
+                            <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=fast_consulting">ㅣ 빠른상담확인</a></li>
                             <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=reservation">ㅣ 온라인예약확인</a></li>
                         <?php } ?>    
                         <li><a href="https://m.booking.naver.com/booking/6/bizes/255056?theme=place&entry=pll&area=pll">ㅣ 네이버 예약</a></li>
@@ -264,7 +267,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=qa">ㅣ 시술 후 주의사항</a></li>
                         <li><a href="/menu10_5.php">ㅣ 리셋 리얼 모델 모집</a></li>
                         <?php if ($is_admin) {  ?>
-                            <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=model">ㅣ 리셋 리얼 모델 모집 확인</a></li>
+                            <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=model">ㅣ 리셋 리얼 모델모집 확인</a></li>
                         <?php } ?>    
                     </ul>
                 </li>
@@ -274,7 +277,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                         <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=online_consulting">ㅣ 온라인 상담</a></li>    
                         <li><a href="/menu11_2.php">ㅣ 온라인 예약</a></li>
                         <?php if ($is_admin) {  ?>
-                            <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=fast_consulting">ㅣ 빠른상담</a></li>
+                            <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=fast_consulting">ㅣ 빠른상담확인</a></li>
                             <li><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=reservation">ㅣ 온라인예약확인</a></li>
                         <?php } ?>    
                         <li><a href="https://m.booking.naver.com/booking/6/bizes/255056?theme=place&entry=pll&area=pll">ㅣ 네이버 예약</a></li>
