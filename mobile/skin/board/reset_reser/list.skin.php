@@ -117,8 +117,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                             </select>
                             <?php
                             // UPDATE `g5_write_reservation` SET `wr_10` = '확인함' WHERE `g5_write_reservation`.`wr_id` = 13;
-                            // $sql = "update g5_write_reservation set wr_10=".$list[$i]["wr_10"]." where g5_write_reservation wr_id=".$list[$i]['wr_id'];
-                            // sql_query($sql);
+                            $sql = "update g5_write_reservation set wr_10=".$list[$i]["wr_10"]." where g5_write_reservation wr_id=".$list[$i]['wr_id'];
+                            sql_query($sql);
                             ?>
                     </span>
                     </div>
