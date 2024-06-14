@@ -162,7 +162,7 @@ if (!auth_check_menu($auth, '300100', 'r', true)) {
     $colspan = 5;
     ?>
 
-    <section>
+    <!-- <section>
         <h2>최근게시물</h2>
 
         <div class="tbl_head01 tbl_wrap">
@@ -241,7 +241,7 @@ if (!auth_check_menu($auth, '300100', 'r', true)) {
         <div class="btn_list03 btn_list">
             <a href="<?php echo G5_BBS_URL ?>/new.php">최근게시물 더보기</a>
         </div>
-    </section>
+    </section> -->
 
     <?php
 } //endif 최근게시물
