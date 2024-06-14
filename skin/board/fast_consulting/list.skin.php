@@ -58,6 +58,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     <input type="hidden" name="sod" value="<?php echo $sod ?>">
     <input type="hidden" name="page" value="<?php echo $page ?>">
     <input type="hidden" name="sw" value="">
+    <input type="hidden" name="wr_10" value="대기중">
 
     <!-- 게시판 페이지 정보 및 버튼 시작 { -->
     <div id="bo_btn_top">
@@ -102,13 +103,15 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 				</label>
             </th>
             <?php } ?>
-            <th scope="col">index</th>
-            <th scope="col">title</th>
-            <th scope="col">author</th>
-            <th scope="col"><?php echo subject_sort_link('wr_hit', $qstr2, 1) ?>views </a></th>
+            <th scope="col">번호</th>
+            <th scope="col">연락처</th>
+            <th scope="col">신청자</th>
+            <th scope="col"><?php echo subject_sort_link('wr_hit', $qstr2, 1) ?>조회수 </a></th>
+            
             <?php if ($is_good) { ?><th scope="col"><?php echo subject_sort_link('wr_good', $qstr2, 1) ?>추천 </a></th><?php } ?>
             <?php if ($is_nogood) { ?><th scope="col"><?php echo subject_sort_link('wr_nogood', $qstr2, 1) ?>비추천 </a></th><?php } ?>
             <th scope="col"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>date  </a></th>
+            <th>상태</th>
         </tr>
         </thead>
         <tbody>
@@ -167,7 +170,13 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             <?php if ($is_good) { ?><td class="td_num"><?php echo $list[$i]['wr_good'] ?></td><?php } ?>
             <?php if ($is_nogood) { ?><td class="td_num"><?php echo $list[$i]['wr_nogood'] ?></td><?php } ?>
             <td class="td_datetime"><?php echo $list[$i]['datetime2'] ?></td>
-
+            <td>
+                <select name="wr_10" id="td_state" onchange="location.href=this.value">
+                    <option value="<?php echo G5_BBS_URL; ?>/fast_consulting_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "대기중"; ?>" <?php if($list[$i]['wr_10']=='대기중') echo 'selected'; ?>>대기중</option>
+                    <option value="<?php echo G5_BBS_URL; ?>/fast_consulting_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "확인함"; ?>" <?php if($list[$i]['wr_10']=='확인함') echo 'selected'; ?>>확인함</option>
+                    <option value="<?php echo G5_BBS_URL; ?>/fast_consulting_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "예약완료"; ?>" <?php if($list[$i]['wr_10']=='예약완료') echo 'selected'; ?>>예약완료</option>
+                </select>
+            </td>
         </tr>
         <?php } ?>
         <?php if (count($list) == 0) { echo '<tr><td colspan="'.$colspan.'" class="empty_table">게시물이 없습니다.</td></tr>'; } ?>

@@ -137,7 +137,13 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             <td class="td_center"><?php echo $list[$i]['wr_4']?></td>
             <td class="td_center"><?php echo $list[$i]['wr_5']?></td>
             <td class="td_center"><?php echo $list[$i]['wr_6']?></td>
-            <td class="td_center"><?php echo $list[$i]['wr_10']?></td>
+            <td class="td_center">
+                <select name="wr_10" id="td_state" onchange="location.href=this.value">
+                    <option value="<?php echo G5_BBS_URL; ?>/reser_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "대기중"; ?>" <?php if($list[$i]['wr_10']=='대기중') echo 'selected'; ?>>대기중</option>
+                    <option value="<?php echo G5_BBS_URL; ?>/reser_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "확인함"; ?>" <?php if($list[$i]['wr_10']=='확인함') echo 'selected'; ?>>확인함</option>
+                    <option value="<?php echo G5_BBS_URL; ?>/reser_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "예약완료"; ?>" <?php if($list[$i]['wr_10']=='예약완료') echo 'selected'; ?>>예약완료</option>
+                </select>
+            </td>
             
         </tr>
         <tr>

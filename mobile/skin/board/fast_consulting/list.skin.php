@@ -40,6 +40,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 <input type="hidden" name="sod" value="<?php echo $sod ?>">
 <input type="hidden" name="page" value="<?php echo $page ?>">
 <input type="hidden" name="sw" value="">
+<input type="hidden" name="wr_10" value="대기중">
 
 <?php if ($rss_href || $write_href) { ?>
 <ul class="<?php echo isset($view) ? 'view_is_list' : 'top btn_bo_user';?>">
@@ -99,18 +100,15 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                     <div class="reser_grid">
                         <div><span><?php echo $list[$i]['wr_name'] ?></span></div>
                         <div><span><?php echo $list[$i]['wr_subject'] ?></span></div>
-                        <div><span><?php echo $list[$i]['wr_1'] ?></span></div>
-                        <div><span><?php echo $list[$i]['wr_2'] ?></span></div>
-                        <div><span><?php echo $list[$i]['wr_3'] ?></span></div>
-                        <div><span><?php echo $list[$i]['wr_4'] ?></span></div>
-                        <div><span><?php echo $list[$i]['wr_5'] ?></span></div>
-                        <div><span><?php echo $list[$i]['wr_6'] ?></span></div>
                         <div><span><?php echo $list[$i]['wr_content'] ?></span></div>
-                        <div><select name="wr_10" id="td_state" onchange="location.href=this.value">
-                                <option value="<?php echo G5_BBS_URL; ?>/reser_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "대기중"; ?>" <?php if($list[$i]['wr_10']=='대기중') echo 'selected'; ?>>대기중</option>
-                                <option value="<?php echo G5_BBS_URL; ?>/reser_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "확인함"; ?>" <?php if($list[$i]['wr_10']=='확인함') echo 'selected'; ?>>확인함</option>
-                                <option value="<?php echo G5_BBS_URL; ?>/reser_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "예약완료"; ?>" <?php if($list[$i]['wr_10']=='예약완료') echo 'selected'; ?>>예약완료</option>
-                            </select></div>
+                        <div><span><?php echo $list[$i]['wr_datetime'] ?></span></div>
+                        <div>
+                            <select name="wr_10" id="td_state" onchange="location.href=this.value">
+                                <option value="<?php echo G5_BBS_URL; ?>/fast_consulting_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "대기중"; ?>" <?php if($list[$i]['wr_10']=='대기중') echo 'selected'; ?>>대기중</option>
+                                <option value="<?php echo G5_BBS_URL; ?>/fast_consulting_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "확인함"; ?>" <?php if($list[$i]['wr_10']=='확인함') echo 'selected'; ?>>확인함</option>
+                                <option value="<?php echo G5_BBS_URL; ?>/fast_consulting_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "예약완료"; ?>" <?php if($list[$i]['wr_10']=='예약완료') echo 'selected'; ?>>예약완료</option>
+                            </select>
+                        </div>
                     </div>
                     <!-- <table>
                         <tr>
