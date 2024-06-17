@@ -177,7 +177,10 @@ box-shadow:1px 2px 5px rgba(191, 191, 191, 0.4)}
 .img_fix {width:100%;height:auto}
 
 /* 캡챠 자동등록(입력)방지 기본 -pc */
-#captcha {position:relative}
+#captcha {
+  position: relative;
+  border: none;
+}
 #captcha legend {position:absolute;margin:0;padding:0;font-size:0;line-height:0;text-indent:-9999em;overflow:hidden}
 #captcha #captcha_img {height:40px;border:1px solid #898989;vertical-align:top;padding:0;margin:0}
 #captcha #captcha_mp3 {margin:0;padding:0;width:40px;height:40px;border:0;background:transparent;vertical-align:middle;overflow:hidden;cursor:pointer;width:40px;height:40px;background:url('../../../img/captcha2.png') no-repeat;text-indent:-999px;border-radius:3px}
@@ -228,7 +231,11 @@ button.btn02 {display:inline-block;margin:0;padding:7px;border:1px solid #3b3c3f
   border-radius: 3px;
   align-items: center;
 }
-.btn_submit:hover {background:#2375eb}
+.btn_submit:hover {
+  background: none;
+  color: #f2838f;
+  border: 1px solid #f2838f;
+}
 .btn_close {border:1px solid #dcdcdc;cursor:pointer;border-radius:3px;background:#fff}
 a.btn_close {text-align:center;line-height:50px}
 
@@ -377,7 +384,14 @@ box-shadow:0 1px 10px rgba(0,0,0,.1)}
 .new_win .win_desc:after {content:"";position:absolute;left:0;top:0;width:4px;height:50px;background:#da4453;border-radius:3px 0 0 3px}
 
 .new_win .win_total {float:right;display:inline-block;line-height:30px;font-weight:normal;font-size:0.75em;color:#3a8afd;background:#f6f6f6;padding:0 10px;border-radius:5px}
-.new_win .new_win_con {padding:20px}
+.new_win .new_win_con {
+  padding: 20px;
+  width: 50%;
+  min-width: 280px;
+  margin: 0 auto;
+  padding: 100px 0 30px;
+  text-align: center;
+}
 .new_win .new_win_con:after {display:block;visibility:hidden;clear:both;content:""}
 .new_win .new_win_con2 {margin:20px 0}
 

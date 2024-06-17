@@ -39,11 +39,12 @@ outline:none;
 }
 
 input[type=text]:focus,input[type=password]:focus, textarea:focus,select:focus {
--webkit-box-shadow:0 0 5px #9ed4ff;
--moz-box-shadow:0 0 5px #9ed4ff;
-box-shadow:0 0 5px #9ed4ff;
-border:1px solid #558ab7 !important;
+/* -webkit-box-shadow:0 0 5px #E17384;
+-moz-box-shadow:0 0 5px #E17384;
+box-shadow:0 0 5px #E17384; */
+border:1px solid #E17384 !important;
 }
+
 
 .placeholdersjs {color:#aaa !important}
 
@@ -281,7 +282,7 @@ button.btn02 {display:inline-block;margin:0;padding:7px;border:1px solid #3b3c3f
   cursor: pointer;
   border-radius: 3px;
 }
-.btn_submit:hover {background:#2375eb}
+.btn_submit:hover {background:#f2838f}
 .btn_close {border:1px solid #dcdcdc;cursor:pointer;border-radius:3px;background:#fff}
 a.btn_close {text-align:center;line-height:50px}
 
