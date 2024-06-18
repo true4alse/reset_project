@@ -102,6 +102,7 @@ if (defined('G5_IS_ADMIN')) {
 <link rel="stylesheet" as="style" crossorigin href="https://fastly.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
 <!-- css -->
 
+
 <?php
 if (!defined('G5_IS_ADMIN')) {
     echo '<link rel="stylesheet" href="/css/common.css">
@@ -124,6 +125,8 @@ if (!defined('G5_IS_ADMIN')) {
 
 <!-- js -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="/js/header.js"></script>
 <script src="/js/swiper.js"></script>
 <!-- aos -->

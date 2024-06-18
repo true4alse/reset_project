@@ -19,24 +19,25 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                 echo "<strong>".$list[$i]['subject']."</strong>";
             else
                 echo $list[$i]['subject'];
+                if ($list[$i]['comment_cnt'])  echo "
+                <span class=\"lt_cmt\"><span class=\"sound_only\">댓글</span>답변완료</span>";
 
             echo "</a>";
 			
-			if ($list[$i]['icon_hot']) echo "<span class=\"hot_icon\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i><span class=\"sound_only\">인기글</span></span>";
-			if ($list[$i]['icon_new']) echo "<span class=\"new_icon\">N<span class=\"sound_only\">새글</span></span>";
+			// if ($list[$i]['icon_hot']) echo "<span class=\"hot_icon\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i><span class=\"sound_only\">인기글</span></span>";
+			// if ($list[$i]['icon_new']) echo "<span class=\"new_icon\">N<span class=\"sound_only\">새글</span></span>";
             // if ($list[$i]['link']['count']) { echo "[{$list[$i]['link']['count']}]"; }
             // if ($list[$i]['file']['count']) { echo "<{$list[$i]['file']['count']}>"; }
 
-            echo $list[$i]['icon_reply']." ";
-           	if ($list[$i]['icon_file']) echo " <i class=\"fa fa-download\" aria-hidden=\"true\"></i>" ;
-            if ($list[$i]['icon_link']) echo " <i class=\"fa fa-link\" aria-hidden=\"true\"></i>" ;
+            // echo $list[$i]['icon_reply']." ";
+           	// if ($list[$i]['icon_file']) echo " <i class=\"fa fa-download\" aria-hidden=\"true\"></i>" ;
+            // if ($list[$i]['icon_link']) echo " <i class=\"fa fa-link\" aria-hidden=\"true\"></i>" ;
 
-            if ($list[$i]['comment_cnt'])  echo "
-            <span class=\"lt_cmt\"><span class=\"sound_only\">댓글</span>".$list[$i]['comment_cnt']."</span>";
+            
 
             ?>
             <div class="lt_info">
-				<span class="lt_nick"><?php echo $list[$i]['name'] ?></span>
+				<!-- <span class="lt_nick"><?php echo $list[$i]['name'] ?></span> -->
             	<span class="lt_date"><?php echo $list[$i]['datetime2'] ?></span>              
             </div>
         </li>
@@ -45,6 +46,6 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     <li class="empty_li">게시물이 없습니다.</li>
     <?php }  ?>
     </ul>
-    <a href="<?php echo get_pretty_url($bo_table); ?>" class="lt_more"><span class="sound_only"><?php echo $bo_subject ?></span>더보기</a>
+    <a href="<?php echo get_pretty_url($bo_table); ?>" class="lt_more"><span class="sound_only"><?php echo $bo_subject ?></span>more</a>
 
 </div>

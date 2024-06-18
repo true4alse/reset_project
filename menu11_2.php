@@ -73,16 +73,20 @@ include_once(G5_PATH.'/head.php');
                                 <p>위 내용에 동의합니다. (동의를 거부할 수 있습니다. 단, 동의 거부시에는 서비스 이용이 제한됩니다.)</p>
                             </label>
                         </div>
+                        
                         <div class="online_wrap online2">
                             <div>
                                 <p class="online_tit">예약일 선택</p>
-                                <div class="online_box">
-                                    <input type="date" class="date_input" id="chk_date" name="wr_1">
+                                <div class="online_box" id="reservationDate">
+                                    <!-- <input type="date" class="date_input" id="chk_date" name="wr_1"> -->
+
                                 </div>
+
+                                
                                 <p class="online_tit dPdirtlrks">예약 시간 선택</p>
                                 <div class="rp_title">
-                                    <p>선택된 날짜</p>
-                                    <input type="text" name="resdate" id="aacaa" class="tcal tcalInput tcalActive online_box" value="" readonly="">
+                                    <p class="datep">선택된 날짜<input type="text" name="wr_1" id="chk_date"></p>
+                                    <!-- <input type="text" name="resdate" id="aacaa" class="tcal tcalInput tcalActive online_box" value="" readonly=""> -->
                                     <p>시간 </p>
                                     <select name="wr_2" class="online_box" id="chk_time">
                                         <option value="10:00">10:00</option>
@@ -163,13 +167,96 @@ include_once(G5_PATH.'/head.php');
                                 </tbody></table>
                             </div>
                         </div>
-                        <button type="submit"><p>지원하기</p></button>
+                        <p class="las"><button type="submit">지원하기</button></p>
+
                     </form>
                 </div>
             </div>
         </main>
 </div>
 <script>
+
+
+        var holidays = {
+        "0101":{type:0, title:"신정", year:""},
+        "0301":{type:0, title:"삼일절", year:""},
+        "0505":{type:0, title:"어린이날", year:""},
+        "0606":{type:0, title:"현충일", year:""},
+        "0815":{type:0, title:"광복절", year:""},
+        "1003":{type:0, title:"개천절", year:""},
+        "1009":{type:0, title:"한글날", year:""},
+        "1225":{type:0, title:"크리스마스", year:""},
+
+        "0209":{type:0, title:"설날", year:"2013"},
+        "0210":{type:0, title:"설날", year:"2013"},
+        "0211":{type:0, title:"설날", year:"2013"},
+        "0918":{type:0, title:"추석", year:"2013"},
+        "0919":{type:0, title:"추석", year:"2013"},
+        "0920":{type:0, title:"추석", year:"2013"},
+        "0517":{type:0, title:"석가탄신일", year:"2013"}
+        };
+
+
+        /*원하는 날짜 선택하기*/
+        $("#reservationDate").datepicker({
+            minDate : "0D",
+            maxDate : "+2M",
+            navigationAsDateFormat: true,
+            prevText: 'Next',
+            nextText: 'Prev',
+            dateFormat : 'yy-mm-dd D',
+            dayNamesMin : [  '일', '월', '화', '수', '목', '금', '토' ],
+            monthNames : [ '1월', '2월', '3월', '4월', '5월', '6월', '7월','8월', '9월', '10월', '11월', '12월' ],
+            monthNamesShort : [ '1월', '2월', '3월', '4월', '5월', '6월','7월', '8월', '9월', '10월', '11월', '12월' ],
+            yearSuffix: '년',
+            onSelect: function( date, el ) {
+                let day  = el.selectedDay,
+                    mon  = el.selectedMonth+1,
+                    year = el.selectedYear;
+                console.log(date);
+                console.log(year+"년"+mon+"월"+day+"일");
+                if( date.split(' ')[0] == "<?= date("Y-m-d")?>" ) {
+                    alert('당일예약은 할 수 없습니다.');
+                    return;
+                } else {
+                    $("#chk_date").val(year+"년"+mon+"월"+day+"일");
+
+                }
+
+      		},
+              beforeShowDay: function(day) {
+         var result;
+         // 포맷에 대해선 다음 참조(http://docs.jquery.com/UI/Datepicker/formatDate)
+         var holiday = holidays[$.datepicker.formatDate("mmdd",day )];
+         var thisYear = $.datepicker.formatDate("yy", day);
+
+         // exist holiday?
+         if (holiday) {
+         if(thisYear == holiday.year || holiday.year == "") {
+            result =  [false, "date-holiday", holiday.title];
+         }
+         }
+
+         if(!result) {
+         switch (day.getDay()) {
+            case 0: // is sunday?
+               result = [false, "date-sunday"];
+               break;
+            case 6: // is saturday?
+               result = [true, "date-saturday"];
+               break;
+            default:
+               result = [true, ""];
+               break;
+         }
+         }
+
+         return result;
+      }
+        });
+
+
+
     function checking_form(){
         var chk_date = document.getElementById('chk_date');
         var chk_time = document.getElementById('chk_time');

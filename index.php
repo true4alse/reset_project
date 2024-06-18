@@ -269,20 +269,17 @@ include_once(G5_PATH.'/head.php');
                             // latest(스킨, 게시판아이디, 출력라인, 글자수);
                             echo latest('basic', 'online_consulting', 4, 25);
                         ?>
-                            <h5>온라인 상담</h5>
+                            <!-- <h5>온라인 상담</h5>
                             <ul class="counsel_list">
                                 <li><a href="menu11_1.html">제모 비용</a><span class="date">24-04-30</span></li>
                                 <li><a href="menu11_1.html">SPL가격문의</a><span class="date">24-04-20</span></li>
                                 <li><a href="menu11_1.html">제모 가격문의</a><span class="date">24-04-18</span></li>
                                 <li><a href="menu11_1.html">다이어트 관련</a><span class="date">24-04-16</span></li>
                             </ul>
-                            <a href="menu11_1.html" class="btn_more">more</a>
+                            <a href="menu11_1.html" class="btn_more">more</a> -->
                         </div>
                         <div class="broad_wrap">
-                        <?php
-                            // latest(스킨, 게시판아이디, 출력라인, 글자수);
-                            echo latest('basic', 'event', 4, 25);
-                        ?>
+                        
                             <h5>보도자료</h5>
                             <div class="broad_content">
                                 <span class="img"><img src="./img/broad2.png" alt="보도자료"></span>
