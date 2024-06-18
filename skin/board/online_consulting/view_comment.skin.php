@@ -7,7 +7,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 var char_min = parseInt(<?php echo $comment_min ?>); // 최소
 var char_max = parseInt(<?php echo $comment_max ?>); // 최대
 </script>
-<button type="button" class="cmt_btn"><span class="total"><b>댓글</b> <?php echo $view['wr_comment']; ?></span><span class="cmt_more"></span></button>
+<button type="button" class="cmt_btn"><span class="total"><b>답변</b> <?php echo $view['wr_comment']; ?></span><span class="cmt_more"></span></button>
 <!-- 댓글 시작 { -->
 <section id="bo_vc">
     <h2>댓글목록</h2>
@@ -30,11 +30,11 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
 	?>
 
 	<article id="c_<?php echo $comment_id ?>" <?php if ($cmt_depth) { ?>style="margin-left:<?php echo $cmt_depth ?>px;border-top-color:#e0e0e0"<?php } ?>>
-        <div class="pf_img"><?php echo get_member_profile_img($list[$i]['mb_id']); ?></div>
+        <!-- <div class="pf_img"><?php echo get_member_profile_img($list[$i]['mb_id']); ?></div> -->
         
         <div class="cm_wrap">
 
-            <header style="z-index:<?php echo $cmt_sv; ?>">
+            <div style="z-index:<?php echo $cmt_sv; ?>">
 	            <h2><?php echo get_text($list[$i]['wr_name']); ?>님의 <?php if ($cmt_depth) { ?><span class="sound_only">댓글의</span><?php } ?> 댓글</h2>
 	            <?php echo $list[$i]['name'] ?>
 	            <?php if ($is_ip_view) { ?>
@@ -46,7 +46,7 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
 	            <?php
 	            include(G5_SNS_PATH.'/view_comment_list.sns.skin.php');
 	            ?>
-	        </header>
+	        </div>
 	
 	        <!-- 댓글 출력 -->
 	        <div class="cmt_contents">
@@ -101,7 +101,7 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
 		</script>
     </article>
     <?php } ?>
-    <?php if ($i == 0) { //댓글이 없다면 ?><p id="bo_vc_empty">등록된 댓글이 없습니다.</p><?php } ?>
+    <?php if ($i == 0) { //댓글이 없다면 ?><p id="bo_vc_empty">등록된 답변이 없습니다.</p><?php } ?>
 
 </section>
 <!-- } 댓글 끝 -->
@@ -127,7 +127,7 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
 
     <span class="sound_only">내용</span>
     <?php if ($comment_min || $comment_max) { ?><strong id="char_cnt"><span id="char_count"></span>글자</strong><?php } ?>
-    <textarea id="wr_content" name="wr_content" maxlength="10000" required class="required" title="내용" placeholder="댓글내용을 입력해주세요" 
+    <textarea id="wr_content" name="wr_content" maxlength="10000" required class="required" title="내용" placeholder="답변 내용을 입력해주세요" 
     <?php if ($comment_min || $comment_max) { ?>onkeyup="check_byte('wr_content', 'char_count');"<?php } ?>><?php echo $c_wr_content; ?></textarea>
     <?php if ($comment_min || $comment_max) { ?><script> check_byte('wr_content', 'char_count'); </script><?php } ?>
     <script>
@@ -165,7 +165,7 @@ var char_max = parseInt(<?php echo $comment_max ?>); // 최대
 	            <input type="checkbox" name="wr_secret" value="secret" id="wr_secret" class="selec_chk">
 	            <label for="wr_secret"><span></span>비밀글</label>
             </span>
-            <button type="submit" id="btn_submit" class="btn_submit">댓글등록</button>
+            <button type="submit" id="btn_submit" class="btn_submit">답변등록</button>
         </div>
     </div>
     </form>

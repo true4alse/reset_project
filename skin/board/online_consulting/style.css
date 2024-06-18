@@ -137,7 +137,16 @@ box-shadow:inset 0 2px 5px rgb(33, 135, 202)}
 }
 .bo_current {color:#e8180c}
 #bo_list .profile_img img {border-radius:50%}
-#bo_list .cnt_cmt {background:#e9eff5;color:#d66a79;font-size:11px;height:16px;line-height:16px;padding:0 5px;border-radius:3px;vertical-align:middle}
+#bo_list .cnt_cmt {
+    background: #e9eff5;
+    color: #d66a79;
+    font-size: 11px;
+    height: 16px;
+    line-height: 16px;
+    padding: 5px 15px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
 
 #bo_list .bo_tit .title_icon {margin-right:2px}
 #bo_list .bo_tit .fa-heart {color:#ff0000}
@@ -364,10 +373,18 @@ box-shadow:1px 1px 5px 0px hsl(232, 36%, 96%)}
 #bo_vc header:after {display:block;visibility:hidden;clear:both;content:""}
 #bo_vc header .profile_img {display:none}
 #bo_vc header .icon_reply {position:absolute;top:15px;left:-20px}
-#bo_vc .member, #bo_vc .guest, #bo_vc .sv_member, #bo_vc .sv_guest {font-weight:bold}
+#bo_vc .member, #bo_vc .guest, #bo_vc .sv_member, #bo_vc .sv_guest {
+    font-weight: bold;
+    font-size: 1.3em;
+    /* margin-bottom: 10px; */
+}
 .bo_vc_hdinfo {color:#777}
 #bo_vc h1 {position:absolute;font-size:0;line-height:0;overflow:hidden}
 #bo_vc .cmt_contents {line-height:1.8em;padding:0 0 20px}
+#bo_vc .cmt_contents p{
+    font-size: 1em;;
+}
+
 #bo_vc p a {text-decoration:underline}
 #bo_vc p a.s_cmt {text-decoration:underline;color:#ed6479}
 #bo_vc_empty {margin:0;padding:80px 0 !important;color:#777;text-align:center}

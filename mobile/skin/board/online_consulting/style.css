@@ -108,8 +108,20 @@
 .chk_box input[type="checkbox"]:checked + label {color:#000}
 .chk_box input[type="checkbox"]:checked + label span {background:url(./img/chk.png) no-repeat 50% 50% #3a8afd;border-color:#1471f6;border-radius:3px}
 .all_chk.chk_box input[type="checkbox"] + label span {top:18px;left:15px}
-
-.bo_cmt {background:#e9eff5;color:#3a8afd;font-size:0.925em;height:16px;padding:0 5px;border-radius:2px;vertical-align:top;min-width:16px}
+.member{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.bo_cmt {
+    background: #e9eff5;
+    color: #d66a79;
+    font-size: 0.925em;
+    height: 16px;
+    padding: 5px;
+    border-radius: 2px;
+    vertical-align: top;
+    min-width: 16px;
+}
 
 .bo_subject {display:block;width:100%;padding-bottom:5px}
 .bo_current {color:#e8180c}

@@ -120,7 +120,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                         <?php if ($list[$i]['comment_cnt']) { ?>
                         <span class="bo_cmt">
 							<span class="sound_only">댓글</span>
-							<?php echo $list[$i]['comment_cnt']; ?>
+							<?php if($list[$i]['comment_cnt']){echo "답변완료";} ?>
 							<span class="sound_only">개</span>
                         </span>
                         <?php } ?>
