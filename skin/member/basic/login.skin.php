@@ -1,6 +1,6 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
-
+include_once(G5_PATH.'/head.php');
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 0);
 ?>
@@ -11,7 +11,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
         <h1><?php echo $g5['title'] ?></h1>
         <div class="mb_log_cate">
             <h2><span class="sound_only">회원</span>로그인</h2>
-            <a href="<?php echo G5_BBS_URL ?>/register.php" class="join">회원가입</a>
+            
         </div>
         <form name="flogin" action="<?php echo $login_action_url ?>" onsubmit="return flogin_submit(this);" method="post">
         <input type="hidden" name="url" value="<?php echo $login_url ?>">
@@ -22,7 +22,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
             <input type="text" name="mb_id" id="login_id" required class="frm_input required" size="20" maxLength="20" placeholder="아이디">
             <label for="login_pw" class="sound_only">비밀번호<strong class="sound_only"> 필수</strong></label>
             <input type="password" name="mb_password" id="login_pw" required class="frm_input required" size="20" maxLength="20" placeholder="비밀번호">
-            <button type="submit" class="btn_submit">로그인</button>
+            <button type="submit" class="btn_submit">로그인하기</button>
+            <a href="<?php echo G5_BBS_URL ?>/register.php" class="join">회원가입하기</a>
             
             <div id="login_info">
                 <div class="login_if_auto chk_box">
@@ -106,7 +107,9 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
     <?php // 쇼핑몰 사용시 여기까지 반드시 복사해 넣으세요 ?>
 
 </div>
-
+<?php
+    include_once(G5_PATH.'/tail.php');
+?>
 <script>
 jQuery(function($){
     $("#login_auto_login").click(function(){

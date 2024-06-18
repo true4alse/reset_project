@@ -1,6 +1,6 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
-
+include_once(G5_PATH.'/head.php');
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 0);
 ?>
@@ -21,7 +21,9 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
             <input type="checkbox" name="auto_login" id="login_auto_login" class="selec_chk">
             <label for="login_auto_login"><span></span> 자동로그인</label>
         </div>
-		<button type="submit" class="btn_submit">로그인</button>
+		<button type="submit" class="btn_submit">로그인하기</button>
+        <a class="btn_st33" href="<?php echo G5_BBS_URL ?>/register.php">회원가입하기</a>
+        <a class="btn_st33 nonbor" href="<?php echo G5_BBS_URL ?>/password_lost.php">아이디/비밀번호 찾기</a>
     </div>
 
     <?php
@@ -29,13 +31,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
     @include_once(get_social_skin_path().'/social_login.skin.php');
     ?>
 
-    <section class="mb_login_join">
-        <h2>회원로그인 안내</h2>
-        <div>
-            <a href="<?php echo G5_BBS_URL ?>/password_lost.php">아이디/비밀번호 찾기</a>
-            <a href="<?php echo G5_BBS_URL ?>/register.php">회원 가입</a>
-        </div>
-    </section>
+    
     </form>
 
 
@@ -109,6 +105,9 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 
 </div>
 
+<?php
+    include_once(G5_PATH.'/tail.php');
+?>
 <script>
 jQuery(function($){
     $("#login_auto_login").click(function(){
