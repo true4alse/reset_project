@@ -29,6 +29,27 @@ ul {list-style:none}
   -moz-box-sizing:border-box;
   box-sizing:border-box;
 }
+#bo_v_info {
+  margin: 0;
+  border-bottom: 1px solid #333;
+  color: #333;
+}
+.bo_v_nb li:last-child {
+  border-bottom: 1px solid #333;
+}
+.bo_v_nb li {
+  border-top: 1px solid #333;
+  padding: 13px;
+}
+.bo_v_nb li .nb_date {
+  float: right;
+  color: #333;
+}
+.bo_v_nb li .nb_tit {
+  display: inline-block;
+  padding-right: 20px;
+  color: #333;
+}
 .date_input {
   width: 100%;
   font-size: 18px;

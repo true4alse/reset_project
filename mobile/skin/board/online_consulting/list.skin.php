@@ -111,8 +111,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                         <?php echo $list[$i]['subject'] ?>
                         <?php
                         // if ($list[$i]['file']['count']) { echo '<'.$list[$i]['file']['count'].'>'; }
-                        if ($list[$i]['icon_new']) echo "<span class=\"new_icon\">N<span class=\"sound_only\">새글</span></span>";
-                        if (isset($list[$i]['icon_hot'])) echo $list[$i]['icon_hot'];
+                        // if ($list[$i]['icon_new']) echo "<span class=\"new_icon\">N<span class=\"sound_only\">새글</span></span>";
+                        // if (isset($list[$i]['icon_hot'])) echo $list[$i]['icon_hot'];
                         if (isset($list[$i]['icon_file'])) echo $list[$i]['icon_file'];
                         if (isset($list[$i]['icon_link'])) echo $list[$i]['icon_link'];
                         ?>
@@ -128,8 +128,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                 </div>
 				<div class="bo_info">
                     <span class="sound_only">작성자</span><?php echo $list[$i]['name'] ?>
-                    <span class="bo_date">Date <?php echo $list[$i]['datetime2'] ?></span>
-                	<span class="bo_view">View <?php echo number_format($list[$i]['wr_hit']) ?><span class="sound_only">회</span></span>
+                    <span class="bo_date">작성일 <?php echo $list[$i]['datetime2'] ?></span>
+                	<span class="bo_view">조회 <?php echo number_format($list[$i]['wr_hit']) ?><span class="sound_only">회</span></span>
                 	<?php if ($is_good) { ?><span class="sound_only">추천</span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <?php echo $list[$i]['wr_good'] ?><?php } ?>
                     <?php if ($is_nogood) { ?><span class="sound_only">비추천</span><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> <?php echo $list[$i]['wr_nogood'] ?><?php } ?>
                 </div>        

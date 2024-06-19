@@ -175,6 +175,10 @@ box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 /* 중간 레이아웃 */
 #wrapper {
   /* padding-top: 130px; */
+  padding-bottom: 100px;
+}
+#bo_gall, #bo_w, #bo_v {
+  font-size: 14px!important;
 }
 #container_wr:after {display:block;visibility:hidden;clear:both;content:""}
 #container_wr {margin:0 auto;zoom:1}

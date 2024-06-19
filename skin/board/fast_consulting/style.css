@@ -21,6 +21,19 @@
     text-align: center;
     padding: 10px 0;
 }
+#td_state{
+    padding: 10px;
+    border-radius: 0;
+}
+.reser_grid>div {
+    border: 1px solid #dfdfdf;
+    padding: 6px;
+}
+.reser_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
 #bo_list .td_nick {width:100px;text-align:center}
 #bo_list .td_num {width:50px;text-align:center}
 #bo_list .td_num2 {width:50px;text-align:center}

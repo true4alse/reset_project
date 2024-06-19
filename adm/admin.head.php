@@ -119,6 +119,10 @@ if (!empty($_COOKIE['g5_admin_btn_gnb'])) {
 
         <div id="tnb">
             <ul>
+                <li class="tnb_li"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=model">리셋리얼모집확인</a></li>
+                <li class="tnb_li"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=fast_consulting">빠른상담확인</a></li>
+                <li class="tnb_li"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=reservation">온라인예약확인</a></li>
+                <li class="tnb_li"><a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=online_consulting">온라인상담확인</a></li>
                 <?php if (defined('G5_USE_SHOP') && G5_USE_SHOP) { ?>
                     <li class="tnb_li"><a href="<?php echo G5_SHOP_URL ?>/" class="tnb_shop" target="_blank" title="쇼핑몰 바로가기">쇼핑몰 바로가기</a></li>
                 <?php } ?>

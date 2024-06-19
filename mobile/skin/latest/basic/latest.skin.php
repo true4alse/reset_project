@@ -43,7 +43,7 @@ $is_show_next_prev = ($list_count > 4) ? 1 : 0;
                 }
                 
                 echo "<a href=\"".$wr_href."\" class=\"lt_tit\">";
-                if ($list[$i]['icon_secret']) echo "<i class=\"fa fa-lock\" aria-hidden=\"true\"></i> ";
+                // if ($list[$i]['icon_secret']) echo "<i class=\"fa fa-lock\" aria-hidden=\"true\"></i> ";
                 if ($list[$i]['is_notice'])
                     echo "<strong>".$list[$i]['subject']."</strong>";
                 else
@@ -52,13 +52,13 @@ $is_show_next_prev = ($list_count > 4) ? 1 : 0;
                     // if ($list[$i]['link']['count']) { echo "[{$list[$i]['link']['count']}]"; }
                     // if ($list[$i]['file']['count']) { echo "<{$list[$i]['file']['count']}>"; }
 
-                if ($list[$i]['icon_new']) echo " <span class=\"new_icon\">N</span>";
-                if ($list[$i]['icon_file']) echo " <i class=\"fa fa-download\" aria-hidden=\"true\"></i>" ;
-                if ($list[$i]['icon_link']) echo " <i class=\"fa fa-link\" aria-hidden=\"true\"></i>" ;
-                if ($list[$i]['icon_hot']) echo " <i class=\"fa fa-heart\" aria-hidden=\"true\"></i>";
+                // if ($list[$i]['icon_new']) echo " <span class=\"new_icon\">N</span>";
+                // if ($list[$i]['icon_file']) echo " <i class=\"fa fa-download\" aria-hidden=\"true\"></i>" ;
+                // if ($list[$i]['icon_link']) echo " <i class=\"fa fa-link\" aria-hidden=\"true\"></i>" ;
+                // if ($list[$i]['icon_hot']) echo " <i class=\"fa fa-heart\" aria-hidden=\"true\"></i>";
                 
                 if ($list[$i]['comment_cnt'])  echo "
-                <span class=\"lt_cmt\"><span class=\"sound_only\">댓글</span>".$list[$i]['comment_cnt']."</span>";
+                <span class=\"lt_cmt\"><span class=\"sound_only\">댓글</span>답변완료</span>";
                 echo "</a>";
                 ?>
                
@@ -82,5 +82,5 @@ $is_show_next_prev = ($list_count > 4) ? 1 : 0;
 		<button class="lt_page_next"><span class="sound_only">다음페이지</span><i class="fa fa-caret-right" aria-hidden="true"></i></button>
 	</div>
     <?php } ?>
-    <a href="<?php echo get_pretty_url($bo_table); ?>" class="lt_more"><span class="sound_only"><?php echo $bo_subject ?></span>전체보기</a>
+    <a href="<?php echo get_pretty_url($bo_table); ?>" class="lt_more"><span class="sound_only"><?php echo $bo_subject ?></span>more</a>
 </div>

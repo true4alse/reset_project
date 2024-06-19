@@ -52,7 +52,7 @@ include_once(G5_PATH.'/head.php');
                     </h3>
                     <ul class="s1_ul">
                         <li data-aos="fade-up">
-                            <a href="menu2_7.html">
+                            <a href="menu2_7.php">
                                 <img src="./img/s1_1.png" alt="웨딩플래너">
                                 <div class="li_wrap">
                                     <div class="s1_tit">웨딩플래너</div>
@@ -61,7 +61,7 @@ include_once(G5_PATH.'/head.php');
                             </a>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="100">
-                            <a href="menu2_4.html">
+                            <a href="menu2_4.php">
                                 <img src="./img/s1_2.png" alt="3D DIET">
                                 <div class="li_wrap">
                                     <div class="s1_tit">3D DIET</div>
@@ -70,7 +70,7 @@ include_once(G5_PATH.'/head.php');
                             </a>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="200">
-                            <a href="menu7.html">
+                            <a href="menu7.php">
                                 <img src="./img/s1_3.png" alt="토탈피로케어">
                                 <div class="li_wrap">
                                     <div class="s1_tit">토탈피로케어</div>
@@ -85,7 +85,7 @@ include_once(G5_PATH.'/head.php');
             <section class="s2 page">
                 <div class="s2_left">
                     <div class="s2_inner">
-                        <a href="menu1_2.html">
+                        <a href="menu1_2.php">
                             <span>reset your skin</span>
                             <p>맞춤관리 시작</p>
                         </a>
@@ -93,7 +93,7 @@ include_once(G5_PATH.'/head.php');
                 </div>
                 <div class="s3_right">
                     <div class="s2_inner">
-                        <a href="menu9_1.html">
+                        <a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=review">
                             <span>reset your skin</span>
                             <p>RESET <br>STORY</p>
                         </a>
@@ -155,25 +155,25 @@ include_once(G5_PATH.'/head.php');
                     </h3>
                     <ul class="s5_ul">
                         <li>
-                            <a href="menu9_2.html">
+                            <a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=before_after">
                                 <img src="./img/s5_1.png" alt="복부 허벅지 4부위 8회 + 8회 추가">
                                 <p>복부 허벅지 4부위 8회 + 8회 추가</p>
                             </a>
                         </li>
                         <li>
-                            <a href="menu9_2.html">
+                            <a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=before_after">
                                 <img src="./img/s5_2.png" alt="SPL 6부위 12회">
                                 <p>SPL 6부위 12회</p>
                             </a>
                         </li>
                         <li>
-                            <a href="menu9_2.html">
+                            <a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=before_after">
                                 <img src="./img/s5_3.png" alt="복부 SPL 12회">
                                 <p>복부 SPL 12회</p>
                             </a>
                         </li>
                         <li>
-                            <a href="menu9_2.html">
+                            <a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=before_after">
                                 <img src="./img/s5_4.png" alt="SPL 리셋">
                                 <p>SPL 리셋</p>
                             </a>
@@ -186,14 +186,14 @@ include_once(G5_PATH.'/head.php');
                 <div class="content innertop  innerbot">
                     <div class="s6_wrap">
                         <div class="s6_box1">
-                            <a href="menu10_2.html">
+                            <a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=event">
                                 <div class="tit">리셋 EVENT</div>
                                 <p>리셋 이벤트를 <br>
                                     확인해보세요!</p>
                             </a>
                         </div>
                         <div class="s6_box2">
-                            <a href="menu10_1.html">
+                            <a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=notice">
                                 <div>
                                     <div class="tit">RESET DRAMA</div>
                                     <p>비교 불가, 오직 리셋에서만</p>
@@ -271,12 +271,12 @@ include_once(G5_PATH.'/head.php');
                         ?>
                             <!-- <h5>온라인 상담</h5>
                             <ul class="counsel_list">
-                                <li><a href="menu11_1.html">제모 비용</a><span class="date">24-04-30</span></li>
-                                <li><a href="menu11_1.html">SPL가격문의</a><span class="date">24-04-20</span></li>
-                                <li><a href="menu11_1.html">제모 가격문의</a><span class="date">24-04-18</span></li>
-                                <li><a href="menu11_1.html">다이어트 관련</a><span class="date">24-04-16</span></li>
+                                <li><a href="menu11_1.php">제모 비용</a><span class="date">24-04-30</span></li>
+                                <li><a href="menu11_1.php">SPL가격문의</a><span class="date">24-04-20</span></li>
+                                <li><a href="menu11_1.php">제모 가격문의</a><span class="date">24-04-18</span></li>
+                                <li><a href="menu11_1.php">다이어트 관련</a><span class="date">24-04-16</span></li>
                             </ul>
-                            <a href="menu11_1.html" class="btn_more">more</a> -->
+                            <a href="menu11_1.php" class="btn_more">more</a> -->
                         </div>
                         <div class="broad_wrap">
                         
@@ -287,7 +287,7 @@ include_once(G5_PATH.'/head.php');
                                     <p class="tit">'[칼럼] 실패하기 쉬운 다이어트, 개인별로 복합적인 맞춤관리 이뤄어줘야'</p>
                                 </div>
                             </div>
-                            <a href="menu11_3.html" class="btn_more">more</a>
+                            <a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=gallery" class="btn_more">more</a>
                         </div>
                     </div>
                 </div>
@@ -310,7 +310,7 @@ include_once(G5_PATH.'/head.php');
                             <em class="pink_line"><b>Reset Selfie</b></em>
                         </i>
                     </h3>
-                    <a href="menu9_2.html">
+                    <a href="menu9_2.php">
                         <img src="./img/selfie.png" alt="Reset Selfie">
                     </a>
                 </div>

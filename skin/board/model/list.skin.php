@@ -59,7 +59,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         </div>
 
         <ul class="btn_bo_user">
-        	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_s1" title="관리자">Admin<span class="sound_only">admin</span></a></li><?php } ?>
+        	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_s1" title="관리자">관리자<span class="sound_only">admin</span></a></li><?php } ?>
             <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_s1" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
             <!-- <li>
             	<button type="button" class="btn_s1" title="게시판 검색">search<span class="sound_only">게시판 검색</span></button>

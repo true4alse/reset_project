@@ -67,12 +67,12 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         </div>
 
         <ul class="btn_bo_user">
-        	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_s1" title="관리자">Admin<span class="sound_only">admin</span></a></li><?php } ?>
+        	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_s1" title="관리자">관리자<span class="sound_only">admin</span></a></li><?php } ?>
             <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_s1" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
             <!-- <li>
             	<button type="button" class="btn_s1" title="게시판 검색">search<span class="sound_only">게시판 검색</span></button>
             </li> -->
-            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_s1" title="글쓰기">write<span class="sound_only">글쓰기</span></a></li><?php } ?>
+            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_s1" title="글쓰기">글쓰기<span class="sound_only">글쓰기</span></a></li><?php } ?>
         	<?php if ($is_admin == 'super' || $is_auth) {  ?>
         	<li>
             <button type="button" class="btn_more_opt is_list_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
@@ -103,13 +103,13 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 				</label>
             </th>
             <?php } ?>
-            <th scope="col">index</th>
-            <th scope="col">title</th>
-            <th scope="col">author</th>
-            <th scope="col"><?php echo subject_sort_link('wr_hit', $qstr2, 1) ?>views </a></th>
+            <th scope="col">번호</th>
+            <th scope="col">제목</th>
+            <th scope="col">작성자</th>
+            <th scope="col"><?php echo subject_sort_link('wr_hit', $qstr2, 1) ?>조회수 </a></th>
             <?php if ($is_good) { ?><th scope="col"><?php echo subject_sort_link('wr_good', $qstr2, 1) ?>추천 </a></th><?php } ?>
             <?php if ($is_nogood) { ?><th scope="col"><?php echo subject_sort_link('wr_nogood', $qstr2, 1) ?>비추천 </a></th><?php } ?>
-            <th scope="col"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>date  </a></th>
+            <th scope="col"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>작성일  </a></th>
         </tr>
         </thead>
         <tbody>

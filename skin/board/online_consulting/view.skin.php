@@ -61,9 +61,9 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 	        <?php ob_start(); ?>
 
 	        <ul class="btn_bo_user bo_v_com">
-				<li><a href="<?php echo $list_href ?>" class="btn_b01" title="목록">List<span class="sound_only">목록</span></a></li>
-	            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01" title="답변">Reply<span class="sound_only">답변</span></a></li><?php } ?>
-	            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01" title="글쓰기">Write<span class="sound_only">글쓰기</span></a></li><?php } ?>
+				<li><a href="<?php echo $list_href ?>" class="btn_b01" title="목록">목록<span class="sound_only">목록</span></a></li>
+	            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01" title="답변">답변<span class="sound_only">답변</span></a></li><?php } ?>
+	            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01" title="글쓰기">글쓰기<span class="sound_only">글쓰기</span></a></li><?php } ?>
 	        	<?php if($update_href || $delete_href || $copy_href || $move_href || $search_href) { ?>
 	        	<li>
 	        		<button type="button" class="btn_more_opt is_view_btn btn_b01 btn"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>

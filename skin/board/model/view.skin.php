@@ -51,7 +51,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         		<span class="sound_only">작성자</span> <strong><?php echo $view['name'] ?><?php if ($is_ip_view) { echo "&nbsp;($ip)"; } ?></strong><br>
        		 	<span class="sound_only">댓글</span><strong><a href="#bo_vc">댓글 <?php echo number_format($view['wr_comment']) ?>건</a></strong>
         		<span class="sound_only">조회</span><strong>조회수 <?php echo number_format($view['wr_hit']) ?>회</strong>
-        		<strong class="if_date"><span class="sound_only">작성일</span>날짜 <?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></strong>
+        		<strong class="if_date"><span class="sound_only">작성일</span>작성일 <?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></strong>
     		</div>
     	</div>
 
@@ -60,8 +60,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 	        <?php ob_start(); ?>
 
 	        <ul class="btn_bo_user bo_v_com">
-				<li><a href="<?php echo $list_href ?>" class="btn_b01 btn btn_s1" title="목록">list<span class="sound_only">목록</span></a></li>
-	            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01 btn btn_s1" title="답변">Reply</i><span class="sound_only">답변</span></a></li><?php } ?>
+				<li><a href="<?php echo $list_href ?>" class="btn_b01 btn btn_s1" title="목록">목록<span class="sound_only">목록</span></a></li>
+	            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01 btn btn_s1" title="답변">답변</i><span class="sound_only">답변</span></a></li><?php } ?>
 	            
 	        	<?php if($update_href || $delete_href || $copy_href || $move_href || $search_href) { ?>
 	        	<li>

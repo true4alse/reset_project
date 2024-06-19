@@ -105,19 +105,19 @@ if (defined('G5_IS_ADMIN')) {
 
 <?php
 if (!defined('G5_IS_ADMIN')) {
-    echo '<link rel="stylesheet" href="/css/common.css">
-    <link rel="stylesheet" href="/css/font.css">
-    <link rel="stylesheet" href="/css/main.css">
+    echo '<link rel="stylesheet" href="/css/common.css?ver='.G5_CSS_VER.'">
+    <link rel="stylesheet" href="/css/font.css?ver='.G5_CSS_VER.'">
+    <link rel="stylesheet" href="/css/main.css?ver='.G5_CSS_VER.'">
     <link rel="stylesheet" href="/css/slider-custom.css?a">
-    <link rel="stylesheet" href="/css/ani.css">
-    <link rel="stylesheet" href="/css/idpw.css">
-    <link rel="stylesheet" href="/css/join.css">
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/css/mobile.css">
-    <link rel="stylesheet" href="/css/model.css">
-    <link rel="stylesheet" href="/css/online.css">
-    <link rel="stylesheet" href="/css/sub.css">
-    <link rel="stylesheet" href="/css/tab.css">';
+    <link rel="stylesheet" href="/css/ani.css?ver='.G5_CSS_VER.'">
+    <link rel="stylesheet" href="/css/idpw.css?ver='.G5_CSS_VER.'">
+    <link rel="stylesheet" href="/css/join.css?ver='.G5_CSS_VER.'">
+    <link rel="stylesheet" href="/css/login.css?ver='.G5_CSS_VER.'">
+    <link rel="stylesheet" href="/css/mobile.css?ver='.G5_CSS_VER.'">
+    <link rel="stylesheet" href="/css/model.css?ver='.G5_CSS_VER.'">
+    <link rel="stylesheet" href="/css/online.css?ver='.G5_CSS_VER.'">
+    <link rel="stylesheet" href="/css/sub.css?ver='.G5_CSS_VER.'">
+    <link rel="stylesheet" href="/css/tab.css?ver='.G5_CSS_VER.'">';
 }
 
 ?>

@@ -57,7 +57,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         <?php } ?>
 	</li>
     <?php } ?>
-	<?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="write_btn" title="글쓰기">Write<span class="sound_only">글쓰기</span></a></li><?php } ?>
+	<?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="write_btn" title="글쓰기">글쓰기<span class="sound_only">글쓰기</span></a></li><?php } ?>
 </ul>
 <?php } ?>
 <!-- 게시판 목록 시작 -->
@@ -128,8 +128,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                 </div>
 				<div class="bo_info">
                     <span class="sound_only">작성자</span><?php echo $list[$i]['name'] ?>
-                    <span class="bo_date">Date <?php echo $list[$i]['datetime2'] ?></span>
-                	<span class="bo_view">View <?php echo number_format($list[$i]['wr_hit']) ?><span class="sound_only">회</span></span>
+                    <span class="bo_date">작성일 <?php echo $list[$i]['datetime2'] ?></span>
+                	<span class="bo_view">조회수 <?php echo number_format($list[$i]['wr_hit']) ?><span class="sound_only">회</span></span>
                 	<?php if ($is_good) { ?><span class="sound_only">추천</span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <?php echo $list[$i]['wr_good'] ?><?php } ?>
                     <?php if ($is_nogood) { ?><span class="sound_only">비추천</span><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> <?php echo $list[$i]['wr_nogood'] ?><?php } ?>
                 </div>        

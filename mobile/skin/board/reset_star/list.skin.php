@@ -56,7 +56,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         <?php } ?>
 	</li>
     <?php } ?>
-	<?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="write_btn" title="글쓰기">Write<span class="sound_only">글쓰기</span></a></li><?php } ?>
+	<?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="write_btn" title="글쓰기">글쓰기<span class="sound_only">글쓰기</span></a></li><?php } ?>
 </ul>
 <?php } ?>
 
@@ -153,8 +153,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 					</a>                  
                     <div class="gall_info">
                     	<span class="sound_only">작성자 </span><?php echo $list[$i]['name'] ?>
-                        <span class="sound_only">작성일 </span><span class="date">Date <?php echo $list[$i]['datetime2'] ?></span>
-                        <span class="sound_only">조회 </span><strong>View <?php echo $list[$i]['wr_hit'] ?></strong>
+                        <span class="sound_only">작성일 </span><span class="date">작성일 <?php echo $list[$i]['datetime2'] ?></span>
+                        <span class="sound_only">조회 </span><strong>조회 <?php echo $list[$i]['wr_hit'] ?></strong>
                         <?php if ($is_good) { ?><span class="sound_only">추천</span><strong><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> <?php echo $list[$i]['wr_good'] ?></strong><?php } ?>
                         <?php if ($is_nogood) { ?><span class="sound_only">비추천</span><strong><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> <?php echo $list[$i]['wr_nogood'] ?></strong><?php } ?>
                     </div>

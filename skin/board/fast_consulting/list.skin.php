@@ -68,7 +68,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         </div>
 
         <ul class="btn_bo_user">
-        	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_s1" title="관리자">Admin<span class="sound_only">admin</span></a></li><?php } ?>
+        	<?php if ($admin_href) { ?><li><a href="<?php echo $admin_href ?>" class="btn_s1" title="관리자">관리자<span class="sound_only">admin</span></a></li><?php } ?>
             <?php if ($rss_href) { ?><li><a href="<?php echo $rss_href ?>" class="btn_s1" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i><span class="sound_only">RSS</span></a></li><?php } ?>
             <!-- <li>
             	<button type="button" class="btn_s1" title="게시판 검색">search<span class="sound_only">게시판 검색</span></button>
@@ -90,94 +90,54 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     <!-- } 게시판 페이지 정보 및 버튼 끝 -->
         	
     <div class="tbl_head01 tbl_wrap">
-        <table>
-        <caption><?php echo $board['bo_subject'] ?> 목록</caption>
-        <thead>
-        <tr>
             <?php if ($is_checkbox) { ?>
-            <th scope="col" class="all_chk chk_box">
+            <div scope="col" class="all_chk chk_box">
             	<input type="checkbox" id="chkall" onclick="if (this.checked) all_checked(true); else all_checked(false);" class="selec_chk">
                 <label for="chkall">
                 	<span></span>
                 	<b class="sound_only">현재 페이지 게시물  전체선택</b>
 				</label>
-            </th>
+            </div>
             <?php } ?>
-            <th scope="col">번호</th>
-            <th scope="col">연락처</th>
-            <th scope="col">신청자</th>
-            <th scope="col"><?php echo subject_sort_link('wr_hit', $qstr2, 1) ?>조회수 </a></th>
             
-            <?php if ($is_good) { ?><th scope="col"><?php echo subject_sort_link('wr_good', $qstr2, 1) ?>추천 </a></th><?php } ?>
-            <?php if ($is_nogood) { ?><th scope="col"><?php echo subject_sort_link('wr_nogood', $qstr2, 1) ?>비추천 </a></th><?php } ?>
-            <th scope="col"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>date  </a></th>
-            <th>상태</th>
-        </tr>
-        </thead>
-        <tbody>
+            
+            
+            
         <?php
         for ($i=0; $i<count($list); $i++) {
         	if ($i%2==0) $lt_class = "even";
         	else $lt_class = "";
 		?>
-        <tr class="<?php if ($list[$i]['is_notice']) echo "bo_notice"; ?> <?php echo $lt_class ?>">
-            <?php if ($is_checkbox) { ?>
-            <td class="td_chk chk_box">
+
+        <?php if ($is_checkbox) { ?>
+            <div class="td_chk chk_box">
 				<input type="checkbox" name="chk_wr_id[]" value="<?php echo $list[$i]['wr_id'] ?>" id="chk_wr_id_<?php echo $i ?>" class="selec_chk">
             	<label for="chk_wr_id_<?php echo $i ?>">
             		<span></span>
             		<b class="sound_only"><?php echo $list[$i]['subject'] ?></b>
             	</label>
-            </td>
-            <?php } ?>
-            <td class="td_num2">
-            <?php
-            if ($list[$i]['is_notice']) // 공지사항
-                echo '<strong class="notice_icon">공지</strong>';
-            else if ($wr_id == $list[$i]['wr_id'])
-                echo "<span class=\"bo_current\">열람중</span>";
-            else
-                echo $list[$i]['num'];
-             ?>
-            </td>
+            </div>
+        <?php } ?>
 
-            <td class="td_subject" style="padding-left:<?php echo $list[$i]['reply'] ? (strlen($list[$i]['wr_reply'])*10) : '0'; ?>px">
-                <?php
-                if ($is_category && $list[$i]['ca_name']) {
-				?>
-                <a href="<?php echo $list[$i]['ca_name_href'] ?>" class="bo_cate_link"><?php echo $list[$i]['ca_name'] ?></a>
-                <?php } ?>
-                <div class="bo_tit">
-                    <a href="<?php echo $list[$i]['href'] ?>">
-                        <?php echo $list[$i]['icon_reply'] ?>
-                        <?php
-                            if (isset($list[$i]['icon_secret'])) echo rtrim($list[$i]['icon_secret']);
-                         ?>
-                        <?php echo $list[$i]['subject'] ?>
-                    </a>
-                    <?php
-                    if ($list[$i]['icon_new']) echo "<span class=\"new_icon\">N<span class=\"sound_only\">새글</span></span>";
-                    // if ($list[$i]['file']['count']) { echo '<'.$list[$i]['file']['count'].'>'; }
-                    if (isset($list[$i]['icon_hot'])) echo rtrim($list[$i]['icon_hot']);
-                    if (isset($list[$i]['icon_file'])) echo rtrim($list[$i]['icon_file']);
-                    if (isset($list[$i]['icon_link'])) echo rtrim($list[$i]['icon_link']);
-                    ?>
-                    <?php if ($list[$i]['comment_cnt']) { ?><span class="sound_only">댓글</span><span class="cnt_cmt"><?php echo $list[$i]['wr_comment']; ?></span><span class="sound_only">개</span><?php } ?>
-                </div>
-            </td>
-            <td class="td_name sv_use"><?php echo $list[$i]['name'] ?></td>
-            <td class="td_num"><?php echo $list[$i]['wr_hit'] ?></td>
-            <?php if ($is_good) { ?><td class="td_num"><?php echo $list[$i]['wr_good'] ?></td><?php } ?>
-            <?php if ($is_nogood) { ?><td class="td_num"><?php echo $list[$i]['wr_nogood'] ?></td><?php } ?>
-            <td class="td_datetime"><?php echo $list[$i]['datetime2'] ?></td>
-            <td>
-                <select name="wr_10" id="td_state" onchange="location.href=this.value">
+
+        <div class="bo_cnt">
+                    <div class="reser_grid">
+                        <div><span><?php echo $list[$i]['wr_name'] ?></span></div>
+                        <div><span><?php echo $list[$i]['wr_subject'] ?></span></div>
+                        <div><span><?php echo $list[$i]['wr_content'] ?></span></div>
+                        <div><span><?php echo $list[$i]['wr_datetime'] ?></span></div>
+                        <div>
+                        <select name="wr_10" id="td_state" onchange="location.href=this.value">
                     <option value="<?php echo G5_BBS_URL; ?>/fast_consulting_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "대기중"; ?>" <?php if($list[$i]['wr_10']=='대기중') echo 'selected'; ?>>대기중</option>
                     <option value="<?php echo G5_BBS_URL; ?>/fast_consulting_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "확인함"; ?>" <?php if($list[$i]['wr_10']=='확인함') echo 'selected'; ?>>확인함</option>
                     <option value="<?php echo G5_BBS_URL; ?>/fast_consulting_update.php?rid=<?php echo $list[$i]['wr_id']; ?>&rcon=<?php echo "예약완료"; ?>" <?php if($list[$i]['wr_10']=='예약완료') echo 'selected'; ?>>예약완료</option>
                 </select>
-            </td>
-        </tr>
+                        </div>
+                    </div>
+
+
+
+                
         <?php } ?>
         <?php if (count($list) == 0) { echo '<tr><td colspan="'.$colspan.'" class="empty_table">게시물이 없습니다.</td></tr>'; } ?>
         </tbody>
