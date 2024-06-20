@@ -63,16 +63,19 @@ ul {list-style:none}
 .hd_pops_con {}
 .hd_pops_footer {
   padding: 10px 0;
-  background: #d66a79;
+  background: #111;
   color: #fff;
   text-align: right;
+  display: flex;
+  justify-content: space-between;
 }
 .hd_pops_footer button {
   margin-right: 5px;
   padding: 5px 10px;
   border: 0;
   background: #393939;
-  color: #d66a79;
+  color: #fff;
+  font-family: 'NanumSquareNeo', "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
 /* 상단 레이아웃 */
