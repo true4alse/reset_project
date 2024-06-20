@@ -181,8 +181,9 @@ include_once(G5_PATH.'/head.php');
                                 <p>위 개인정보 보호정책에 동의합니다. <br>(동의를 하셔야 모델지원이 가능합니다.)</p>
                             </label>
                         </div>
-                
-                        <button type="submit"><p>지원하기</p></button>
+                                <p class="las">
+                                    <button type="submit">지원하기</button>
+                                </p>
                     </form>
                     
                     <script>
