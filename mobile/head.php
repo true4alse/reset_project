@@ -54,8 +54,8 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                         <li><a href="/menu2_2.php">ㅣ 하체 패키지</a></li>
                         <li><a href="/menu2_3.php">ㅣ 전신 패키지</a></li>
                         <li><a href="/menu2_4.php">ㅣ one-day 패키지</a></li>
-                        <li><a href="/menu2_5.php">ㅣ 5주 패키지</a></li>
-                        <li><a href="/menu2_6.php">ㅣ 100days 패키지</a></li>
+                        <li><a href="/menu2_5.php">ㅣ 4주 패키지</a></li>
+                        <li><a href="/menu2_6.php">ㅣ 3개월 패키지</a></li>
                         <li><a href="/menu2_7.php">ㅣ 리셋 웨딩플래너</a></li>
                     </ul>
                 </li>
@@ -184,8 +184,8 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                         <li><a href="/menu2_2.php">ㅣ 하체 패키지</a></li>
                         <li><a href="/menu2_3.php">ㅣ 전신 패키지</a></li>
                         <li><a href="/menu2_4.php">ㅣ one-day 패키지</a></li>
-                        <li><a href="/menu2_5.php">ㅣ 5주 패키지</a></li>
-                        <li><a href="/menu2_6.php">ㅣ 100days 패키지</a></li>
+                        <li><a href="/menu2_5.php">ㅣ 4주 패키지</a></li>
+                        <li><a href="/menu2_6.php">ㅣ 3개월 패키지</a></li>
                         <li><a href="/menu2_7.php">ㅣ 리셋 웨딩플래너</a></li>
                     </ul>
                 </li>
