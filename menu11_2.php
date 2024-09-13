@@ -1,7 +1,7 @@
 <?php
 include_once('./_common.php');
 
-define('_INDEX_', true);
+// define('_INDEX_', true);
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 if(defined('G5_THEME_PATH')) {
@@ -85,21 +85,17 @@ include_once(G5_PATH.'/head.php');
                                 
                                 <p class="online_tit dPdirtlrks">예약 시간 선택</p>
                                 <div class="rp_title">
+
+
                                     <p class="datep">선택된 날짜<input type="text" name="wr_1" id="chk_date"></p>
                                     <!-- <input type="text" name="resdate" id="aacaa" class="tcal tcalInput tcalActive online_box" value="" readonly=""> -->
                                     <p>시간 </p>
                                     <select name="wr_2" class="online_box" id="chk_time">
-                                        <option value="10:00">10:00</option>
-                                        <option value="10:30">10:30</option>
-                                        <option value="11:00">11:00</option>
-                                        <option value="11:30">11:30</option>
-                                        <option value="12:00">12:00</option>
-                                        <option value="12:30">12:30</option>
-                                        <option value="14:00">14:00</option>
-                                        <option value="14:30">14:30</option>
-                                        <option value="15:00">15:00</option>
-                                        <option value="15:30">15:30</option>
+                                        <option>요일을 선택해주세요.</option>
                                     </select>
+
+                                   
+
                                 </div>
                             </div>
                             <div>
@@ -198,6 +194,15 @@ include_once(G5_PATH.'/head.php');
 
 
         /*원하는 날짜 선택하기*/
+        // var selectedDate = $('#reservationDate').datepicker('getDate');
+        // var dayOfWeek = selectedDate.getDay();
+        // var daysOfWeek = ['일', '월', '화', '수', '목', '금', '토'];
+        // var dayOfWeekName = daysOfWeek[dayOfWeek];
+        // console.log(dayOfWeekName); // 예: "월"
+
+
+
+
         $("#reservationDate").datepicker({
             minDate : "0D",
             maxDate : "+2M",
@@ -214,7 +219,7 @@ include_once(G5_PATH.'/head.php');
                     mon  = el.selectedMonth+1,
                     year = el.selectedYear;
                 console.log(date);
-                console.log(year+"년"+mon+"월"+day+"일");
+                // console.log(year+"년"+mon+"월"+day+"일");
                 if( date.split(' ')[0] == "<?= date("Y-m-d")?>" ) {
                     alert('당일예약은 할 수 없습니다.');
                     return;
@@ -222,6 +227,60 @@ include_once(G5_PATH.'/head.php');
                     $("#chk_date").val(year+"년"+mon+"월"+day+"일");
 
                 }
+                if(date.split(' ')[1]=="Mon"||date.split(' ')[1]=="Wed"||date.split(' ')[1]=="Fri"){
+                    $("#chk_time").html(`
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                    `)
+                }else if(date.split(' ')[1]=="Tue"||date.split(' ')[1]=="Thu"){
+                    $("#chk_time").html(`
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                    `)
+                }else if(date.split(' ')[1]=="Sat"){
+                    $("#chk_time").html(`
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                    `)
+                }
+                
 
       		},
               beforeShowDay: function(day) {
